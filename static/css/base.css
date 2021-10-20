@@ -183,8 +183,421 @@
 }
 
 .check-out-2 {
-
     color: rgb(77, 39, 26);
+}
+
+/*--mobile-menu bar logo----*/
+
+.fa-bars {
+    display: none;
+    color: black;
+    font-size: 40px;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    left: 20px;
+}
+
+.sidebar {
+    display: initial;
+    position: fixed;
+    width: 0px;
+    height: 100%;
+    left: 0px;
+    z-index: 1000;
+    top: 0px;
+    transition: 0.7s ease;
+    overflow-x: hidden;
+    background: White;
+}
+
+.color-red {
+
+    border: 2px solid red;
+}
+
+.all-products {
+    margin-top: 40px;
+
+}
+
+.sidebar h6 {
+    margin-top: 60px;
+}
+
+section .sidebar ul {
+    padding-left: 10px;
+}
+
+section ul li {
+    list-style: none;
+    border-bottom: 1px solid rgba(11, 12, 12, 0.3);
+    padding: 20px;
+    border-left: 2px solid transparent;
+}
+
+section ul li:hover {
+    border-left-color: red !important;
+
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    width: 100%;
+    display: block;
+    color: black;
+    position: relative;
+    font-family: 'Playfair Display SC', serif;
+    opacity: 0.9;
+
+}
+
+.sidebar ul li>a:hover {
+    color: red;
+    background-color: white;
+}
+
+section .sidebar ul li a i {
+    position: absolute;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 22px;
+    top: 50%;
+    transition: transfrom 0.4s;
+}
+
+section ul li a i.rotate {
+    transform: translateY(-50%) rotate(-180deg);
+}
+
+section .sidebar ul ul {
+    position: static;
+    display: none;
+}
+
+section .sidebar ul ul li {
+    border-bottom: none;
+    line-height: 2px;
+    padding-left: 0px;
+
+}
+
+section ul ul li .dropdown-item {
+    font-size: 16px;
+
+}
+
+section ul .men-show.show-1 {
+    display: block;
+}
+
+section ul .women-show.show-2 {
+    display: block;
+}
+
+section ul .bag-show.show-3 {
+    display: block;
+}
+
+section ul .user-show.show-4 {
+    display: block;
+}
 
 
+.sidebar .close-button {
+    position: absolute;
+    font-size: 30px;
+    right: 15px;
+    top: 10px;
+
+}
+
+.fa-bars {
+    top: 20px;
+    left: 30px;
+}
+
+@media (max-width: 1080px) {
+
+    .all-products .all-product {
+        font-size: 14px;
+    }
+
+    .all-products {
+        margin-top: 20px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .fa-bars {
+
+        top: 20px;
+        left: 15px;
+
+    }
+}
+
+/*--main-nav media query---*/
+
+@media (max-width: 1200px) {
+    .check-out {
+        display: flex;
+        position: absolute;
+        top: 85%;
+        right: -8%;
+        transform: translate(-50%, -50%);
+        font-family: 'Playfair Display SC', serif;
+        letter-spacing: 2px;
+    }
+}
+
+@media (max-width: 1080px) {
+
+    .main-nav {
+        display: none;
+    }
+
+    .no-image {
+        display: none;
+    }
+
+    .nav-bar .logo span {
+        display: none;
+    }
+
+
+    .company-name h1 {
+        font-size: 25px;
+
+    }
+
+    .company-name {
+        top: 65%;
+
+    }
+
+    .nav-bar .fa-bars {
+        display: initial;
+        top: 30px;
+        left: 20px;
+    }
+
+    .find {
+        display: none;
+    }
+
+    .nav-bar {
+        height: 80px;
+    }
+
+    .check-out {
+        top: 70%;
+        right: -5%;
+
+    }
+
+    .check-out-1 {
+        margin-top: 12px;
+
+    }
+
+    .check-out-2 {
+
+        display: none;
+    }
+
+    .fa-user {
+        margin-right: -10px;
+    }
+
+
+}
+
+@media (max-width: 850px) {
+    .check-out {
+        font-size: 14px;
+        margin-right: -2%;
+    }
+
+}
+
+@media (max-width: 767px) {
+    .check-out {
+        font-size: 14px;
+        margin-right: -2%;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+    .logo-2 span {
+        display: none;
+    }
+
+    .company-name h1 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .magic-font-1 {
+        font-size: 9px;
+        padding-top: 5px;
+        letter-spacing: 3px;
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .fa-bars {
+        top: 20px;
+        left: 15px;
+    }
+
+    .check-out {
+        font-size: 14px;
+        margin-right: -5%;
+    }
+
+
+    .company-name h1 {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .magic-font-1 {
+        font-size: 9px;
+        padding-top: 5px;
+        letter-spacing: 3px;
+        text-align: center;
+    }
+
+    .fa-user {
+        margin-right: -15px;
+    }
+
+}
+
+@media (max-width: 485px) {
+
+    .check-out {
+        font-size: 14px;
+        margin-right: -8%;
+
+    }
+
+    .nav-bar {
+        min-height: 88px;
+    }
+
+    .company-name h1 {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .magic-font-1 {
+        font-size: 7px;
+        padding-top: 5px;
+        letter-spacing: 3px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 485px) {
+
+    .check-out {
+        font-size: 14px;
+        margin-right: -11%;
+
+    }
+}
+
+@media (max-width:367px) {
+    
+    .fa-user {
+        margin-right: -20px;
+    }
+
+    .company-name h1 {
+        font-size: 14px;
+        text-align: center;
+        letter-spacing: 2px;
+    }
+
+    .magic-font-1 {
+        font-size: 7px;
+        padding-top: 5px;
+        letter-spacing: 3px;
+        text-align: center;
+    }
+
+    .check-out {
+        font-size: 12px;
+        margin-right: -14%;
+    }
+}
+
+@media (max-width: 320px) {
+
+    .check-out {
+        margin-right: -18%;
+    }
+}
+
+/*---delivery-message-*/
+
+.delivery-message {
+
+    color: white;
+    text-align: center;
+    justify-content: center;
+    font-family: 'Playfair Display SC', serif;
+    text-transform: capitalize;
+    letter-spacing: 3px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 40px;
+    background-color: black;
+}
+
+.delivery-message h6 {
+    position: absolute;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+}
+
+@media (max-width:1080px) {
+    .delivery-message {
+        margin-top: 10px;
+        height: 20px;
+    }
+
+    .delivery-message h6 {
+        font-size: 10px;
+        top: 50%;
+    }
+}
+
+@media (max-width:430px) {
+
+    .delivery-message h6 {
+        font-size: 9px;
+        top: 50%;
+
+    }
+
+    .delivery-message {
+
+        letter-spacing: 1px;
+    }
 }

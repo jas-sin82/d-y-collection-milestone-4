@@ -62,7 +62,7 @@
             <h1> David & Yenny<span class="magic-font magic-font-1">Collection since 2018</span></h1>
         </div>
         <nav>
-            
+            {% include 'includes/mobile-top-header.html' %}
             {% include 'includes/main-nav.html' %}
         </nav>
         <!--search bar -->
@@ -145,8 +145,45 @@
     {% endblock %}
 
     {% block postloadjs %}
-    {% endblock %}
+    
+    <script>
+    function openMenu() {
+        document.getElementById("menu_bar").style.width = "250px";
+        document.getElementById("menu_bar").style.left = "0px";
+    }
 
+    function closeMenu() {
+        document.getElementById("menu_bar").style.width = "0px";
+        document.getElementById("menu_bar").style.left = "-250px";
+    }
+
+    $(".men-btn").click(function () {
+        $("section ul .men-show").toggleClass("show-1");
+        $("section ul .rotate-two").toggleClass("rotate");
+    });
+
+    $(".women-btn").click(function () {
+        $("section ul .women-show").toggleClass("show-2");
+        $("section ul .rotate-three").toggleClass("rotate");
+    });
+
+    $(".bag-btn").click(function () {
+        $("section ul .bag-show").toggleClass("show-3");
+        $("section ul .rotate-four").toggleClass("rotate");
+    });
+    
+    $(".user-btn").click(function(){
+       $("section ul .user-show").toggleClass("show-4");
+       $("section ul .rotate-four").toggleClass("rotate");
+    });
+
+    $("nav ul li").click(function () {
+        $(this).addClass("active").siblings().removeClass("active");
+    });
+
+    </script>
+
+    {% endblock %}
 
 </body>
 

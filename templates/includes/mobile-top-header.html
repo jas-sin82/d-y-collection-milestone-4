@@ -1,0 +1,81 @@
+<section>
+<div class="sidebar " id="menu_bar">
+    <div class="close-button" onclick="closeMenu()">
+        <i class="fas fa-times"></i>
+    </div>
+    <h6 class="text-center"> David & Yenny <span class="magic-font">Collection since 2018</span></h6>
+    <hr class="color-red">
+    <!--search form of side bar-->
+    <div class="search-bar-1">
+        <form method="GET" action="">
+            <div class="input-group w-80 mt-5 p-2 ">
+                <input class="form-control border border-black rounded-0" type="text" name="q"
+                    placeholder="Search our site">
+                <div class="input-group-append">
+                    <button class="form-control btn btn-black border border-black rounded-0" type="submit">
+                        <span class="icon">
+                            <i class="fas fa-search"></i>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!--dropdown products and sub products-->
+    <ul class="all-products">
+        <li class="nav-item  ">
+            <a class=" font-weight-bold mr-5 all-product " href=""> All Products</a>
+        </li>
+        <li class="nav-item ">
+            <a class=" font-weight-bold   mr-5 men-btn all-product" href="#">Men <i
+                    class="fas fa-caret-down rotate-two"></i></a>
+            <ul class="men-show">
+                <li> <a href="" class="dropdown-item">T-Shirts</a></li>
+                <li> <a href="" class="dropdown-item">Jeans</a></li>
+                <li> <a href="" class="dropdown-item">Shirts</a></li>
+                <li> <a href="" class="dropdown-item">Blazers</a></li>
+            </ul>
+        </li>
+        <li class="nav-item">
+            <a class=" font-weight-bold   mr-5 women-btn all-product" href="#">Women <i
+                    class="fas fa-caret-down rotate-three"></i></a>
+            <ul class="women-show">
+                <li> <a href="" class="dropdown-item">Dresses</a></li>
+                <li> <a href="" class="dropdown-item">Jeans</a></li>
+                <li><a href="" class="dropdown-item">Blouses</a></li>
+                <li><a href="" class="dropdown-item">Skirts</a></li>
+            </ul>
+        </li>
+        <li class="nav-item">
+            <a class=" font-weight-bold   mr-5 bag-btn all-product" href="#">Bags <i
+                    class="fas fa-caret-down rotate-four"></i></a>
+            <ul class="bag-show">
+                <li><a href="" class="dropdown-item">Envelope Bags</a></li>
+                <li><a href="" class="dropdown-item">Handbags</a></li>
+                <li><a href="" class="dropdown-item">Shopping Bags</a></li>
+                <li><a href="" class="dropdown-item">Backpacks</a></li>
+                <li><a href="" class="dropdown-item">Briefcases</a></li>
+            </ul>
+        </li>
+        <li class="nav-item">
+            <a class="font-weight-bold all-product " href="#">Sale
+            </a>
+        </li>
+        <li class="nav-item user-account-mobile ">
+            <a class=" font-weight-bold   mr-5 user-btn  all-product" href="#"> My Account<i
+                    class="fas fa-caret-down rotate-two"></i></a>
+            <ul class="user-show">
+                {% if request.user.is_authenticated %}
+                    {% if request.user.is_superuser %}
+                        <li><a href="" class="dropdown-item">Product Management</a></li>
+                    {% endif %}
+                    <li><a href="" class="dropdown-item">My Profile</a></li>
+                    <li><a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a></li>
+                {% else %}
+                    <li><a href="{% url 'account_signup' %}" class="dropdown-item">Register</a></li>
+                    <li><a href="{% url 'account_login' %}" class="dropdown-item">Login</a></li>
+                {% endif %}
+        </li>
+    </ul>
+</div>
+</section>
