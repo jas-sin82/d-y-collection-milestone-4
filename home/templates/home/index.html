@@ -2,5 +2,18 @@
 {% load static %}
 
 {% block content %}
-    <h1 class="text-success">Hello world!</h1>
+<header class="img-hero text-center">
+    <div class="container-fluid ">
+        <div class="row">
+            <div class="col-12   ">
+                <img src="{{ MEDIA_URL }}media/hero-image-1.jpg" class="d-block w-100 " alt="crossfit">
+            </div>
+            <div class="main-box-heading text-center ">
+                <h1 class="title-owner "> David & Yenny</h1>
+                <h3 class="slogan mt-lg-4 mt-md-3 mt-sm-3">Boutique Fashion</h3>
+                <a class="shop-button btn btn-dark mt-lg-4 mt-md-4 mt-sm-4" href="">Shop Now</a>
+            </div>
+        </div>
+    </div>
+</header>
 {% endblock %}

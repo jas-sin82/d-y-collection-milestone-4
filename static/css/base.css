@@ -601,3 +601,157 @@ section ul .user-show.show-4 {
         letter-spacing: 1px;
     }
 }
+
+/*---Home page hero image---*/
+
+.img-hero {
+    margin-left: -15px;
+    margin-right: -15px;
+    position: relative;
+    margin-top: 160px;
+}
+
+.main-box-heading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Playfair Display SC', serif;
+    letter-spacing: 5px;
+
+
+}
+
+.title-owner {
+    font-size: 25px;
+    font-weight: 900;
+
+}
+
+.slogan {
+    font-size: 80px;
+    letter-spacing: 10px;
+    font-weight: 900;
+
+}
+
+.shop-button {
+    border: 1px solid black;
+    background: black;
+    color: white;
+    width: 200px;
+    opacity: 0.8;
+
+}
+
+.shop-button:hover {
+    background: orangered;
+    color: whitesmoke;
+    border: none;
+}
+
+/*---media query home page hero image---*/
+
+@media (max-width:1300px) {
+    .slogan {
+        font-size: 60px;
+        letter-spacing: 6px;
+    }
+}
+
+@media (max-width:1080px) {
+    .img-hero {
+        margin-left: -15px;
+        margin-right: -15px;
+        position: relative;
+        margin-top: 80px;
+    }
+}
+
+@media (max-width:1000px) {
+    .slogan {
+        font-size: 50px;
+        letter-spacing: 5px;
+    }
+
+    .shop-button {
+       letter-spacing: 3px;
+
+    }
+}
+
+@media (max-width:768px) {
+    .main-box-heading {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: 'Playfair Display SC', serif;
+        letter-spacing: 5px;
+    }
+
+    .slogan {
+        font-size: 35px;
+        letter-spacing: 6px;
+
+    }
+
+    .shop-button {
+        width: auto;
+
+    }
+
+    .title-owner {
+
+        font-size: 18px;
+    }
+}
+
+@media (max-width:600px) {
+    .slogan {
+        font-size: 30px;
+        letter-spacing: 4px;
+
+    }
+
+    .shop-button {
+        margin-top: 8px;
+        max-width: 150px;
+    }
+
+    .title-owner {
+
+        font-size: 16px;
+
+    }
+
+}
+
+
+@media (max-width:485px) {
+    .shop-button {
+        font-size: 10px;
+        max-width: 120px;
+    }
+}
+
+@media (max-width:400px) {
+
+    .slogan {
+        font-size: 24px;
+        letter-spacing: 3px;
+
+    }
+
+    .title-owner {
+
+        display: none;
+
+    }
+
+    .shop-button {
+        font-size: 10px;
+        max-width: 100px;
+
+    }
+}
