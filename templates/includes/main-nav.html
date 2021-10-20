@@ -10,10 +10,10 @@
                 Men
             </a>
             <ul class="dropdown-menu border-0" aria-labelledby="mens-link">
-                <li><a href="" class="dropdown-item">T-Shirts</a></li>
-                <li><a href="" class="dropdown-item">Jeans</a></li>
-                <li><a href="" class="dropdown-item">Shirts</a></li>
-                <li><a href="" class="dropdown-item">Blazers</a></li>
+                <li><a href="{% url 'products' %}?category=t-shirts&gender=m" class="dropdown-item">T-Shirts</a></li>
+                <li><a href="{% url 'products' %}?category=jeans&gender=m" class="dropdown-item">Jeans</a></li>
+                <li><a href="{% url 'products' %}?category=shirts&gender=m" class="dropdown-item">Shirts</a></li>
+                <li><a href="{% url 'products' %}?category=blazers&gender=m" class="dropdown-item">Blazers</a></li>
             </ul>
         </li>
         <li class="nav-item dropdown">
@@ -22,10 +22,10 @@
                 Women
             </a>
             <ul class="dropdown-menu border-0" aria-labelledby="womens-link">
-                <li><a href="" class="dropdown-item">Dresses</a></li>
-                <li><a href="" class="dropdown-item">Jeans</a></li>
-                <li><a href="" class="dropdown-item">Blouses</a></li>
-                <li><a href="" class="dropdown-item">Skirts</a></li>
+                <li><a href="{% url 'products' %}?category=dresses&gender=f" class="dropdown-item">Dresses</a></li>
+                <li><a href="{% url 'products' %}?category=jeans&gender=f" class="dropdown-item">Jeans</a></li>
+                <li><a href="{% url 'products' %}?category=blouse&gender=f" class="dropdown-item">Blouses</a></li>
+                <li><a href="{% url 'products' %}?category=skirts&gender=f" class="dropdown-item">Skirts</a></li>
             </ul>
         </li>
         <!--bag section--->
@@ -35,11 +35,11 @@
                 Bag
             </a>
             <ul class="dropdown-menu border-0" aria-labelledby="bags-link">
-                <li><a href="" class="dropdown-item">Envelope Bags</a></li>
-                <li><a href="" class="dropdown-item">Handbags</a></li>
-                <li><a href="" class="dropdown-item">Shopping Bags</a></li>
-                <li><a href="" class="dropdown-item">Backpacks</a></li>
-                <li><a href="" class="dropdown-item">Briefcases</a></li>
+                <li><a href="{% url 'products' %}?category=envelope bags" class="dropdown-item">Envelope Bags</a></li>
+                <li><a href="{% url 'products' %}?category=handbags" class="dropdown-item">Handbags</a></li>
+                <li><a href="{% url 'products' %}?category=shopping bags" class="dropdown-item">Shopping Bags</a></li>
+                <li><a href="{% url 'products' %}?category=backpacks" class="dropdown-item">Backpacks</a></li>
+                <li><a href="{% url 'products' %}?category=briefcases" class="dropdown-item">Briefcases</a></li>
             </ul>
         </li>
         <!--bag section end-->

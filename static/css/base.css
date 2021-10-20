@@ -755,3 +755,81 @@ section ul .user-show.show-4 {
 
     }
 }
+
+/*----------product page-----*/
+
+.product-page {
+   margin-top: 150px;
+}
+
+.product-heading {
+    font-family: 'Playfair Display SC', serif;
+
+}
+
+.card-footer {
+
+    box-shadow: 6px 6px 10px -1px rgb(0, 0, 0, 0.5),
+        -6px -6px 10px -1px rgb(255, 255, 255, 0.7);
+}
+
+.product-display,
+.product-display-1 {
+
+    font-family: 'Playfair Display SC', serif;
+}
+
+.btt-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+   background-color:orangered;
+   opacity: 0.9;
+}
+
+.btt-link {
+    cursor: pointer;
+    color:white;
+}
+
+.btt-link:hover {
+    color:white;
+}
+
+@media (max-width:1080px) {
+    .product-page {
+        margin-top: 60px;
+    }
+}
+
+@media (max-width:767px) {
+    .product-display {
+        margin-bottom: -80px;
+        font-size: 10px;
+    }
+
+    .product-display-1 {
+
+        font-size: 14px;
+    }
+}
+
+@media (max-width:580px) {
+    .product-display {
+        margin-top: 30px;
+        font-size: 9px;
+
+    }
+
+    .product-display-1 {
+        margin-top: -22px;
+        font-size: 14px;
+    }
+
+    .products-card {
+        margin-top: 30px;
+    }
+}
+
