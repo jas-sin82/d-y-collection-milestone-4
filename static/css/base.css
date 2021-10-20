@@ -8,9 +8,12 @@
     box-sizing: border-box;
 }
 
-::-webkit-scrollbar {
-    display: none;
+body,
+html {
+    overflow-x: hidden;
+    
 }
+
 
 /*---nav-bar---*/
 
@@ -786,6 +789,279 @@ section ul .user-show.show-4 {
     border: none;
     
 }
+
+/* home page men's and women's section---*/
+
+.heading-1 {
+    font-size: 50px;
+    font-family: 'Playfair Display SC', serif;
+    text-transform: capitalize;
+    font-weight: 700;
+}
+
+.img-hero-1 {
+    margin-left: -15px;
+    margin-right: -15px;
+    position: relative;
+
+}
+
+.main-box-heading-2 {
+    position: absolute;
+    top: 70%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    font-family: 'Playfair Display SC', serif;
+    letter-spacing: 5px;
+}
+
+.summer-dress {
+    height: 93.7%;
+}
+
+.title-owner-2 {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.slogan-2 {
+    font-size: 50px;
+    letter-spacing: 10px;
+    font-weight: 700;
+}
+
+.shop-button-2 {
+    border: none;
+    background: orangered;
+    color: whitesmoke;
+    width: 200px;
+}
+
+.shop-button-2:hover {
+    border: none;
+    background: whitesmoke;
+    color: orangered;
+}
+
+.main-box-heading-1 {
+    position: absolute;
+    top: 60%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    font-family: 'Playfair Display SC', serif;
+    letter-spacing: 2px;
+}
+
+.mens-dress {
+    height: 93.7%;
+
+}
+
+.title-owner-1 {
+    font-weight: 700;
+    font-size: 30px;
+    color: white;
+}
+
+.slogan-1 {
+    font-size: 50px;
+    letter-spacing: 10px;
+    font-weight: 700;
+    color: white;
+}
+
+.shop-button-3 {
+    border: 1px solid black;
+    background: black;
+    color: whitesmoke;
+    width: 200px;
+
+}
+
+.shop-button-3:hover {
+    border: none;
+    background: orangered;
+    color: whitesmoke;
+}
+
+@media (max-width: 1120px) {
+    .main-box-heading-1 {
+        position: absolute;
+        top: 60%;
+        left: 25%;
+        transform: translate(-50%, -50%);
+        font-family: 'Playfair Display SC', serif;
+        letter-spacing: 2px;
+    }
+
+    .title-owner-1 {
+        font-weight: 700;
+        font-size: 25px;
+    }
+
+    .slogan-1 {
+        font-size: 40px;
+        letter-spacing: 7px;
+        font-weight: 700;
+    }
+
+    .shop-button-2 {
+        background: orangered;
+        color: whitesmoke;
+        width: 200px;
+    }
+
+    .main-box-heading-2 {
+        position: absolute;
+        top: 65%;
+        left: 75%;
+        transform: translate(-50%, -50%);
+        font-family: 'Playfair Display SC', serif;
+        letter-spacing: 5px;
+    }
+
+    .summer-dress {
+        height: 93.7%;
+
+    }
+
+    .title-owner-2 {
+        font-size: 25px;
+        font-weight: 700;
+    }
+
+    .slogan-2 {
+        font-size: 40px;
+        letter-spacing: 6px;
+        font-weight: 700;
+    }
+
+    .shop-button-3 {
+        border: 1px solid white;
+        background: black;
+        color: whitesmoke;
+        width: 200px;
+    }
+}
+
+@media (max-width: 767px) {
+    .main-box-heading-1 {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: 'Playfair Display SC', serif;
+        letter-spacing: 2px;
+    }
+
+    h1.title-owner-1 {
+        font-weight: 700;
+        font-size: 20px;
+    }
+
+    h3.slogan-1 {
+        font-size: 35px;
+        letter-spacing: 7px;
+        font-weight: 700;
+    }
+
+    .shop-button-2 {
+        border: 1px solid black;
+        background: orangered;
+        color: whitesmoke;
+        max-width: 150px;
+    }
+
+    .main-box-heading-2 {
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: 'Playfair Display SC', serif;
+        letter-spacing: 5px;
+        
+    }
+
+    .summer-dress {
+        height: 93.7%;
+        
+    }
+
+    h1.title-owner-2 {
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    h3.slogan-2 {
+        font-size: 35x;
+        letter-spacing: 5px;
+        font-weight: 700;
+    }
+
+    .shop-button-3 {
+        border: 1px solid black;
+        background: black;
+        color: whitesmoke;
+        max-width: 150px;
+    }
+}
+
+@media (max-width:575px) {
+    .img-hero-1 {
+        margin-top: 20px;
+    }
+
+    .shop-button-3 {
+        border: 1px solid black;
+        background: black;
+        color: whitesmoke;
+        max-width: 150px;
+        margin-top: 8px;
+    }
+
+    .shop-button-2 {
+        border: 1px solid black;
+        background: orangered;
+        color: whitesmoke;
+        max-width: 150px;
+        margin-top: 8px;
+    }
+}
+
+@media (max-width:400px) {
+    .shop-button-2 {
+        font-size: 10px;
+        max-width: 100px;
+    }
+
+    .shop-button-3 {
+        font-size: 10px;
+        max-width: 120px;
+    }
+}
+
+@media (max-width:1000px) {
+    .heading {
+        font-size: 35px;
+    }
+
+    .heading-1 {
+        font-size: 35px;
+    }
+}
+
+@media (max-width:580px) {
+    .heading {
+        font-size: 20px;
+        margin-top: 20px;
+    }
+
+    .heading-1 {
+        font-size: 20px;
+        margin-top: 20px;
+    }
+}
+
 
 
 /*----------product page-----*/

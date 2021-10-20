@@ -12,7 +12,7 @@
             <div class="main-box-heading text-center ">
                 <h1 class="title-owner "> David & Yenny</h1>
                 <h3 class="slogan mt-lg-4 mt-md-3 mt-sm-3">Boutique Fashion</h3>
-                <a class="shop-button btn btn-dark mt-lg-4 mt-md-4 mt-sm-4" href="">Shop Now</a>
+                <a class="shop-button btn btn-dark mt-lg-4 mt-md-4 mt-sm-4" href="{% url 'products' %}">Shop Now</a>
             </div>
         </div>
     </div>
@@ -43,7 +43,7 @@
                     <img class="card-img-top " src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                 </a>
                 {% endif %}
-                <div class="card-body text-center pb-0">
+                <div class="card-body text-center small  pb-0">
                     <p class="mb-0">{{ product.name }}</p>
                 </div>
             </div>
@@ -51,27 +51,63 @@
         {% endfor %}
     </div>
 </section>
+<!--men's and women's collection section"-->
+<section>
+    <div class="container text-center  ">
+        <div class="row mt-lg-5 mt-md-4 mt-sm-4 ">
+            <div class="col-12 ">
+                <h2 class=" heading-1 "> D & Y Collection </h2>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="img-hero-1  text-center">
+    <div class="container-fluid ">
+        <div class="row mt-lg-5 mt-md-4 mt-sm-4">
+            <div class="col-md-6 p-0 ">
+                <a href="{% url 'products' %}?category=t-shirt&gender=m">
+                    <img src=" {{ MEDIA_URL }}media/men-tshirt-10.jpg" class="d-block w-100 mens-dress " alt="crossfit">
+                </a>
+            </div>
+            <div class="main-box-heading-1 text-center">
+                <h1 class="title-owner-1 ">Exclusive Fashion </h1>
+                <h3 class="slogan-1 mt-lg-4 ">Men's Fashion</h3>
+                <a class="shop-button-2 btn btn-dark mt-lg-4 mt-md-4 mt-sm-4"
+                    href="{% url 'products' %}?gender=m">Men's</a>
+            </div>
+            <div class="col-md-6 p-0 ">
+                <a href="{% url 'products' %}?category=blouse&gender=f">
+                    <img src=" {{ MEDIA_URL }}media/women-top-55.jpg" class="d-block w-100 summer-dress" alt="crossfit">
+                </a>
+            </div>
+            <div class="main-box-heading-2 text-center ">
+                <h1 class="title-owner-2 ">Best Collection</h1>
+                <h3 class="slogan-2 mt-lg-4">Women's Fashion</h3>
+                <a class="shop-button-3 btn btn-dark mt-lg-4 mt-md-4 mt-sm-4"
+                    href="{% url 'products' %}?gender=f">Women's</a>
+            </div>
+        </div>
+    </div>
+</section>
 {% endblock %}
 
 {% block postloadjs %}
 
 <script>
+    // Flickity  the carousel element
 
-// Flickity  the carousel element
+    var elem = document.querySelector('.carousel');
+    var flkty = new Flickity(elem, {
 
-var elem = document.querySelector('.carousel');
-var flkty = new Flickity( elem, {
- 
-  contain: true,
-  freeScroll: true,
-  wrapAround: true,
-  prevNextButtons: false,
-  pageDots: false,
-  autoPlay: true,
-  pauseAutoPlayOnHover: true
-  
-});
+        contain: true,
+        freeScroll: true,
+        wrapAround: true,
+        prevNextButtons: false,
+        pageDots: false,
+        autoPlay: true,
+        pauseAutoPlayOnHover: true
 
+    });
 </script>
 
-{% endblock %}  
+{% endblock %}
