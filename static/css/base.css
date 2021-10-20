@@ -1040,6 +1040,8 @@ section ul .user-show.show-4 {
     }
 }
 
+/* home page headings both new arrival and d & y collection---*/
+
 @media (max-width:1000px) {
     .heading {
         font-size: 35px;
@@ -1062,6 +1064,164 @@ section ul .user-show.show-4 {
     }
 }
 
+/*---- christmas sale timer */
+
+.sale-section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background: white;
+    color: white;
+}
+
+.christmas-sale {
+    height: 60%;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.sale-text {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Playfair Display SC', serif;
+    letter-spacing: 5px;
+    background-color: lightcoral;
+    box-shadow: 6px 6px 10px -1px rgb(0, 0, 0, 0.5),
+        -6px -6px 10px -1px rgb(255, 255, 255, 0.7);
+    min-width: 600px;
+    min-height: 400px;
+}
+
+.coming-soon {
+    margin-top: 80px;
+}
+
+.sale-text h2 {
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    color: white;
+
+}
+
+#sale-start {
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 10px;
+    color: white;
+    margin-top: 50px;
+}
+
+@media (max-width:1200px) {
+
+    .sale-text {
+        min-width: 400px;
+        min-height: 200px;
+    }
+
+    .sale-text h2 {
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: 5px;
+        color: white;
+    }
+
+    #sale-start {
+        font-size: 30px;
+        font-weight: 700;
+        letter-spacing: 10px;
+        color: white;
+        margin-top: 20px;
+    }
+
+    .coming-soon {
+        margin-top: 40px;
+    }
+
+}
+
+@media (max-width:600px) {
+
+    .sale-text h2 {
+        letter-spacing: 2px;
+        font-size: 18px;
+    }
+
+    .sale-text {
+        min-width: 200px;
+        min-height: 200px;
+    }
+
+    #sale-start {
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: 3px;
+        color: white;
+    }
+}
+
+
+@media (max-width:450px) {
+    .sale-text h2 {
+        letter-spacing: 2px;
+        font-size: 16px;
+    }
+
+    #sale-start {
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        color: white;
+    }
+
+}
+
+@media (max-width:400px) {
+
+    .sale-text {
+        min-width: 180px;
+        min-height: 180px;
+    }
+}
+
+@media (max-width:360px) {
+
+    .sale-text {
+        min-width: 160px;
+        min-height: 160px;
+    }
+
+    .coming-soon {
+        margin-top: 30px;
+    }
+}
+
+@media (max-width:320px) {
+
+    .sale-text {
+        min-width: 140px;
+        min-height: 140px;
+    }
+
+    .coming-soon {
+        margin-top: 20px;
+    }
+
+    .sale-text h2 {
+        letter-spacing: 1px;
+        font-size: 12px;
+    }
+
+    #sale-start {
+        font-size: 15px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        color: white;
+    }
+}
 
 
 /*----------product page-----*/
