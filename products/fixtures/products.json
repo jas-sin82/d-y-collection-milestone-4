@@ -1,0 +1,1364 @@
+[
+  {
+    "pk":1 ,
+    "model": "products.product",
+    "fields": {
+    "sku": "A82001",
+    "name": "Moleskine - Backpack",
+    "description": "Invest in classic models that you can use for a long time.The beautiful Backpack Design by Moleskine in black color is suitable for everyday.",
+    "price": 189.99,
+    "discount_percent": 15,
+    "category": 11,
+    "gender": "m",
+    "image_a": "men-bag-80.jpg",
+    "image_b": "men-bag-80-a.jpg",
+    "image_c": "men-bag-80-b.jpg",
+    "image_d": "men-bag-80-c.jpg"
+    }
+  },
+  {
+   "pk": 2,
+   "model": "products.product",
+   "fields": {
+   "sku": "A82002",
+   "name": " Men's Tommy Jeans ORIGINAL FINE SLIM FIT - Pike",
+   "description": "Invest in classic models that you can use for a long time.The Pike from Tommy in black iris color is suitable for both everyday and parties.100% cotton and 40 ° C machine wash",
+   "price": 60.99,
+   "discount_percent": 15,
+   "category": 1,
+   "gender": "m",
+    "image_a": "men-tshirt-2.jpg",
+   "image_b": "men-tshirt-2-a.jpg",
+   "image_c": "men-tshirt-2-b.jpg",
+   "image_d": "men-tshirt-2-c.jpg"
+   }
+ },
+ {
+  "pk": 3,
+  "model": "products.product",
+  "fields": {
+  "sku": "A82003",
+  "name": " Men's Tommy Jeans ORIGINAL FINE SLIM FIT - Pike",
+  "description": "Invest in classic models that you can use for a long time.The Pike from Tommy in black color is suitable for both everyday and parties.100% cotton and 40 ° C machine wash",
+   "price": 55.00,
+  "discount_percent": 15,
+  "category": 1,
+  "gender": "m",
+  "image_a": "men-tshirt-3.jpg",
+  "image_b": "men-tshirt-3-a.jpg",
+  "image_c": "men-tshirt-3-b.jpg",
+  "image_d": "men-tshirt-3-c.jpg"
+  }
+},
+{
+  "pk": 4,
+  "model": "products.product",
+  "fields": {
+  "sku": "A82004",
+  "name": " Casual Dress by David & Yenny ",
+  "description": "Invest in classic models that you can use for a long time.The Rounded Neck Dress,beautiful Floral design from Yenny & David in Cream color is suitable for both everyday and parties.100% cotton and 40 ° C machine wash",
+  "price": 50.99,
+  "discount_percent": 15,
+  "category": 5,
+  "gender": "f",
+  "image_a": "women-Dress-13.jpg",
+  "image_b": "women-Dress-13-a.jpg",
+  "image_c": "women-Dress-13-b.jpg",
+  "image_d": "women-Dress-13-c.jpg"
+  }
+},
+ {
+   "pk": 5,
+   "model": "products.product",
+   "fields": {
+   "sku": "A82005",
+   "name": "Men's Polo Ralph Lauren SLIM FIT MESH POLO SHIRT - Pike",
+   "description": "Invest in classic models that you can use for a long time.The Pike from Polo Ralph in andover heather color is suitable for both everyday and parties.100% cotton and 40 ° C machine wash",
+   "price": 79.99,
+   "discount_percent": 15,
+   "category": 1,
+   "gender": "m",
+   "image_a": "men-tshirt-5.jpg",
+   "image_b": "men-tshirt-5-a.jpg",
+   "image_c": "men-tshirt-5-b.jpg",
+   "image_d": "men-tshirt-5-c.jpg"
+   }
+ },
+  {
+   "pk": 6,
+   "model": "products.product",
+   "fields": {
+   "sku": "A82006",
+   "name": "Men's Polo Ralph Lauren SLIM FIT MESH POLO SHIRT - Pike",
+   "description": "Invest in classic models that you can use for a long time.The Pike from Polo Ralph in seafoam color is suitable for both everyday and parties.100% cotton and 40 ° C machine wash",
+   "price": 89.99,
+   "discount_percent": 15,
+   "category": 1,
+   "gender": "m",
+   "image_a": "men-tshirt-6.jpg",
+   "image_b": "men-tshirt-6-a.jpg",
+   "image_c": "men-tshirt-6-b.jpg",
+   "image_d": "men-tshirt-6-c.jpg"
+   }
+ },
+ {
+  "pk": 7,
+  "model": "products.product",
+  "fields": {
+  "sku": "A82007",
+  "name": " Casual Dress by David & Yenny ",
+  "description": "Invest in classic models that you can use for a long time.The Boat ring Neck, beautiful Floral design from Yenny & David in White color is suitable for both everyday and parties.90% polyester, 10% elastan and 40 ° C machine wash",
+  "price": 67.00,
+  "discount_percent": 15,
+  "category": 5,
+  "gender": "f",
+  "image_a": "women-Dress-15.jpg",
+  "image_b": "women-Dress-15-a.jpg",
+  "image_c": "women-Dress-15-b.jpg",
+  "image_d": "women-Dress-15-c.jpg"
+  }
+},
+ {
+   "pk": 8,
+   "model": "products.product",
+   "fields": {
+   "sku": "A82008",
+   "name": "Men's Lacoste T-shirt - bas",
+   "description": "Invest in classic models that you can use for a long time.The T-shirt from Lacoste in navy blue color is suitable for both everyday and parties.100% cotton and 40 ° C machine wash",
+   "price": 78.99,
+   "discount_percent": 15,
+   "category": 1,
+   "gender": "m",
+   "image_a": "men-tshirt-8.jpg",
+   "image_b": "men-tshirt-8-a.jpg",
+   "image_c": "men-tshirt-8-b.jpg",
+   "image_d": "men-tshirt-8-c.jpg"
+   }
+ },
+ {
+   "pk": 9,
+   "model": "products.product",
+   "fields": {
+   "sku": "A82009",
+   "name": "Men's Lacoste Pike",
+   "description": "Invest in classic models that you can use for a long time.The Pike from Lacoste in green color is suitable for both everyday and parties.100% cotton and 40 ° C machine wash",
+   "price": 90.00,
+   "discount_percent": 15,
+   "category": 1,
+   "gender": "m",
+   "image_a": "men-tshirt-9.jpg",
+   "image_b": "men-tshirt-9-a.jpg",
+   "image_c": "men-tshirt-9-b.jpg",
+   "image_d": "men-tshirt-9-c.jpg"
+   }
+ },
+ {
+  "pk": 10,
+  "model": "products.product",
+  "fields": {
+  "sku": "A82010",
+  "name": "Tiger of Sweden - Briefcases & Computer Bags",
+  "description": "Invest in classic models that you can use for a long time.The beautiful Briefcases & Computer Bags Design by Tiger of Sweden in black color is suitable for everyday office.",
+  "price": 270.99,
+  "discount_percent": 15,
+  "category": 12,
+  "gender": "m",
+  "image_a": "men-bag-74.jpg",
+  "image_b": "men-bag-74-a.jpg",
+  "image_c": "men-bag-74-b.jpg",
+  "image_d": "men-bag-74-c.jpg"
+  }
+},
+ {
+   "pk": 11,
+   "model": "products.product",
+   "fields": {
+   "sku": "A82011",
+   "name": "Men's GANT REGULAR STRIPE - Shirt",
+   "description": "Invest in classic models that you can use for a long time.The Shirt from GANT in clear blue color is suitable for both everyday and parties.100% cotton and 40 ° C machine wash",
+   "price": 80.99,
+   "discount_percent": 15,
+   "category": 3,
+   "gender": "m",
+   "image_a": "men-shirt-11.jpg",
+   "image_b": "men-shirt-11-a.jpg",
+   "image_c": "men-shirt-11-b.jpg",
+   "image_d": "men-shirt-11-c.jpg"
+   }
+ },
+ {
+  "pk": 12,
+  "model": "products.product",
+  "fields": {
+  "sku": "A82012",
+  "name": " Casual Dress by David & Yenny ",
+  "description": "Invest in classic models that you can use for a long time.The Rounded Neck Dress, Floral design from Yenny & David in White color is suitable for both everyday and parties.100% cotton and 40 ° C machine wash",
+  "price": 90.00,
+  "discount_percent": 15,
+  "category": 5,
+  "gender": "f",
+  "image_a": "women-Dress-12.jpg",
+  "image_b": "women-Dress-12-a.jpg",
+  "image_c": "women-Dress-12-b.jpg",
+  "image_d": "women-Dress-12-c.jpg"
+  }
+},
+{
+  "pk": 13,
+  "model": "products.product",
+  "fields": {
+  "sku": "A82013",
+  "name": "Men's Tommy Jeans ORIGINAL TEE REGULAR FIT - T-shirt - bas",
+  "description": "Invest in classic models that you can use for a long time. The t-shirt from Tommy in black iris color is suitable for both everyday and parties.100% cotton and 40 ° C machine wash",
+  "price": 29.99,
+  "discount_percent": 15,
+  "category": 1,
+  "gender": "m",
+  "image_a": "men-tshirt-4.jpg",
+  "image_b": "men-tshirt-4-a.jpg",
+  "image_c": "men-tshirt-4-b.jpg",
+  "image_d": "men-tshirt-4-c.jpg"
+  }
+},
+{
+  "pk": 14,
+  "model": "products.product",
+  "fields": {
+  "sku": "A82014",
+  "name": "JOOP! - Briefcases & Computer Bags",
+  "description": "Invest in classic models that you can use for a long time.The beautiful Briefcases & Computer Bags Design by JOOP! in black color is suitable for everyday office.",
+  "price": 230.99,
+  "discount_percent": 15,
+  "category": 12,
+  "gender": "m",
+  "image_a": "men-bag-79.jpg",
+  "image_b": "men-bag-79-a.jpg",
+  "image_c": "men-bag-79-b.jpg",
+  "image_d": "men-bag-79-c.jpg"
+  }
+},
+ {
+  "pk": 15,
+  "model": "products.product",
+  "fields": {
+  "sku": "A82015",
+  "name": "Men's Polo Ralph Lauren  Pike - bas",
+  "description": "Invest in classic models that you can use for a long time.The pike from Polo Ralph Lauren in white color is suitable for both everyday and parties.100% cotton and 40 ° C machine wash",
+  "price": 90.00,
+  "discount_percent": 15,
+  "category": 1,
+  "gender": "m",
+  "image_a": "men-tshirt-7.jpg",
+  "image_b": "men-tshirt-7-a.jpg",
+  "image_c": "men-tshirt-7-b.jpg",
+  "image_d": "men-tshirt-7-c.jpg"
+  }
+},
+ {
+  "pk": 16,
+  "model": "products.product",
+  "fields": {
+  "sku": "A82016",
+  "name": " Cocktail dress by David & Yenny ",
+  "description": "Invest in classic models that you can use for a long time.Only shoulders, beautiful design from Yenny & David in off White color is suitable for all type of parties.90% polyester, 10% elastan and 40 ° C machine wash",
+  "price": 70.99,
+  "discount_percent": 15,
+  "category": 5,
+  "gender": "f",
+  "image_a":"women-Dress-16.jpg",
+  "image_b":"women-Dress-16-a.jpg",
+  "image_c":"women-Dress-16-b.jpg",
+  "image_d":"women-Dress-16-c.jpg"
+  }
+},
+{
+  "pk": 17,
+  "model": "products.product",
+  "fields": {
+  "sku": "A82017",
+  "name": " Cocktail dress by David & Yenny ",
+  "description": "Invest in classic models that you can use for a long time.The Deep v-neck, beautiful design from Yenny & David in black color is suitable for all type of parties.90% polyester, 10% elastan and 40 ° C machine wash",
+  "price": 80.99,
+  "discount_percent": 15,
+  "category": 5,
+  "gender": "f",
+  "image_a": "women-Dress-17.jpg",
+  "image_b": "women-Dress-17-a.jpg",
+  "image_c": "women-Dress-17-b.jpg",
+  "image_d": "women-Dress-17-c.jpg"
+  }
+},
+{
+  "pk": 18,
+  "model": "products.product",
+  "fields": {
+  "sku": "A82018",
+  "name": "Sandqvist - Backpack",
+  "description": "Invest in classic models that you can use for a long time.The beautiful Backpack Design by Sandqvist in black color is suitable for everyday.",
+  "price": 190.99,
+  "discount_percent": 15,
+  "category": 11,
+  "gender": "m",
+  "image_a": "men-bag-71.jpg",
+  "image_b": "men-bag-71-a.jpg",
+  "image_c": "men-bag-71-b.jpg",
+  "image_d": "men-bag-71-c.jpg"
+  }
+},
+{
+  "pk": 19,
+  "model": "products.product",
+  "fields": {
+  "sku": "A82019",
+  "name": " Halter Neck Braided Belt Dress - Jersey dress by David & Yenny ",
+  "description": "Invest in classic models that you can use for a long time.The beautiful design from Yenny & David in scarab color is suitable for all type of parties.90% polyester, 10% elastan and 40 ° C machine wash",
+  "price": 80.00,
+  "discount_percent": 15,
+  "category": 5,
+  "gender": "f",
+  "image_a": "women-Dress-19.jpg",
+  "image_b": "women-Dress-19-a.jpg",
+  "image_c": "women-Dress-19-b.jpg",
+  "image_d": "women-Dress-19-c.jpg"
+  }
+},
+{
+  "pk": 20,
+  "model": "products.product",
+  "fields": {
+  "sku": "A82020",
+  "name": " Cocktail dress - by David & Yenny ",
+  "description": "Invest in classic models that you can use for a long time.The Deep ringed back, beautiful design from Yenny & David in ink color is suitable for all type of parties.90% polyester, 10% elastan and 40 ° C machine wash",
+  "price": 95.00,
+  "discount_percent": 15,
+  "category": 5,
+  "gender": "f",
+  "image_a": "women-Dress-20.jpg",
+  "image_b": "women-Dress-20-a.jpg",
+  "image_c": "women-Dress-20-b.jpg",
+  "image_d": "women-Dress-20-c.jpg"
+  }
+},
+{
+  "pk": 21,
+  "model": "products.product",
+  "fields": {
+  "sku": "A82021",
+  "name": "Men's Suit shirt - by David & Yenny",
+  "description": "Invest in classic models that you can use for a long time.The beautiful Shirt Design by David & Yenny in black color is suitable for both everyday and parties.100% cotton and 40 ° C machine wash",
+  "price": 50.00,
+  "discount_percent": 15,
+  "category": 3,
+  "gender": "m",
+  "image_a": "men-shirt-21.jpg",
+  "image_b": "men-shirt-21-a.jpg",
+  "image_c": "men-shirt-21-b.jpg",
+  "image_d": "men-shirt-21-c.jpg"
+  }
+},
+{
+  "pk": 22,
+  "model": "products.product",
+  "fields": {
+  "sku": "A82022",
+  "name": "Men's Suit shirt - by David & Yenny",
+  "description": "Invest in classic models that you can use for a long time.The beautiful Shirt Design by David & Yenny in dark blue color is suitable for both everyday and parties.100% cotton and 40 ° C machine wash",
+  "price": 50.99,
+  "discount_percent": 15,
+  "category": 3,
+  "gender": "m",
+  "image_a":"men-shirt-22.jpg",
+  "image_b":"men-shirt-22-a.jpg",
+  "image_c":"men-shirt-22-b.jpg",
+  "image_d":"men-shirt-22-c.jpg"
+  }
+},
+{
+  "pk": 23,
+  "model": "products.product",
+  "fields": {
+  "sku": "A82023",
+  "name": "Men's Suit shirt - by David & Yenny",
+  "description": "Invest in classic models that you can use for a long time.The beautiful Shirt Design by David & Yenny in blue color is suitable for both everyday and parties.100% cotton and 40 ° C machine wash",
+  "price": 50.05,
+  "discount_percent": 15,
+  "category": 3,
+  "gender": "m",
+  "image_a": "men-shirt-23.jpg",
+  "image_b": "men-shirt-23-a.jpg",
+  "image_c": "men-shirt-23-b.jpg",
+  "image_d": "men-shirt-23-c.jpg"
+  }
+},
+{
+  "pk": 24,
+  "model": "products.product",
+  "fields": {
+  "sku": "A82024",
+  "name": "Men's shirt - by David & Yenny",
+  "description": "Invest in classic models that you can use for a long time.The beautiful Shirt Design by David & Yenny in original color is suitable for both everyday and parties.100% cotton and 40 ° C machine wash",
+  "price": 40.99,
+  "discount_percent": 15,
+  "category": 3,
+  "gender": "m",
+  "image_a": "men-shirt-24.jpg",
+  "image_b": "men-shirt-24-a.jpg",
+  "image_c": "men-shirt-24-b.jpg",
+  "image_d": "men-shirt-24-c.jpg"
+  }
+},
+{
+  "pk": 25,
+  "model": "products.product",
+  "fields": {
+  "sku": "A82025",
+  "name": "Men's Slim Fit-Shirt - by David & Yenny",
+  "description": "Invest in classic models that you can use for a long time.The beautiful Shirt Design by David & Yenny in white color is suitable for both everyday and parties.100% cotton and 40 ° C machine wash",
+  "price": 50.05,
+  "discount_percent": 15,
+  "category": 3,
+  "gender": "m",
+  "image_a":"men-shirt-25.jpg",
+  "image_b":"men-shirt-25-a.jpg",
+  "image_c":"men-shirt-25-b.jpg",
+  "image_d":"men-shirt-25-c.jpg"
+  }
+},
+{
+  "pk": 26,
+  "model": "products.product",
+  "fields": {
+  "sku": "A82026",
+  "name": "Men's Jeans Slim Fit - by David & Yenny",
+  "description": "Invest in classic models that you can use for a long time.The beautiful Jean Design by David & Yenny in blue denim.100% cotton and 40 ° C machine wash",
+  "price": 60.99,
+  "discount_percent": 15,
+  "category": 2,
+  "gender": "m",
+  "image_a": "men-jean-26.jpg",
+  "image_b": "men-jean-26-a.jpg",
+  "image_c": "men-jean-26-b.jpg",
+  "image_d": "men-jean-26-c.jpg"
+  }
+},
+{
+  "pk": 27,
+  "model": "products.product",
+  "fields": {
+  "sku": "A82027",
+  "name": "Men's Jeans straight leg - by David & Yenny",
+  "description": "Invest in classic models that you can use for a long time.The beautiful Jean Design by David & Yenny in blue denim.100% cotton and 40 ° C machine wash",
+  "price": 70.00,
+  "discount_percent": 15,
+  "category": 2,
+  "gender": "m",
+  "image_a": "men-jean-27.jpg",
+  "image_b": "men-jean-27-a.jpg",
+  "image_c": "men-jean-27-b.jpg",
+  "image_d": "men-jean-27-c.jpg"
+  }
+},
+{
+  "pk": 28,
+  "model": "products.product",
+  "fields": {
+  "sku": "A82028",
+  "name": "Men's Jeans slim fit - by David & Yenny",
+  "description": "Invest in classic models that you can use for a long time.The beautiful Jean Design by David & Yenny in pure indigo color.100% cotton and 40 ° C machine wash",
+  "price": 50.99,
+  "discount_percent": 15,
+  "category": 2,
+  "gender": "m",
+  "image_a": "men-jean-28.jpg",
+  "image_b": "men-jean-28-a.jpg",
+  "image_c": "men-jean-28-b.jpg",
+  "image_d": "men-jean-28-c.jpg"
+  }
+},
+{
+  "pk": 29,
+  "model": "products.product",
+  "fields": {
+  "sku": "A82029",
+  "name": "Men's Jeans slim fit - by David & Yenny",
+  "description": "Invest in classic models that you can use for a long time.The beautiful Jean Design by David & Yenny in aspen dark blue color stretch.100% cotton and 40 ° C machine wash",
+  "price": 70.05,
+  "discount_percent": 15,
+  "category": 2,
+  "gender": "m",
+  "image_a":"men-jean-29.jpg",
+  "image_b":"men-jean-29-a.jpg",
+  "image_c":"men-jean-29-b.jpg",
+  "image_d":"men-jean-29-c.jpg"
+  }
+},
+{
+  "pk": 30,
+  "model": "products.product",
+  "fields": {
+  "sku": "A82030",
+  "name": "Men's Jeans slim fit - by David & Yenny",
+  "description": "Invest in classic models that you can use for a long time.The beautiful Jean Design by David & Yenny in soft blue color.100% cotton and 40 ° C machine wash",
+  "price": 60.99,
+  "discount_percent": 15,
+  "category": 2,
+  "gender": "m",
+  "image_a": "men-jean-30.jpg",
+  "image_b": "men-jean-30-a.jpg",
+  "image_c": "men-jean-30-b.jpg",
+  "image_d": "men-jean-30-c.jpg"
+  }
+},
+{
+  "pk": 31,
+  "model": "products.product",
+  "fields": {
+  "sku": "A82031",
+  "name": "Women's Jeans slim fit - by David & Yenny",
+  "description": "Invest in classic models that you can use for a long time.The beautiful Jean Design by David & Yenny in soft blue color.100% cotton and 40 ° C machine wash",
+  "price": 70.00,
+  "discount_percent": 15,
+  "category": 2,
+  "gender": "f",
+  "image_a": "women-jean-31.jpg",
+  "image_b": "women-jean-31-a.jpg",
+  "image_c": "women-jean-31-b.jpg",
+  "image_d": "women-jean-31-c.jpg"
+  }
+},
+{
+  "pk": 32,
+  "model": "products.product",
+  "fields": {
+  "sku": "A82032",
+  "name": "Women's Jeans slim fit - by David & Yenny",
+  "description": "Invest in classic models that you can use for a long time.The beautiful Jean Design by David & Yenny in medium blue denim.100% cotton and 40 ° C machine wash",
+  "price": 50.99,
+  "discount_percent": 15,
+  "category": 2,
+  "gender": "f",
+  "image_a": "women-jean-32.jpg",
+  "image_b": "women-jean-32-a.jpg",
+  "image_c": "women-jean-32-b.jpg",
+  "image_d": "women-jean-32-c.jpg"
+  }
+},
+{
+  "pk": 33,
+  "model": "products.product",
+  "fields": {
+  "sku": "A82033",
+  "name": "Women's Jeans slim fit - by David & Yenny",
+  "description": "Invest in classic models that you can use for a long time.The beautiful Jean Design by David & Yenny in medium blue denim.100% cotton and 40 ° C machine wash",
+  "price": 55.05,
+  "discount_percent": 15,
+  "category": 2,
+  "gender": "f",
+  "image_a": "women-jean-33.jpg",
+  "image_b": "women-jean-33-a.jpg",
+  "image_c": "women-jean-33-b.jpg",
+  "image_d": "women-jean-33-c.jpg"
+  }
+},
+{
+  "pk": 34,
+  "model": "products.product",
+  "fields": {
+  "sku": "A82034",
+  "name": "BOSS - Briefcases & Computer Bags",
+  "description": "Invest in classic models that you can use for a long time.The beautiful Briefcases & Computer Bags Design by BOSS in black color is suitable for everyday office.",
+  "price": 490.99,
+  "discount_percent": 15,
+  "category": 12,
+  "gender": "m",
+  "image_a": "men-bag-75.jpg",
+  "image_b": "men-bag-75-a.jpg",
+  "image_c": "men-bag-75-b.jpg",
+  "image_d": "men-bag-75-c.jpg"
+  }
+},
+
+{
+  "pk": 35,
+  "model": "products.product",
+  "fields": {
+  "sku": "A82035",
+  "name": "Women's Jeans slim fit - by David & Yenny",
+  "description": "Invest in classic models that you can use for a long time.The beautiful Jean Design by David & Yenny in medium blue denim.100% cotton and 40 ° C machine wash",
+  "price": 60.98,
+  "discount_percent": 15,
+  "category": 2,
+  "gender": "f",
+  "image_a": "women-jean-35.jpg",
+  "image_b": "women-jean-35-a.jpg",
+  "image_c": "women-jean-35-b.jpg",
+  "image_d": "women-jean-35-c.jpg"
+  }
+},
+{
+  "pk": 36,
+  "model": "products.product",
+  "fields": {
+  "sku": "A82036",
+  "name": "Women's Jeans slim fit - by David & Yenny",
+  "description": "Invest in classic models that you can use for a long time.The beautiful Jean Design by David & Yenny in light blue denim.100% cotton and 40 ° C machine wash",
+  "price": 65.00,
+  "discount_percent": 15,
+  "category": 2,
+  "gender": "f",
+  "image_a": "women-jean-36.jpg",
+  "image_b": "women-jean-36-a.jpg",
+  "image_c": "women-jean-36-b.jpg",
+  "image_d": "women-jean-36-c.jpg"
+  }
+},
+{
+  "pk": 37,
+  "model": "products.product",
+  "fields": {
+  "sku": "A82037",
+  "name": " Men's smart casual blazers - by David & Yenny",
+  "description": "Invest in classic models that you can use for a long time.The beautiful Blazer Design by David & Yenny in green color has a reverse collar, long sleeves, single-breasted with button closure, three pockets.100% cotton.",
+  "price": 300.00,
+  "discount_percent": 15,
+  "category": 4,
+  "gender": "m",
+  "image_a": "men-blazer-37.jpg",
+  "image_b": "men-blazer-37-a.jpg",
+  "image_c": "men-blazer-37-b.jpg",
+  "image_d": "men-blazer-37-c.jpg"
+  }
+},
+{
+  "pk": 38,
+  "model": "products.product",
+  "fields": {
+  "sku": "A82038",
+  "name": " Men's smart casual blazers - by David & Yenny",
+  "description": "Invest in classic models that you can use for a long time.The beautiful Blazer Design by David & Yenny in grey color has a reverse collar, long sleeves, single-breasted with button closure, three pockets.100% cotton.",
+  "price": 350.00,
+  "discount_percent": 15,
+  "category": 4,
+  "gender": "m",
+  "image_a": "men-blazer-38.jpg",
+  "image_b": "men-blazer-38-a.jpg",
+  "image_c": "men-blazer-38-b.jpg",
+  "image_d": "men-blazer-38-c.jpg"
+  }
+},
+{
+  "pk": 39,
+  "model": "products.product",
+  "fields": {
+  "sku": "A82039",
+  "name": "Moleskine - Backpack",
+  "description": "Invest in classic models that you can use for a long time.The beautiful Backpack Design by Moleskine in black color is suitable for everyday.",
+  "price": 180.99,
+  "discount_percent": 15,
+  "category": 11,
+  "gender": "m",
+  "image_a": "men-bag-73.jpg",
+  "image_b": "men-bag-73-a.jpg",
+  "image_c": "men-bag-73-b.jpg",
+  "image_d": "men-bag-73-c.jpg"
+  }
+},
+{
+  "pk": 40,
+  "model": "products.product",
+  "fields": {
+  "sku": "A82040",
+  "name": " Men's blazers - by David & Yenny",
+  "description": "Invest in classic models that you can use for a long time.The beautiful Blazer Design by David & Yenny in grey color has a reverse collar, long sleeves, single-breasted with button closure, three pockets.100% cotton.",
+  "price": 230.00,
+  "discount_percent": 15,
+  "category": 4,
+  "gender": "m",
+  "image_a": "men-blazer-40.jpg",
+  "image_b": "men-blazer-40-a.jpg",
+  "image_c": "men-blazer-40-b.jpg",
+  "image_d": "men-blazer-40-c.jpg"
+  }
+},
+{
+  "pk": 41,
+  "model": "products.product",
+  "fields": {
+  "sku": "A82041",
+  "name": " Men's blazers - by David & Yenny",
+  "description": "Invest in classic models that you can use for a long time.The beautiful Blazer Design by David & Yenny in blue color has a reverse collar, long sleeves, single-breasted with button closure, three pockets.100% cotton.",
+  "price": 240.90,
+  "discount_percent": 15,
+  "category": 4,
+  "gender": "m",
+  "image_a": "men-blazer-41.jpg",
+  "image_b": "men-blazer-41-a.jpg",
+  "image_c": "men-blazer-41-b.jpg",
+  "image_d": "men-blazer-41-c.jpg"
+  }
+},
+{
+  "pk": 42,
+  "model": "products.product",
+  "fields": {
+  "sku": "A82042",
+  "name": "Emporio Armani - Briefcases & Computer Bags",
+  "description": "Invest in classic models that you can use for a long time.The beautiful Briefcases & Computer Bags Design by Emporio Armani in black color is suitable for everyday office.",
+  "price": 280.99,
+  "discount_percent": 15,
+  "category": 12,
+  "gender": "m",
+  "image_a": "men-bag-78.jpg",
+  "image_b": "men-bag-78-a.jpg",
+  "image_c": "men-bag-78-b.jpg",
+  "image_d": "men-bag-78-c.jpg"
+  }
+},
+{
+  "pk": 43,
+  "model": "products.product",
+  "fields": {
+  "sku": "A82043",
+  "name": " Men's blazers - by David & Yenny",
+  "description": "Invest in classic models that you can use for a long time.The beautiful Blazer Design by David & Yenny in brown color has a reverse collar, long sleeves, single-breasted with button closure, three pockets.100% cotton.",
+  "price": 220.90,
+  "discount_percent": 15,
+  "category": 4,
+  "gender": "m",
+  "image_a": "men-blazer-43.jpg",
+  "image_b": "men-blazer-43-a.jpg",
+  "image_c": "men-blazer-43-b.jpg",
+  "image_d": "men-blazer-43-c.jpg"
+  }
+},
+{
+  "pk": 44,
+  "model": "products.product",
+  "fields": {
+  "sku": "A82044",
+  "name": " Men's blazers - by David & Yenny",
+  "description": "Invest in classic models that you can use for a long time.The beautiful Blazer Design by David & Yenny in grey color has a reverse collar, long sleeves, single-breasted with button closure, three pockets.100% cotton.",
+  "price": 200.00,
+  "discount_percent": 15,
+  "category": 4,
+  "gender": "m",
+  "image_a": "men-blazer-44.jpg",
+  "image_b": "men-blazer-44-a.jpg",
+  "image_c": "men-blazer-44-b.jpg",
+  "image_d": "men-blazer-44-c.jpg"
+  }
+},
+{
+  "pk": 45,
+  "model": "products.product",
+  "fields": {
+  "sku": "A82045",
+  "name": " Skirt - by David & Yenny",
+  "description": "Invest in classic models that you can use for a long time.The beautiful skirt Design by David & Yenny in stone color is suitable for both everyday and parties.70% viscose, 30% polyimide, and 40 ° C machine wash",
+  "price": 40.99,
+  "discount_percent": 15,
+  "category": 6,
+  "gender": "f",
+  "image_a": "women-skirt-45.jpg",
+  "image_b": "women-skirt-45-a.jpg",
+  "image_c": "women-skirt-45-b.jpg",
+  "image_d": "women-skirt-45-c.jpg"
+  }
+},
+{
+  "pk": 46,
+  "model": "products.product",
+  "fields": {
+  "sku": "A82046",
+  "name": " Wrap skirt - by David & Yenny",
+  "description": "Invest in classic models that you can use for a long time.The beautiful skirt Design by David & Yenny in black color is suitable for both everyday and parties.71% polyester, 22% viscose.",
+  "price": 30.98,
+  "discount_percent": 15,
+  "category": 6,
+  "gender": "f",
+  "image_a": "women-skirt-46.jpg",
+  "image_b": "women-skirt-46-a.jpg",
+  "image_c": "women-skirt-46-b.jpg",
+  "image_d": "women-skirt-46-c.jpg"
+  }
+},
+{
+  "pk": 47,
+  "model": "products.product",
+  "fields": {
+  "sku": "A82047",
+  "name": "BOSS - Briefcases & Computer Bags",
+  "description": "Invest in classic models that you can use for a long time.The beautiful Briefcases & Computer Bags Design by BOSS in black color is suitable for everyday office.",
+  "price": 580.99,
+  "discount_percent": 15,
+  "category": 12,
+  "gender": "m",
+  "image_a": "men-bag-77.jpg",
+  "image_b": "men-bag-77-a.jpg",
+  "image_c": "men-bag-77-b.jpg",
+  "image_d": "men-bag-77-c.jpg"
+  }
+},
+{
+  "pk": 48,
+  "model": "products.product",
+  "fields": {
+  "sku": "A82048",
+  "name": " Mini skirt - by David & Yenny",
+  "description": "Invest in classic models that you can use for a long time.The beautiful skirt Design by David & Yenny in black color is suitable for both everyday and parties.70% viscose, 30% polyamide",
+  "price": 150.00,
+  "discount_percent": 15,
+  "category": 6,
+  "gender": "f",
+  "image_a": "women-skirt-48.jpg",
+  "image_b": "women-skirt-48-a.jpg",
+  "image_c": "women-skirt-48-b.jpg",
+  "image_d": "women-skirt-48-c.jpg"
+  }
+},
+{
+  "pk": 49,
+  "model": "products.product",
+  "fields": {
+  "sku": "A82049",
+  "name": " Mini skirt - by David & Yenny",
+  "description": "Invest in classic models that you can use for a long time.The beautiful skirt Design by David & Yenny in black color is suitable for both everyday and parties , Zipper and plug pockets.75% polyester, 25% viscose.",
+  "price": 39.05,
+  "discount_percent": 15,
+  "category": 6,
+  "gender": "f",
+  "image_a": "women-skirt-49.jpg",
+  "image_b": "women-skirt-49-a.jpg",
+  "image_c": "women-skirt-49-b.jpg",
+  "image_d": "women-skirt-49-c.jpg"
+  }
+},
+{
+  "pk": 50,
+  "model": "products.product",
+  "fields": {
+  "sku": "A82050",
+  "name": " Mini skirt - by David & Yenny",
+  "description": "Invest in classic models that you can use for a long time.The beautiful skirt Design by David & Yenny in black color is suitable for both everyday and parties. 95% polyester, 5% elastane  and 30 ° C machine wash.",
+  "price": 49.99,
+  "discount_percent": 15,
+  "category": 6,
+  "gender": "f",
+  "image_a": "women-skirt-50.jpg",
+  "image_b": "women-skirt-50-a.jpg",
+  "image_c": "women-skirt-50-b.jpg",
+  "image_d": "women-skirt-50-c.jpg"
+  }
+},
+{
+  "pk": 51,
+  "model": "products.product",
+  "fields": {
+  "sku": "A82051",
+  "name": " Floral A-line dress - by David & Yenny",
+  "description": "Invest in classic models that you can use for a long time.The beautiful Floral Design by David & Yenny in black color is suitable for both everyday and parties. 95% polyester, 5% elastane  and 30 ° C machine wash.",
+  "price": 45.00,
+  "discount_percent": 15,
+  "category": 6,
+  "gender": "f",
+  "image_a": "women-skirt-51.jpg",
+  "image_b": "women-skirt-51-a.jpg",
+  "image_c": "women-skirt-51-b.jpg",
+  "image_d": "women-skirt-51-c.jpg"
+  }
+},
+{
+  "pk": 52,
+  "model": "products.product",
+  "fields": {
+  "sku": "A82052",
+  "name": "Geometric Pattern Blouse - by David & Yenny",
+  "description": "Invest in classic models that you can use for a long time.The beautiful rounded neck blouse Design by David & Yenny in schwarz color is suitable for both everyday and parties. 100% polyester and 30 ° C machine wash.",
+  "price": 48.00,
+  "discount_percent": 15,
+  "category": 7,
+  "gender": "f",
+  "image_a": "women-top-52.jpg",
+  "image_b": "women-top-52-a.jpg",
+  "image_c": "women-top-52-b.jpg",
+  "image_d": "women-top-52-c.jpg"
+  }
+},
+{
+  "pk": 53,
+  "model": "products.product",
+  "fields": {
+  "sku": "A82053",
+  "name": "VIVI - Blouse - by David & Yenny",
+  "description": "Invest in classic models that you can use for a long time.The beautiful rounded neck blouse Design by David & Yenny in pitch black color is suitable for both everyday and parties. 70% cotton, 30% acrylic and 30 ° C machine wash.",
+  "price": 45.99,
+  "discount_percent": 15,
+  "category": 7,
+  "gender": "f",
+  "image_a": "women-top-53.jpg",
+  "image_b": "women-top-53-a.jpg",
+  "image_c": "women-top-53-b.jpg",
+  "image_d": "women-top-53-c.jpg"
+  }
+},
+{
+  "pk": 54,
+  "model": "products.product",
+  "fields": {
+  "sku": "A82054",
+  "name": "Blouse - by David & Yenny",
+  "description": "Invest in classic models that you can use for a long time.The beautiful v neck blouse Design by David & Yenny in off-white color is suitable for both everyday and parties. 100% polyester and 30 ° C machine wash.",
+  "price": 48.99,
+  "discount_percent": 15,
+  "category": 7,
+  "gender": "f",
+  "image_a": "women-top-54.jpg",
+  "image_b": "women-top-54-a.jpg",
+  "image_c": "women-top-54-b.jpg",
+  "image_d": "women-top-54-c.jpg"
+  }
+},
+{
+  "pk": 55,
+  "model": "products.product",
+  "fields": {
+  "sku": "A82055",
+  "name": "Top - by David & Yenny",
+  "description": "Invest in classic models that you can use for a long time.The beautiful deep v neck top Design by David & Yenny in green color is suitable for both everyday and parties. 100% polyester and 30 ° C machine wash.",
+  "price": 55.99,
+  "discount_percent": 15,
+  "category": 7,
+  "gender": "f",
+  "image_a": "women-top-55.jpg",
+  "image_b": "women-top-55-a.jpg",
+  "image_c": "women-top-55-b.jpg",
+  "image_d": "women-top-55-c.jpg"
+  }
+},
+{
+  "pk": 56,
+  "model": "products.product",
+  "fields": {
+  "sku": "A82056",
+  "name": "Top With wide Straps - by David & Yenny",
+  "description": "Invest in classic models that you can use for a long time.The beautiful deep v neck top with Floral Design by David & Yenny in dark blue color is suitable for both everyday and parties. 100% polyester and 30 ° C machine wash.",
+  "price": 60.99,
+  "discount_percent": 15,
+  "category": 7,
+  "gender": "f",
+  "image_a": "women-top-56.jpg",
+  "image_b": "women-top-56-a.jpg",
+  "image_c": "women-top-56-b.jpg",
+  "image_d": "women-top-56-c.jpg"
+  }
+},
+{
+  "pk": 57,
+  "model": "products.product",
+  "fields": {
+  "sku": "A82057",
+  "name": "Blouse - by David & Yenny",
+  "description": "Invest in classic models that you can use for a long time.The beautiful Shawl collar blouse Design by David & Yenny in off-white color is suitable for both everyday and parties. 100% polyester and 30 ° C machine wash.",
+  "price": 52.99,
+  "discount_percent": 15,
+  "category": 7,
+  "gender": "f",
+  "image_a": "women-top-57.jpg",
+  "image_b": "women-top-57-a.jpg",
+  "image_c": "women-top-57-b.jpg",
+  "image_d": "women-top-57-c.jpg"
+  }
+},
+{
+  "pk": 58,
+  "model": "products.product",
+  "fields": {
+  "sku": "A82058",
+  "name": "Blouse - by David & Yenny",
+  "description": "Invest in classic models that you can use for a long time.The beautiful Wrap ring blouse Design by David & Yenny in  neon pink color is suitable for both everyday and parties. 100% polyester and 30 ° C machine wash.",
+  "price": 49.99,
+  "discount_percent": 15,
+  "category": 7,
+  "gender": "f",
+  "image_a": "women-top-58.jpg",
+  "image_b": "women-top-58-a.jpg",
+  "image_c": "women-top-58-b.jpg",
+  "image_d": "women-top-58-c.jpg"
+  }
+},
+{
+  "pk": 59,
+  "model": "products.product",
+  "fields": {
+  "sku": "A82059",
+  "name": "Michael Kors - Envelope bag",
+  "description": "Invest in classic models that you can use for a long time.The beautiful Envelope bag Design by Michael Kors in brown color is suitable for both everyday and parties.",
+  "price": 150.99,
+  "discount_percent": 15,
+  "category": 8,
+  "gender": "f",
+  "image_a": "women-bag-59.jpg",
+  "image_b": "women-bag-59-a.jpg",
+  "image_c": "women-bag-59-b.jpg",
+  "image_d": "women-bag-59-c.jpg"
+  }
+},
+{
+  "pk": 60,
+  "model": "products.product",
+  "fields": {
+  "sku": "A82060",
+  "name": "Michael Kors - Handbag",
+  "description": "Invest in classic models that you can use for a long time.The beautiful Handbag bag Design by Michael Kors in brown color is suitable for both everyday and parties.",
+  "price": 190.99,
+  "discount_percent": 15,
+  "category": 9,
+  "gender": "f",
+  "image_a": "women-bag-60.jpg",
+  "image_b": "women-bag-60-a.jpg",
+  "image_c": "women-bag-60-b.jpg",
+  "image_d": "women-bag-60-c.jpg"
+  }
+},
+{
+  "pk": 61,
+  "model": "products.product",
+  "fields": {
+  "sku": "A82061",
+  "name": "Michael Kors - Bradshaw Handbag",
+  "description": "Invest in classic models that you can use for a long time.The beautiful Handbag bag Design by Michael Kors in brown color is suitable for both everyday and parties.",
+  "price": 250.99,
+  "discount_percent": 15,
+  "category": 9,
+  "gender": "f",
+  "image_a": "women-bag-61.jpg",
+  "image_b": "women-bag-61-a.jpg",
+  "image_c": "women-bag-61-b.jpg",
+  "image_d": "women-bag-61-c.jpg"
+  }
+},
+{
+  "pk": 62,
+  "model": "products.product",
+  "fields": {
+  "sku": "A82062",
+  "name": "Valentino Bag - Piccadilly Envelope bag",
+  "description": "Invest in classic models that you can use for a long time.The beautiful Envelope bag Design by Valentino Bag in nero color is suitable for both everyday and parties.",
+  "price": 250.99,
+  "discount_percent": 15,
+  "category": 8,
+  "gender": "f",
+  "image_a": "women-bag-62.jpg",
+  "image_b": "women-bag-62-a.jpg",
+  "image_c": "women-bag-62-b.jpg",
+  "image_d": "women-bag-62-c.jpg"
+  }
+},
+{
+  "pk": 63,
+  "model": "products.product",
+  "fields": {
+  "sku": "A82063",
+  "name": "Silvio Tossi - Handbag",
+  "description": "Invest in classic models that you can use for a long time.The beautiful Handbag Design by Silvio Tossi in schwarz color is suitable for both everyday and parties.",
+  "price": 299.99,
+  "discount_percent": 15,
+  "category": 9,
+  "gender": "f",
+  "image_a": "women-bag-63.jpg",
+  "image_b": "women-bag-63-a.jpg",
+  "image_c": "women-bag-63-b.jpg",
+  "image_d": "women-bag-63-c.jpg"
+  }
+},
+{
+  "pk": 64,
+  "model": "products.product",
+  "fields": {
+  "sku": "A82064",
+  "name": "Lauren Ralph Lauren - Handbag",
+  "description": "Invest in classic models that you can use for a long time.The beautiful Handbag Design by Lauren Ralph Lauren in black color is suitable for both everyday and parties.",
+  "price": 199.99,
+  "discount_percent": 15,
+  "category": 9,
+  "gender": "f",
+  "image_a": "women-bag-64.jpg",
+  "image_b": "women-bag-64-a.jpg",
+  "image_c": "women-bag-64-b.jpg",
+  "image_d": "women-bag-64-c.jpg"
+  }
+},
+{
+  "pk": 65,
+  "model": "products.product",
+  "fields": {
+  "sku": "A82065",
+  "name": "Lauren Ralph Lauren - Shopping Bag",
+  "description": "Invest in classic models that you can use for a long time.The beautiful Shopping Bag Design by Lauren Ralph Lauren in black color is suitable for both everyday and parties.",
+  "price": 299.99,
+  "discount_percent": 15,
+  "category": 10,
+  "gender": "f",
+  "image_a": "women-bag-65.jpg",
+  "image_b": "women-bag-65-a.jpg",
+  "image_c": "women-bag-65-b.jpg",
+  "image_d": "women-bag-65-c.jpg"
+  }
+},
+{
+  "pk": 66,
+  "model": "products.product",
+  "fields": {
+  "sku": "A82066",
+  "name": "Lauren Ralph Lauren - Shopping Bag",
+  "description": "Invest in classic models that you can use for a long time.The beautiful Shopping Bag Design by Lauren Ralph Lauren in tan monarc color is suitable for both everyday and parties.",
+  "price": 260.99,
+  "discount_percent": 15,
+  "category": 10,
+  "gender": "f",
+  "image_a": "women-bag-66.jpg",
+  "image_b": "women-bag-66-a.jpg",
+  "image_c": "women-bag-66-b.jpg",
+  "image_d": "women-bag-66-c.jpg"
+  }
+},
+{
+  "pk": 67,
+  "model": "products.product",
+  "fields": {
+  "sku": "A82067",
+  "name": "MICHAEL Michael Kors - Envelope Bag",
+  "description": "Invest in classic models that you can use for a long time.The beautiful Envelope Bag Design by MICHAEL Michael Kors in black color is suitable for both everyday and parties.",
+  "price": 160.99,
+  "discount_percent": 15,
+  "category": 8,
+  "gender": "f",
+  "image_a": "women-bag-67.jpg",
+  "image_b": "women-bag-67-a.jpg",
+  "image_c": "women-bag-67-b.jpg",
+  "image_d": "women-bag-67-c.jpg"
+  }
+},
+{
+  "pk": 68,
+  "model": "products.product",
+  "fields": {
+  "sku": "A82068",
+  "name": "MICHAEL Michael Kors - HandBag",
+  "description": "Invest in classic models that you can use for a long time.The beautiful Handbag Design by MICHAEL Michael Kors in black color is suitable for both everyday and parties.",
+  "price": 240.99,
+  "discount_percent": 15,
+  "category": 9,
+  "gender": "f",
+  "image_a": "women-bag-68.jpg",
+  "image_b": "women-bag-68-a.jpg",
+  "image_c": "women-bag-68-b.jpg",
+  "image_d": "women-bag-68-c.jpg"
+  }
+},
+{
+  "pk": 69,
+  "model": "products.product",
+  "fields": {
+  "sku": "A82069",
+  "name": "Emporio Armani - Shopping Bag",
+  "description": "Invest in classic models that you can use for a long time.The beautiful Shopping bag Design by Emporio Armani in nero/silver-color is suitable for both everyday and parties.",
+  "price": 260.99,
+  "discount_percent": 15,
+  "category": 10,
+  "gender": "f",
+  "image_a": "women-bag-69.jpg",
+  "image_b": "women-bag-69-a.jpg",
+  "image_c": "women-bag-69-b.jpg",
+  "image_d": "women-bag-69-c.jpg"
+  }
+},
+{
+  "pk": 70,
+  "model": "products.product",
+  "fields": {
+  "sku": "A82070",
+  "name": "Sandqvist - Backpack",
+  "description": "Invest in classic models that you can use for a long time.The beautiful Backpack Design by Sandqvist in black color is suitable for everyday.",
+  "price": 220.99,
+  "discount_percent": 15,
+  "category": 11,
+  "gender": "m",
+  "image_a": "men-bag-70.jpg",
+  "image_b": "men-bag-70-a.jpg",
+  "image_c": "men-bag-70-b.jpg",
+  "image_d": "men-bag-70-c.jpg"
+  }
+},
+{
+  "pk": 71,
+  "model": "products.product",
+  "fields": {
+  "sku": "A82071",
+  "name": " High Neck-Cocktail dress by David & Yenny ",
+  "description": "Invest in classic models that you can use for a long time.The rounded neck, beautiful design from Yenny & David in navy color is suitable for all type of parties.90% polyester, 10% elastan and 40 ° C machine wash",
+  "price": 50.99,
+  "discount_percent": 15,
+  "category": 5,
+  "gender": "f",
+  "image_a": "women-Dress-18.jpg",
+  "image_b": "women-Dress-18-a.jpg",
+  "image_c": "women-Dress-18-b.jpg",
+  "image_d": "women-Dress-18-c.jpg"
+  }
+},
+{
+  "pk": 72,
+  "model": "products.product",
+  "fields": {
+  "sku": "A82072",
+  "name": "Sandqvist - Backpack",
+  "description": "Invest in classic models that you can use for a long time.The beautiful Backpack Design by Sandqvist in olive color is suitable for everyday.",
+  "price": 180.99,
+  "discount_percent": 15,
+  "category": 11,
+  "gender": "m",
+  "image_a": "men-bag-72.jpg",
+  "image_b": "men-bag-72-a.jpg",
+  "image_c": "men-bag-72-b.jpg",
+  "image_d": "men-bag-72-c.jpg"
+  }
+},
+{
+  "pk": 73,
+  "model": "products.product",
+  "fields": {
+  "sku": "A82073",
+  "name": " Men's smart casual blazers - by David & Yenny",
+  "description": "Invest in classic models that you can use for a long time.The beautiful Blazer Design by David & Yenny in blue color has a reverse collar, long sleeves, single-breasted with button closure, three pockets.100% cotton.",
+  "price": 250.00,
+  "discount_percent": 15,
+  "category": 4,
+  "gender": "m",
+  "image_a": "men-blazer-39.jpg",
+  "image_b": "men-blazer-39-a.jpg",
+  "image_c": "men-blazer-39-b.jpg",
+  "image_d": "men-blazer-39-c.jpg"
+  }
+},
+{
+  "pk": 74,
+  "model": "products.product",
+  "fields": {
+  "sku": "A82074",
+  "name": "Men's Lacoste Pike",
+  "description": "Invest in classic models that you can use for a long time.The Pike from Lacoste in navy blue color is suitable for both everyday and parties.100% cotton and 40 ° C machine wash",
+  "price": 90.99,
+  "discount_percent": 15,
+  "category": 1,
+  "gender": "m",
+  "image_a": "men-tshirt-10.jpg",
+  "image_b": "men-tshirt-10-a.jpg",
+  "image_c": "men-tshirt-10-b.jpg",
+  "image_d": "men-tshirt-10-c.jpg"
+  }
+},
+{
+  "pk": 75,
+  "model": "products.product",
+  "fields": {
+  "sku": "A82075",
+  "name": "Women's Jeans slim fit - by David & Yenny",
+  "description": "Invest in classic models that you can use for a long time.The beautiful Jean Design by David & Yenny in dark blue denim.100% cotton and 40 ° C machine wash",
+  "price": 60.00,
+  "discount_percent": 15,
+  "category": 2,
+  "gender": "f",
+  "image_a": "women-jean-34.jpg",
+  "image_b": "women-jean-34-a.jpg",
+  "image_c": "women-jean-34-b.jpg",
+  "image_d": "women-jean-34-c.jpg"
+  }
+},
+{
+  "pk": 76,
+  "model": "products.product",
+  "fields": {
+  "sku": "A82076",
+  "name": "Sandqvist - Backpack",
+  "description": "Invest in classic models that you can use for a long time.The beautiful Backpack Design by Sandqvist in multi leaf green/olive color is suitable for everyday.",
+  "price": 149.99,
+  "discount_percent": 15,
+  "category": 11,
+  "gender": "m",
+  "image_a": "men-bag-76.jpg",
+  "image_b": "men-bag-76-a.jpg",
+  "image_c": "men-bag-76-b.jpg",
+  "image_d": "men-bag-76-c.jpg"
+  }
+},
+{
+  "pk": 77,
+  "model": "products.product",
+  "fields": {
+  "sku": "A82077",
+  "name": " Wrap skirt - by David & Yenny",
+  "description": "Invest in classic models that you can use for a long time.The beautiful skirt Design by David & Yenny in sand color is suitable for both everyday and parties.71% polyester, 22% viscose.",
+  "price": 30.00,
+  "discount_percent": 15,
+  "category": 6,
+  "gender": "f",
+  "image_a": "women-skirt-47.jpg",
+  "image_b": "women-skirt-47-a.jpg",
+  "image_c": "women-skirt-47-b.jpg",
+  "image_d": "women-skirt-47-c.jpg"
+  }
+},
+ 
+{
+  "pk": 78,
+  "model": "products.product",
+  "fields": {
+  "sku": "A82078",
+  "name": " Men's blazers - by David & Yenny",
+  "description": "Invest in classic models that you can use for a long time.The beautiful Blazer Design by David & Yenny in grey color has a reverse collar, long sleeves, single-breasted with button closure, three pockets.100% cotton.",
+  "price": 250.00,
+  "discount_percent": 15,
+  "category": 4,
+  "gender": "m",
+  "image_a": "men-blazer-42.jpg",
+  "image_b": "men-blazer-42-a.jpg",
+  "image_c": "men-blazer-42-b.jpg",
+  "image_d": "men-blazer-42-c.jpg"
+  }
+},
+{
+  "pk": 79,
+  "model": "products.product",
+  "fields": {
+  "sku": "A82079",
+  "name": " Casual Dress by David & Yenny ",
+  "description": "Invest in classic models that you can use for a long time.The Rounded Neck Dress, beautiful design from Yenny & David in Black color is suitable for both everyday and parties.95% polyester, 5% elastan and 40 ° C machine wash",
+  "price": 68.99,
+  "discount_percent": 15,
+  "category": 5,
+ "gender": "f",
+  "image_a": "women-Dress-14.jpg",
+  "image_b": "women-Dress-14-a.jpg",
+  "image_c": "women-Dress-14-b.jpg",
+  "image_d": "women-Dress-14-c.jpg"
+  }
+},
+{
+  "pk": 80,
+  "model": "products.product",
+  "fields": {
+  "sku": "A82080",
+  "name": "Men's GANT ORIGINAL - T-shirt - bas",
+  "description": "Invest in classic models that you can use for a long time. The t-shirt from Gant in white color is suitable for both everyday and parties.100% cotton and 40 ° C machine wash",
+  "price": 39.99,
+  "discount_percent": 15,
+  "category": 1,
+  "gender": "m",
+  "image_a": "men-tshirt-1.jpg",
+  "image_b": "men-tshirt-1-a.jpg",
+  "image_c": "men-tshirt-1-b.jpg",
+  "image_d": "men-tshirt-1-c.jpg"
+  }
+}
+]
