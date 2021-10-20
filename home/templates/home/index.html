@@ -2,6 +2,7 @@
 {% load static %}
 
 {% block content %}
+<!--hero image-->
 <header class="img-hero text-center">
     <div class="container-fluid ">
         <div class="row">
@@ -16,4 +17,61 @@
         </div>
     </div>
 </header>
+<section class=" text-center mt-lg-5  mt-md-4 mt-sm-4 ">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 ">
+                <h2 class=" heading"> New Arrivals<span class="badge">New</span></h2>
+            </div>
+        </div>
+    </div>
+</section>
+<!--flickity carousel-->
+<section>
+    <div class="carousel mt-lg-4  mt-md-4" data-flickity='{ "wrapAround": "true", "imagesLoaded": "true"}'>
+        {% for product in products %}
+        <div class="carousel-cell">
+            <div class="card h-100 m-2 card-border" style="width: 18rem;">
+                {% if product.image_a %}
+                <a href="">
+                    <img class="card-img-top " src="{{ product.image_a.url }}" alt="{{ product.name }}">
+                    <div class="badge bg-success text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
+                        New</div>
+                </a>
+                {% else %}
+                <a href="">
+                    <img class="card-img-top " src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                </a>
+                {% endif %}
+                <div class="card-body text-center pb-0">
+                    <p class="mb-0">{{ product.name }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
 {% endblock %}
+
+{% block postloadjs %}
+
+<script>
+
+// Flickity  the carousel element
+
+var elem = document.querySelector('.carousel');
+var flkty = new Flickity( elem, {
+ 
+  contain: true,
+  freeScroll: true,
+  wrapAround: true,
+  prevNextButtons: false,
+  pageDots: false,
+  autoPlay: true,
+  pauseAutoPlayOnHover: true
+  
+});
+
+</script>
+
+{% endblock %}  

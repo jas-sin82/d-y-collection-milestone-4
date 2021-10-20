@@ -756,6 +756,38 @@ section ul .user-show.show-4 {
     }
 }
 
+/*--home page flickity carousel------*/
+
+.heading {
+    font-size: 50px;
+    font-family: 'Playfair Display SC', serif;
+    text-transform: capitalize;
+    position: relative;
+    font-weight: 700;
+
+}
+
+.badge {
+    font-size: 12px;
+    color: white;
+    border: 1px solid green;
+    position: absolute;
+    background: green;
+    text-decoration: none;
+    top: 0px;
+}
+
+.badge:hover {
+    color: white;
+
+}
+
+.card-border {
+    border: none;
+    
+}
+
+
 /*----------product page-----*/
 
 .product-page {
