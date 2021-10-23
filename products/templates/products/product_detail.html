@@ -1,0 +1,111 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Product detail section-->
+<section>
+    <div class="container product-detail">
+        <div class="row justify-content-center ">
+            <div class="col-12 col-md-6 " style="width: 30rem; ">
+                <div class="card h-100  border-0 ">
+                    <!-- Product image carousel which contains 4 different images  -->
+                    <div id="carouselIndicators" class="carousel carousel-dark slide " data-bs-ride="carousel"
+                        data-bs-interval="false">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="3"
+                                aria-label="Slide 4"></button>
+                        </div>
+                        <div class="carousel-inner   ">
+                            <div class="carousel-item  active">
+                                {% if product.image_a %}
+                                <a href="{{ product.image_a.url }}" target="_blank">
+                                    <img src="{{ product.image_a.url }}" class="d-block w-100  "
+                                        alt="{{ product.name }}">
+                                </a>
+                                {% else %}
+                                <img src="{{ MEDIA_URL }}noimage.png" class="d-block w-100" alt="{{ product.name }}">
+                                {% endif %}
+                            </div>
+                            <div class="carousel-item">
+                                {% if product.image_b %}
+                                <a href="{{ product.image_b.url }}" target="_blank">
+                                    <img src="{{ product.image_b.url }}" class="d-block w-100"
+                                        alt="{{ product.name }} Image_b">
+                                </a>
+                                {% else %}
+                                <img src="{{ MEDIA_URL }}noimage.png" class="d-block w-100" alt="{{ product.name }">
+                        {% endif %}
+                      </div>
+                      <div class="carousel-item">
+                        {% if product.image_c %}
+                        <a href="{{ product.image_c.url }}" target="_blank">
+                                <img src="{{ product.image_c.url }}" class="d-block w-100"
+                                    alt="{{ product.name }} Image_c">
+                                </a>
+                                {% else %}
+                                <img src="{{ MEDIA_URL }}noimage.png" class="d-block w-100" alt="{{ product.name }}">
+                                {% endif %}
+                            </div>
+                            <div class="carousel-item">
+                                {% if product.image_d %}
+                                <a href="{{ product.image_d.url }}" target="_blank">
+                                    <img src="{{ product.image_d.url }}" class="d-block w-100"
+                                        alt="{{ product.name }} Image_d">
+                                </a>
+                                {% else %}
+                                <img src="{{ MEDIA_URL }}noimage.png" class="d-block w-100" alt="{{ product.name }}">
+                                {% endif %}
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicators"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselIndicators"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6   product-detail-1  ">
+                <div class="small mb-1">Product ID: {{ product.sku }}
+                </div>
+                <div class="h1 display-5 fw-bolder">
+                    {{ product.name }}
+                </div>
+                <div>
+                    {% if product.rating %}
+                    <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
+                    {% else %}
+                    <small class="text-muted">No Rating</small>
+                    {% endif %}
+                </div>
+                <div>
+                    <!-- Price -->
+                    <small class="text-muted">Price:</small>
+                    <span class="fs-5">€ {{ product.price }}</span>
+                </div>
+                {% if product.category %}
+                <!-- Category -->
+                <p class="small mt-1 mb-5">
+                    <span id="text-category"><strong>Category:</strong></span>
+                    <a href="{% url 'products' %}?category={{ product.category.name }}">
+                        {{ product.category.friendly_name }}
+                    </a>
+                </p>
+                {% endif %}
+                <p class="h6 product-despt ">{{ product.description }}</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
