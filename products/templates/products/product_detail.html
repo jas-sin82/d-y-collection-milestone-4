@@ -1,14 +1,16 @@
+nes (222 sloc)  12 KB
+   
 {% extends 'base.html' %}
 {% load static %}
 
 {% block content %}
-<!-- Product detail section-->
+<!-- Product section-->
 <section>
     <div class="container product-detail">
         <div class="row justify-content-center ">
             <div class="col-12 col-md-6 " style="width: 30rem; ">
                 <div class="card h-100  border-0 ">
-                    <!-- Product image carousel which contains 4 different images  -->
+                    <!-- Product image carousel-->
                     <div id="carouselIndicators" class="carousel carousel-dark slide " data-bs-ride="carousel"
                         data-bs-interval="false">
                         <div class="carousel-indicators">
@@ -78,21 +80,29 @@
             </div>
             <div class="col-12 col-md-6   product-detail-1  ">
                 <div class="small mb-1">Product ID: {{ product.sku }}
+
                 </div>
                 <div class="h1 display-5 fw-bolder">
                     {{ product.name }}
+
+
                 </div>
-                <div>
-                    {% if product.rating %}
-                    <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
+                <div class="rating-title">
+                    {% if product.average_rating %}
+                    <small class="text-muted">
+                        <span class="avg-rating ms-2">{{ product.average_rating|floatformat:"1" }}</span>/5</small>
                     {% else %}
-                    <small class="text-muted">No Rating</small>
+                    <small class="text-muted">
+                        <i class="no-rating">No Rating</i><span class="avg-stars"></span><span
+                            class="avg-rating ms-2"></span></small>
                     {% endif %}
                 </div>
                 <div>
                     <!-- Price -->
                     <small class="text-muted">Price:</small>
+
                     <span class="fs-5">€ {{ product.price }}</span>
+
                 </div>
                 {% if product.category %}
                 <!-- Category -->
@@ -112,8 +122,7 @@
                         {% if s %}
                         <div class="col-12">
                             <p><strong>Size:</strong></p>
-                            <select class="form-control size-option rounded-0 " name="product_size"
-                                id='id_product_size'>
+                            <select class="form-control size-option rounded-0 " name="product_size" id='id_product_size'>
                                 <option value="" selected>Select</option>
                                 <option value="xs">XS</option>
                                 <option value="s">S</option>
@@ -127,20 +136,22 @@
                             <p class="mt-3"><strong>Quantity:</strong></p>
                             <div class="form-group quantity-option">
                                 <div class="input-group">
-                                    <div class="input-group-append">
-                                        <button class="decrement-qty btn btn-black border rounded-0"
+                                    <div class="input-group-prepend">
+                                        <button class="decrement-qty btn btn-black border rounded-0" 
                                             data-item_id="{{ product.id }}" id="decrement-qty_{{ product.id }}">
-                                            <span class="icon-1">
+                                            <span class="icon">
                                                 <i class="fas fa-minus"></i>
                                             </span>
                                         </button>
                                     </div>
-                                    <input class="form-control qty_input" type="number" name="quantity" value="1"
-                                        min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
+                                    <input class="form-control qty_input" type="number"
+                                        name="quantity" value="1" min="1" max="99"
+                                        data-item_id="{{ product.id }}"
+                                        id="id_qty_{{ product.id }}">
                                     <div class="input-group-append">
                                         <button class="increment-qty btn btn-black border rounded-0"
                                             data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
-                                            <span class="icon-1">
+                                            <span class="icon">
                                                 <i class="fas fa-plus"></i>
                                             </span>
                                         </button>
@@ -148,6 +159,7 @@
                                 </div>
                             </div>
                         </div>
+
                         <div class="col{% if s %}-12 mt-2{% endif %}">
                             <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 mt-3">
                                 <span>
