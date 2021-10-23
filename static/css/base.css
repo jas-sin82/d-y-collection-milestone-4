@@ -1388,3 +1388,175 @@ section ul .user-show.show-4 {
     margin-bottom: 100px;
 
 }
+
+
+/*--cart page--*/
+
+
+.shopping-cart {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top:170px;
+}
+
+.shopping-message {
+
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    font-family: 'Playfair Display SC', serif;
+    letter-spacing: 5px;
+}
+
+.shopping-day {
+    margin-top: 30px;
+    
+}
+.shopping-day h2 {
+    margin-top: 40px;
+    font-size: 50px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    color:white !important;
+}
+.shopping-day h3 {
+    font-size: 25px;
+    font-weight: 900;
+    letter-spacing: 0px;
+    color:white !important;
+    letter-spacing: 2px;
+}
+
+.heading-bag h2{
+    font-family: 'Playfair Display SC', serif;
+}
+
+
+@media (max-width:1300px){
+    
+.shopping-message {
+
+    position: absolute;
+    top: 40%;
+    left: 24%;
+    transform: translate(-50%, -50%);
+    font-family: 'Playfair Display SC', serif;
+    }
+}
+
+@media (max-width:1080px){
+    
+    .shopping-cart {
+        margin-top:90px;
+      
+    }
+
+    .shopping-image{
+       min-width:100vw;
+    }
+}
+
+@media (max-width:850px){
+    .shopping-day h2 {
+        font-size: 50px;
+        font-weight: 700;
+        letter-spacing: 4px;
+        color: white !important;
+       
+    }
+
+    .shopping-day h3 {
+   
+        font-size: 30px;
+        font-weight: 700;
+        letter-spacing: 0px;
+        color: black;
+        letter-spacing: 2px;
+        color: white !important;
+        
+    }
+    
+    .shopping-message {
+         left: 50%;
+    }
+}
+    
+@media (max-width:767px){
+    .shopping-day h2 {
+        font-size: 45px;
+        font-weight: 700;
+        letter-spacing: 3px;
+        color: white !important;
+           
+    }
+
+    .shopping-day h3 {
+       
+        font-size: 30px;
+        font-weight: 700;
+        letter-spacing: 0px;
+        color: black;
+        letter-spacing: 2px;
+        color: white !important;
+            
+    }
+        
+    .shopping-message {
+    
+        right:-20%;
+            
+    }  
+         
+} 
+
+@media (max-width:580px){
+    .shopping-day h2 {
+            
+        font-size: 35px;
+        font-weight: 700;
+        letter-spacing: 3px;
+        color: white !important;
+           
+    }
+
+    .shopping-day h3 {
+       
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: 0px;
+        color: black;
+        letter-spacing: 2px;
+        color: white !important;
+            
+    }   
+
+    .bag-image{
+        width:30%;
+    }
+       
+}    
+
+@media (max-width:380px){
+    .shopping-day h2 {
+            
+        font-size: 25px;
+        font-weight: 700;
+        letter-spacing: 3px;
+        color: white !important;
+    }
+
+    .shopping-day h3 {
+       
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0px;
+        color: black;
+        letter-spacing: 2px;
+        color: white !important;
+            
+    }   
+       
+}    
