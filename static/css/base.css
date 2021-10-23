@@ -907,7 +907,7 @@ section ul .user-show.show-4 {
     }
 
     .slogan-1 {
-        font-size: 40px;
+        font-size: 35px;
         letter-spacing: 7px;
         font-weight: 700;
     }
@@ -938,7 +938,7 @@ section ul .user-show.show-4 {
     }
 
     .slogan-2 {
-        font-size: 40px;
+        font-size: 35px;
         letter-spacing: 6px;
         font-weight: 700;
     }
@@ -953,12 +953,9 @@ section ul .user-show.show-4 {
 
 @media (max-width: 767px) {
     .main-box-heading-1 {
-        position: absolute;
-        top: 30%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-family: 'Playfair Display SC', serif;
-        letter-spacing: 2px;
+        top: 25%;
+        left: 45%;
+        
     }
 
     h1.title-owner-1 {
@@ -980,13 +977,9 @@ section ul .user-show.show-4 {
     }
 
     .main-box-heading-2 {
-        position: absolute;
         top: 80%;
         left: 50%;
-        transform: translate(-50%, -50%);
-        font-family: 'Playfair Display SC', serif;
-        letter-spacing: 5px;
-        
+      
     }
 
     .summer-dress {
@@ -1045,17 +1038,26 @@ section ul .user-show.show-4 {
         font-size: 10px;
         max-width: 120px;
     }
+    h3.slogan-1 {
+        font-size: 30px;
+        letter-spacing: 4px;
+        font-weight: 700;
+}
+
 }
 
 /* home page headings both new arrival and d & y collection---*/
 
-@media (max-width:1000px) {
+@media (max-width:1080px) {
     .heading {
         font-size: 35px;
+
     }
 
     .heading-1 {
         font-size: 35px;
+
+
     }
 }
 
@@ -1069,6 +1071,9 @@ section ul .user-show.show-4 {
         font-size: 20px;
         margin-top: 20px;
     }
+    .heading .badge{
+      font-size:8px;
+    }
 }
 
 /*---- christmas sale timer */
@@ -1078,14 +1083,7 @@ section ul .user-show.show-4 {
     display: flex;
     justify-content: center;
     text-align: center;
-    background: white;
-    color: white;
-}
-
-.christmas-sale {
-    height: 60%;
-    max-width: 100%;
-    object-fit: cover;
+    width:100%;
 }
 
 .sale-text {
@@ -1171,6 +1169,13 @@ section ul .user-show.show-4 {
 }
 
 
+@media (max-width:500px) {
+    .sale-text {
+      margin-top:20px;
+    }
+
+}
+
 @media (max-width:450px) {
     .sale-text h2 {
         letter-spacing: 2px;
@@ -1229,6 +1234,74 @@ section ul .user-show.show-4 {
         color: white;
     }
 }
+
+/*---brands logo--*/
+
+.brands h2{
+    font-size: 50px;
+    font-family: 'Playfair Display SC', serif;
+}
+
+@media (max-width:1080px) {
+    .brands h2 {
+        font-size: 35px;
+
+    }
+}
+
+@media (max-width:580px) {
+    .brands h2 {
+        font-size: 20px;
+        
+    }
+
+}
+
+/*----------------footer-----*/
+
+.footer-style{
+    
+    display: block;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    height:160px;
+    background: #abbaab; 
+    background: -webkit-linear-gradient(to bottom, #ffffff, #abbaab); 
+    background: linear-gradient(to bottom, #ffffff, #abbaab);
+    margin-top:80px;
+    box-shadow: -6px -6px 10px -1px rgb(255, 255, 255, 0.7),
+        6px 6px 10px -1px rgb(0, 0, 0, 0.5);
+}
+
+.footer-heading{
+    font-family: 'Playfair Display SC', serif;
+    letter-spacing: 5px;
+} 
+ 
+ .social-link-1{
+     margin-top:-18px;
+ }
+ 
+.social{
+    padding :10px;
+    
+}
+ 
+.social a {
+    color:black;
+    text-decoration: none;
+    font-size: 30px;
+   
+}
+ 
+ .copy-right{
+    font-family: 'Playfair Display SC', serif;
+    color:black;
+    font-weight: 400;
+    font-size: 12px;
+ }
 
 
 /*----------product page-----*/
