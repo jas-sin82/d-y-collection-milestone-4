@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, reverse
 from products.models import Product
 
 
@@ -12,7 +12,7 @@ def view_bag(request):
 
 
 def add_to_bag(request, item_id):
-    """ Add a quantity of the specified product to the shopping bag """
+    """ Add a product to the shopping bag """
     
     product = Product.objects.get(pk=item_id)
     quantity = int(request.POST.get('quantity'))
@@ -23,12 +23,15 @@ def add_to_bag(request, item_id):
     bag = request.session.get('bag', {})
 
     if size:
+        # If there's already a key in the bag matching the item_id
         if item_id in list(bag.keys()):
             if size in bag[item_id]['items_by_size'].keys():
                 bag[item_id]['items_by_size'][size] += quantity
             else:
+                # If item size does not exist set size amount equal to quantity
                 bag[item_id]['items_by_size'][size] = quantity
         else:
+            # If item not in bag
             bag[item_id] = {'items_by_size': {size: quantity}}
     else:
         if item_id in list(bag.keys()):
@@ -38,3 +41,30 @@ def add_to_bag(request, item_id):
             
     request.session['bag'] = bag
     return redirect(redirect_url)
+
+
+def adjust_bag(request, item_id):
+    """Adjust the quantity of the specified product to the specified amount"""
+    
+    
+    quantity = int(request.POST.get('quantity'))
+    size = None
+    if 'product_size' in request.POST:
+        size = request.POST['product_size']
+    bag = request.session.get('bag', {})
+
+    if size:
+        if quantity > 0:
+            bag[item_id]['items_by_size'][size] = quantity
+        else:
+            del bag[item_id]['items_by_size'][size]
+            if not bag[item_id]['items_by_size']:
+                bag.pop(item_id)
+    else:
+        if quantity > 0:
+            bag[item_id] = quantity
+        else:
+            bag.pop(item_id)
+
+    request.session['bag'] = bag
+    return redirect(reverse('view_bag'))
