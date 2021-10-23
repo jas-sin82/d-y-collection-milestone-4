@@ -82,8 +82,8 @@
                         <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                     </a>
                     {% endif %}
-                    <div class="card-body text-center pb-0">
-                        <p class="mb-0">{{ product.name }}</p>
+                    <div class="card-body text-left font pb-0">
+                        <p class="mb-0 small">{{ product.name }}</p>
                         <p class="small mt-2  mb-2">
                             <a class="text-muted  " href="{% url 'products' %}?category={{ product.category.name }}">
                                 <i class="fas fa-tag text-success mr-1"></i>{{ product.category.friendly_name }}

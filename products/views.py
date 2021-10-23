@@ -70,9 +70,21 @@ def product_detail(request, product_id):
     """ A view to show individual product details """
 
     product = get_object_or_404(Product, pk=product_id)
-
+    
+    related_products_men = Product.objects.filter(
+        category=product.category).exclude(
+        sku=product.sku).order_by('-gender')[:4]
+    
+    related_products_women = Product.objects.filter(
+        category=product.category).exclude(
+        sku=product.sku).order_by('gender')[:4]
+    
+    
+    
     context = {
         'product': product,
+        'related_products_men': related_products_men,
+        'related_products_women': related_products_women,
     }
 
     return render(request, 'products/product_detail.html', context)

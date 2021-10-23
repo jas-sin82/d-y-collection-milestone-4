@@ -167,6 +167,52 @@
         </div>
     </div>
 </section>
+<!--related product section-->
+<hr class ="divider">
+<section>
+    <div class="container">
+        <div class="col text-center  mt-4 mb-5">
+            <h1 class="logo-font product-heading"> Related Products</h1>
+        </div>
+        <div class="row ">
+            {% if product.gender == "m" %}
+            {% for product in related_products_men %}
+            <div class=" col-lg-3 col-6 border-0  ">
+                <div class=" card main-cards-1 card-body  border-0 mb-5  card-size" style="width: 18rem;" >
+                    {% if product.image_a %}
+                       <a href="{% url 'product_detail' product.id %}">
+                       <img src="{{ product.image_a.url }}" class=" main-cards  card-img-top " alt="text">
+                      </a>
+                    {% else %}
+                       <a href="{% url 'product_detail' product.id %}">
+                       <img src="{{ MEDIA_URL }}noimage.png" class=" main-cards card-img-top " alt="text">
+                      </a> 
+                    {% endif %}
+                    <p class="mb-0 mt-1 card-title  small text-right ">{{ product.name }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+            {% else %}
+            {% for product in related_products_women %}
+            <div class=" col-6 col-lg-3">
+                <div class=" card main-cards-1 border-0 card-body mb-5 card-size" style="width: 18rem;"  >
+                    {% if product.image_a %}
+                        <a href="{% url 'product_detail' product.id %}">
+                        <img src="{{ product.image_a.url }}" class=" main-cards card-img-top " alt="text">
+                        </a>
+                    {% else %}
+                       <a href="{% url 'product_detail' product.id %}">
+                       <img src="{{ MEDIA_URL }}noimage.png" class=" main-cards card-img-top " alt="text">
+                      </a> 
+                    {% endif %}
+                    <p class="mb-0 mt-1 card-title small text-right">{{ product.name }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+</section> 
 {% endblock %}
 
 {% block postloadjs %}
