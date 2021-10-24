@@ -50,7 +50,7 @@ class Product(models.Model):
     on_sale = models.BooleanField(default=False)
     size = models.BooleanField(default=False, null=True, blank=True)
     discount_percent = models.DecimalField(
-        max_digits=4, decimal_places=2, null=True, blank=True)
+        max_digits=2, decimal_places=0, null=True, blank=True)
     average_rating = models.DecimalField(
         max_digits=4, decimal_places=2, null=True, blank=True)
     gender = models.CharField(max_length=1, choices=GENDER)

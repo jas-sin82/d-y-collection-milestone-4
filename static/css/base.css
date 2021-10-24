@@ -1316,9 +1316,9 @@ section ul .user-show.show-4 {
 }
 
 .card-footer {
-
-    box-shadow: 6px 6px 10px -1px rgb(0, 0, 0, 0.5),
-        -6px -6px 10px -1px rgb(255, 255, 255, 0.7);
+   
+    box-shadow: 6px 6px 10px -1px rgba(136, 54, 54, 0.123),
+        -6px -6px 10px -1px rgba(163, 139, 139, 0.993);
 }
 
 .product-display,
@@ -1344,6 +1344,16 @@ section ul .user-show.show-4 {
 
 .btt-link:hover {
     color:white;
+}
+
+.fa-shopping-cart{
+    font-size:18px;
+    opacity: 0.8;
+}
+
+.discount{
+    font-size:16px;
+    font-weight: 500;
 }
 
 @media (max-width:1080px) {

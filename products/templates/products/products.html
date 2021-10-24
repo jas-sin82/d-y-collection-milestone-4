@@ -73,14 +73,25 @@
             {% for product in products %}
             <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                 <div class="card h-100 border-0">
+                    {% if product.on_sale is True %}
+                   <!-- Sale badge-->
+                        <div class="badge bg-danger border-0 text-white position-absolute" style="top: 0.5rem; left: 0.5rem">Sale
+                        </div>
+                        <div class=" text-left  position-absolute" style=" top: 0.3rem ;  right: 0.8rem" > 
+                        <p class="text-success discount text-decoration-none ">-{{ product.discount_percent }}%</p>
+                        </div>
+                    {% endif %}
                     {% if product.image_a %}
-                    <a href="{% url 'product_detail' product.id %}">
-                        <img class="card-img-top img-fluid" src="{{ product.image_a.url }}" alt="{{ product.name }}">
-                    </a>
+                        <a href="{% url 'product_detail' product.id %}">
+                           <img class="card-img-top img-fluid" src="{{ product.image_a.url }}" alt="{{ product.name }}">
+                        </a>
+                        <div class=" text-right position-absolute" style=" bottom: 13rem ;  right: 0.8rem" > 
+                             <a class="text-success  " href=""><i class="fas fa-shopping-cart"></i></a>
+                        </div>
                     {% else %}
-                    <a href="{% url 'product_detail' product.id %}">
-                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
-                    </a>
+                        <a href="{% url 'product_detail' product.id %}">
+                           <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                         </a>
                     {% endif %}
                     <div class="card-body text-left font pb-0">
                         <p class="mb-0 small">{{ product.name }}</p>
@@ -90,10 +101,15 @@
                             </a>
                         </p>
                     </div>
-                    <div class="card-footer bg-light mb-5 text-center pt-0 border-0 text-left">
+                    <div class="card-footer bg-light mb-5 text-center p-2 border-0 text-left">
                         <div class="row">
                             <div class="col">
-                                <p class="lead mb-0 text-left card-text font-weight-bold">€ {{ product.price }}</p>
+                                {% if product.on_sale is True %}
+                                   <span class=" mb-0 text-decoration-line-through  ">€ {{ product.price }}</span>
+                                   <span class=" mb-0  card-text text-danger font-weight-bold ">€ {{ product.sale_price }}</span></p>
+                                {% else %}
+                                   <span class=" mb-0 card-text  font-weight-bold">€ {{ product.price }}</span>
+                                {% endif %}
                             </div>
                         </div>
                     </div>
