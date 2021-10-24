@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models.functions import Lower
 from django.db.models import Q
-from .models import Product, Category
+from .models import Product, Category, Brand
 
 # Create your views here.
 
@@ -13,6 +13,7 @@ def all_products(request):
     query = None
     categories = None
     gender = None
+    brands = None
     sort = None
     direction = None
 
@@ -41,7 +42,13 @@ def all_products(request):
         if 'gender' in request.GET:
             gender = request.GET['gender'].split(',')
             products = products.filter(gender__in=gender)
-            gender = Product.objects.filter(gender__in=gender)  
+            gender = Product.objects.filter(gender__in=gender) 
+
+
+        if 'brand' in request.GET:
+            brands = request.GET['brand'].split(',')
+            products = products.filter(brand__name__in=brands)
+            brands = Brand.objects.filter(name__in=brands) 
 
 
         if 'q' in request.GET:
@@ -59,6 +66,7 @@ def all_products(request):
         'products': products,
         'search_term': query,
         'current_categories': categories,
+        'current_brands': brands,
         'current_gender': gender,
         'current_sorting': current_sorting,
     }

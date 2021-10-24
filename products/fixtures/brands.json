@@ -1,0 +1,43 @@
+[
+    {
+        "pk": 1,
+        "model": "products.brand",
+        "fields": { 
+            "name": "gant", 
+            "friendly_name": "Gant" 
+        }
+    },
+    {
+        "pk": 2,
+        "model": "products.brand",
+        "fields": { 
+            "name": "hogo_boss", 
+            "friendly_name": "Hogo Boss" 
+        }
+    },
+    {
+        "pk": 3,
+        "model": "products.brand",
+        "fields": { 
+            "name": "polo_ralph_lauren", 
+            "friendly_name": " Polo Ralph Lauren " 
+        }
+    },
+    {
+        "pk": 4,
+        "model": "products.brand",
+        "fields": { 
+            "name": "tommy", 
+            "friendly_name": "Tommy" 
+        }
+    },
+    {
+        "pk": 5,
+        "model": "products.brand",
+        "fields": { 
+            "name": "david_yenny", 
+            "friendly_name": " David & Yenny" 
+        }
+    }
+   
+]
