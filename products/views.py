@@ -98,3 +98,36 @@ def product_detail(request, product_id):
     }
 
     return render(request, 'products/product_detail.html', context)
+
+
+
+# A view to display all products on sale include sorting.
+def sale_products(request):
+    
+    sort = None
+    direction = None
+    products = Product.objects.filter(on_sale=True)
+
+    if request.GET:
+        if 'sort' in request.GET:
+            sortkey = request.GET['sort']
+            sort = sortkey
+            if sortkey == 'name':
+                sortkey = 'lower_name'
+                products = products.annotate(lower_name=Lower('name'))
+            if sortkey == 'category':
+                sortkey = 'category__name'   
+            if 'direction' in request.GET:
+                direction = request.GET['direction']
+                if direction == 'desc':
+                    sortkey = f'-{sortkey}'
+            products = products.order_by(sortkey)
+
+    current_sorting = f'{sort}+{direction}'
+   
+    context = {
+        'products': products,
+        'current_sorting': current_sorting,
+    }
+
+    return render(request, 'products/sale_products.html', context)
