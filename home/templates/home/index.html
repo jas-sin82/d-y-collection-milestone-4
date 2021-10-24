@@ -33,13 +33,13 @@
         <div class="carousel-cell">
             <div class="card h-100 m-2 card-border" style="width: 18rem;">
                 {% if product.image_a %}
-                <a href="">
+                <a href=" {% url 'product_detail' product.id %}">
                     <img class="card-img-top " src="{{ product.image_a.url }}" alt="{{ product.name }}">
                     <div class="badge bg-success text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
                         New</div>
                 </a>
                 {% else %}
-                <a href="">
+                <a href="{% url 'product_detail' product.id %}">
                     <img class="card-img-top " src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                 </a>
                 {% endif %}
@@ -65,7 +65,7 @@
     <div class="container-fluid ">
         <div class="row mt-lg-5 mt-md-4 mt-sm-4">
             <div class="col-md-6 p-0 ">
-                <a href="{% url 'products' %}?category=t-shirt&gender=m">
+                <a href="{% url 'products' %}?category=t-shirts&gender=m">
                     <img src=" {{ MEDIA_URL }}media/men-tshirt-10.jpg" class="d-block w-100  mens-dress "
                         alt="Men's Fashion">
                 </a>

@@ -81,6 +81,11 @@
                 </div>
                 <div class="h1 display-5 fw-bolder">
                     {{ product.name }}
+                    {% if product.on_sale is True %}
+                    <!-- Sale badge-->
+                    <p class="text-danger mt-1 discount text-decoration-none ">-{{ product.discount_percent }}% Sale
+                        </p>
+                     {% endif %}
                 </div>
                 <div>
                     {% if product.average_rating %}
@@ -92,7 +97,12 @@
                 <div>
                     <!-- Price -->
                     <small class="text-muted">Price:</small>
-                    <span class="fs-5">€ {{ product.price }}</span>
+                    {% if product.on_sale is True %}
+                        <span class=" mb-0 text-decoration-line-through  ">€ {{ product.price }}</span>
+                        <span class=" mb-0  card-text text-danger font-weight-bold ">€ {{ product.sale_price }}</span></p>
+                    {% else %}
+                        <span class=" mb-0 card-text  font-weight-bold">€ {{ product.price }}</span>
+                    {% endif %}
                 </div>
                 {% if product.category %}
                 <!-- Category -->
@@ -177,11 +187,23 @@
             {% if product.gender == "m" %}
             {% for product in related_products_men %}
             <div class=" col-lg-3 col-6 border-0  ">
+               
                 <div class=" card main-cards-1 card-body  border-0 mb-5  card-size" style="width: 18rem;" >
+                    {% if product.on_sale is True %}
+                   <!-- Sale badge-->
+                        <div class="badge bg-danger border-0 text-white position-absolute" style="top: 1.6rem; left: 1.5rem">Sale
+                        </div>
+                        <div class=" text-left  position-absolute" style=" top: 2.9rem ;  left: 1.7rem" > 
+                        <p class="text-success discount text-decoration-none ">-{{ product.discount_percent }}%</p>
+                        </div>
+                    {% endif %}
                     {% if product.image_a %}
                        <a href="{% url 'product_detail' product.id %}">
                        <img src="{{ product.image_a.url }}" class=" main-cards  card-img-top " alt="text">
                       </a>
+                      <div class=" text-right position-absolute" style=" top: 1.6rem ;  right: 1.4rem" > 
+                        <a class="text-success  " href=""><i class="fas fa-shopping-cart"></i></a>
+                   </div>
                     {% else %}
                        <a href="{% url 'product_detail' product.id %}">
                        <img src="{{ MEDIA_URL }}noimage.png" class=" main-cards card-img-top " alt="text">
