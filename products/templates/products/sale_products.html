@@ -69,14 +69,13 @@
         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
             <div class="card h-100 border-0">
                 {% if product.on_sale is True %}
-        <!-- Sale badge-->
-        <div class="badge bg-danger border-0 text-white position-absolute" style="top: 0.5rem; left: 0.5rem">Sale
-        </div>
-        <div class=" text-left  position-absolute" style=" top: 0.3rem ;  right: 0.8rem" > 
-            <p class="text-success discount text-decoration-none ">-{{ product.discount_percent }}%</p>
-        </div>
-        {% endif %}
-        
+                    <!-- Sale badge-->
+                    <div class="badge bg-danger border-0 text-white position-absolute" style="top: 0.5rem; left: 0.5rem">Sale
+                    </div>
+                    <div class=" text-left  position-absolute" style=" top: 0.3rem ;  right: 0.8rem" > 
+                        <p class="text-success discount text-decoration-none ">-{{ product.discount_percent }}%</p>
+                    </div>
+                {% endif %}
                 {% if product.image_a %}
                 <a href="{% url 'product_detail' product.id %}">
                     <img class="card-img-top img-fluid" src="{{ product.image_a.url }}" alt="{{ product.name }}">
@@ -89,7 +88,7 @@
                     <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                 </a>
                 {% endif %}
-                <div class="card-body text-center pb-0">
+                <div class="card-body text-left pb-0">
                     <p class="mb-0">{{ product.name }}</p>
                     <p class="small mt-2  mb-2">
                         <a class="text-muted  " href="{% url 'products' %}?category={{ product.category.name }}">
@@ -97,7 +96,7 @@
                         </a>
                     </p>
                 </div>
-                <div class="card-footer bg-light mb-5 pt-0  text-center border-0 ">
+                <div class="card-footer bg-light mb-5 pt-0 mt-2 text-center border-0 ">
                     <div class="row">
                         <div class="col">
                             {% if product.on_sale is True %}
