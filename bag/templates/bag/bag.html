@@ -38,9 +38,9 @@
                                 <th scope="col">Product Info</th>
                                 <th scope="col"></th>
                                 <th scope="col">size</th>
-                                <th scope="col">Price</th>
+                                
                                 <th class="text-center" scope="col">Qty</th>
-                                <th scope="col">Subtotal</th>
+                                <th class="text-center" scope="col">Price</th>
                             </tr>
                         </thead>
                         {% for item in bag_items %}
@@ -58,9 +58,6 @@
                                     {% else %}
                                       <p>N/A</p>
                                     {% endif %}
-                                </td>
-                                <td class="py-3">
-                                    <p class="my-0"> €{{ item.product.price }}</p>
                                 </td>
                                 <td class="py-3 ">
                                    <form class="form update-form" method="POST"
@@ -99,9 +96,9 @@
                                 <a class="remove-item p-2 text-danger  text-right" id="remove_{{ item.item_id }}"
                                 data-product_size="{{ item.size }}"><small><i class="fas fa-trash-alt"></i></small></a>
                                 </td>
-                                <td class="py-3">
+                                <td class="py-3 text-center">
                                     {% if item.product.on_sale is True %}
-                                        <p class="my-0 text-danger"> €{{ item.product.sale_price | calc_subtotal:item.quantity }}</p>
+                                        <p class="my-0 text-danger"> €{{ item.product.sale_price | calc_subtotal_offer:item.quantity }}</p>
                                     {% else %}
                                     <p class="my-0">
                                         <strong> €{{ item.product.price | calc_subtotal:item.quantity }}</strong>
@@ -113,7 +110,7 @@
                             <tr>
                                 <td class="border-0" scope="col"></td>
                                 <td colspan="5" class="pt-5 text-end border-0 ">
-                                   <h6><strong>Bag Total: €{{ total|floatformat:2 }}</strong></h6>
+                                   <h6><strong>Sub Total: €{{ total|floatformat:2 }}</strong></h6>
                                    <h6>Delivery: €{{ delivery|floatformat:2 }}</h6>
                                    <h4 class="mt-4"><strong>Grand Total: €{{ grand_total|floatformat:2 }}</strong></h4>
                                 {% if free_delivery_delta > 0 %}
