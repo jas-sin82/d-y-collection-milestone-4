@@ -1,6 +1,12 @@
 .header-container{
     margin-top:200px;
 }
+
+@media (max-width:1080px){
+  .header-container{
+    margin-top:140px;
+  }
+}
 .fieldset-label {
     position: relative;
     right: .5rem;
@@ -37,4 +43,32 @@
 
 .stripe-style-input::placeholder {
     color: #aab7c4;
+}
+
+.footer-style-3{
+  position: absolute;
+  left: 0;
+ 
+  width: 100%;
+  display: block;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  width:100%;
+  height:160px;
+  background: #abbaab; 
+  background: -webkit-linear-gradient(to bottom, #ffffff, #abbaab);
+  background: linear-gradient(to bottom, #ffffff, #abbaab);
+  box-shadow: -6px -6px 10px -1px rgb(255, 255, 255, 0.7),
+      6px 6px 10px -1px rgb(0, 0, 0, 0.5);
+  
+}
+.btn-outline-black-checkout {
+  background: black;
+  color: white !important; 
+  border: 1px solid black;
+}
+.btn-outline-black-checkout:hover {
+  background:orangered;
+  
 }

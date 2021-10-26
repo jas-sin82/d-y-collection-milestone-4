@@ -3,21 +3,220 @@
 
 
 {% block extra_css %}
-    <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+<link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
 {% endblock %}
 
 
 
 {% block content %}
-   
-    <div class="container header-container">
-        <div class="row">
-            <div class="col">
-                
-                <h2 class="logo-font mb-4">Thank You</h2>
-                <p class="text-black">Your order information is below. A confirmation email will be sent to <strong>{{ order.email }}</strong>.</p>
-                <hr class="divider mt-2">
+
+<div class="container header-container mb-5">
+    <div class="row">
+        <div class="col">
+            <h2 class="logo-font mb-4">Thank You</h2>
+            <p class="text-black">Your order information is below. A confirmation email will be sent to
+                <strong>{{ order.email }}</strong>.</p>
+            <hr class="divider mt-2">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col text-muted ">
+            <small class="bold ">Order/Product Details:</small>
+        </div>
+    </div>
+    <div class="row">
+        {% for item in order.lineitems.all %}
+            <div class="col-sm-6 col-md-4 col-lg-3 ">
+               <div class="card h-100 border-0">
+                   {% if item.product.image_a %}
+                       <img class="card-img-top img-fluid  " src="{{ item.product.image_a.url }}"
+                        alt="{{ item.product.name }}">
+                    {% else %}
+                        <img class="card-img-top img-fluid " src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
+                    {% endif %}
+                <div class="card-body">
+                    <p class="small card-text mb-0 text-black font-weight-bold">
+                        Product Name: {{ item.product.name }}
+                    </p>
+                    <p class="small card-text mb-0">{% if item.product_size %} Size
+                        {{ item.product.size|upper }}{% endif %}</p>
+                    <p class=" card-text small mb-0">Quantity:{{ item.quantity }}</p>
+                    <p class=" card-text small mb-0">Product Price <strong>€{{ item.product.price }}</strong> each</p>
+                </div>
             </div>
         </div>
-
+       {% endfor %}
+    </div>
+    <div class="container mt-3 mb-5">
+        <div class="row">
+            <div class="col">
+                <h2 class="mb-4 text-muted">ORDER RECEIPT</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-lg-7 ">
+                <div class="order-confirmation-wrapper p-2 border">
+                    <div class="row">
+                        <div class="col">
+                            <small class="text-muted">Order Info:</small>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <p class="mb-0 text-black font-weight-bold">Order Number</p>
+                        </div>
+                        <div class="col-12 col-sm-8 text-md-right">
+                            <p class="mb-0">{{ order.order_number }}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <p class="mb-0 text-black font-weight-bold">Order Date</p>
+                        </div>
+                        <div class="col-12 col-sm-8 text-md-right">
+                            <p class="mb-0">{{ order.date }}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <small class="text-muted">Delivering To:</small>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <p class="mb-0 text-black font-weight-bold">Full Name</p>
+                        </div>
+                        <div class="col-12 col-md-8 text-md-right">
+                            <p class="mb-0">{{ order.full_name }}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <p class="mb-0 text-black font-weight-bold">Address 1</p>
+                        </div>
+                        <div class="col-12 col-md-8 text-md-right">
+                            <p class="mb-0">{{ order.street_address1 }}</p>
+                        </div>
+                    </div>
+                    {% if order.street_address2 %}
+                        <div class="row">
+                        <div class="col-12 col-md-4">
+                            <p class="mb-0 text-black font-weight-bold">Address 2</p>
+                        </div>
+                        <div class="col-12 col-md-8 text-md-right">
+                            <p class="mb-0">{{ order.street_address1 }}</p>
+                        </div>
+                        </div>
+                    {% endif %}
+                    {% if order.county %}
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <p class="mb-0 text-black font-weight-bold">County</p>
+                        </div>
+                        <div class="col-12 col-md-8 text-md-right">
+                            <p class="mb-0">{{ order.county }}</p>
+                        </div>
+                    </div>
+                    {% endif %}
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <p class="mb-0 text-black font-weight-bold">Town or City</p>
+                        </div>
+                        <div class="col-12 col-md-8 text-md-right">
+                            <p class="mb-0">{{ order.town_or_city }}</p>
+                        </div>
+                    </div>
+                    {% if order.postcode %}
+                        <div class="row">
+                           <div class="col-12 col-md-4">
+                               <p class="mb-0 text-black font-weight-bold">Postal Code</p>
+                            </div>
+                        <div class="col-12 col-md-8 text-md-right">
+                            <p class="mb-0">{{ order.postcode }}</p>
+                        </div>
+                        </div>
+                    {% endif %}
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <p class="mb-0 text-black font-weight-bold">Country</p>
+                        </div>
+                        <div class="col-12 col-md-8 text-md-right">
+                            <p class="mb-0">{{ order.country }}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <p class="mb-0 text-black font-weight-bold">Phone Number</p>
+                        </div>
+                        <div class="col-12 col-md-8 text-md-right">
+                            <p class="mb-0">{{ order.phone_number }}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <small class="text-muted">Billing Info:</small>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <p class="mb-0 text-black font-weight-bold">Order Total</p>
+                        </div>
+                        <div class="col-12 col-md-8 text-md-right">
+                            <p class="mb-0">{{ order.order_total }}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <p class="mb-0 text-black font-weight-bold">Delivery</p>
+                        </div>
+                        <div class="col-12 col-md-8 text-md-right">
+                            <p class="mb-0">{{ order.delivery_cost }}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <p class="mb-0 text-black font-weight-bold">Grand Total</p>
+                        </div>
+                        <div class="col-12 col-md-8 text-md-right">
+                            <p class="mb-0">{{ order.grand_total }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-lg-7 text-right">
+                <a href="{% url 'sale_products' %}"
+                    class="btn btn-black  btn-small btn-outline-black-checkout  rounded-0 my-2">
+                    <span class="icon mr-2">
+                        <i class="fas fa-gifts"></i>
+                    </span>
+                    <span class="text-uppercase">latest Sale!</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+    {% block page_footer %}
+    <!-- Footer-->
+    <footer>
+        <div class="footer-style-3 ">
+            <div class="footer-heading   p-4">
+                <h5> David & Yenny <span class="magic-font p-1 magic-font-1">Collection since 2018</span> </h5>
+            </div>
+            <div class="social-link-1">
+                <span class="social link"><a href="http://www.facebook.com" target="_blank" rel="noopener">
+                        <i class="fab fa-facebook"></i> </a></span>
+                <span class="social link"><a href="http://www.twitter.com" target="_blank" rel="noopener">
+                        <i class="fab fa-twitter"></i> </a></span>
+                <span class="social link"><a href="http://www.youtube.com" target="_blank" rel="noopener"> <i
+                            class="fab fa-youtube"></i></a></span>
+                <span class="social link"><a href="https://www.instagram.com" target="_blank" rel="noopener">
+                        <i class="fab fa-instagram"></i></i></a></span>
+            </div>
+            <div>
+                <p class="mt-1 copy-right">Copyright © David & Yenny Collection 2021</p>
+            </div>
+        </div>
+    </footer>
 {% endblock %}
