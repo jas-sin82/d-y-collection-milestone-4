@@ -4,18 +4,44 @@
 
 {% block head_title %}{% trans "Signup" %}{% endblock %}
 
-{% block content %}
-<h1>{% trans "Sign Up" %}</h1>
+{% block inner_content %}
+<hr>
+<h2 class="logo-font mb-4 header-container-3 ">{% trans "Sign Up" %}</h2>
+<hr>
 
 <p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
 
 <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
   {% csrf_token %}
-  {{ form.as_p }}
+  {{ form|crispy }}
   {% if redirect_field_value %}
   <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
   {% endif %}
-  <button type="submit">{% trans "Sign Up" %} &raquo;</button>
+  <a class="btn btn-outline-black rounded-0" href="{% url 'account_login' %}">Back to Login</a>
+  <button type="submit">{% trans "Sign Up" %}</button>
 </form>
 
+{% endblock %}
+{% block page_footer %}
+<!-- Footer-->
+<footer>
+    <div class="footer-style-4">
+        <div class="footer-heading   p-4">
+            <h5> David & Yenny <span class="magic-font p-1 magic-font-1">Collection since 2018</span> </h5>
+        </div>
+        <div class="social-link-1">
+            <span class="social link"><a href="http://www.facebook.com" target="_blank" rel="noopener">
+                    <i class="fab fa-facebook"></i> </a></span>
+            <span class="social link"><a href="http://www.twitter.com" target="_blank" rel="noopener">
+                    <i class="fab fa-twitter"></i> </a></span>
+            <span class="social link"><a href="http://www.youtube.com" target="_blank" rel="noopener"> <i
+                        class="fab fa-youtube"></i></a></span>
+            <span class="social link"><a href="https://www.instagram.com" target="_blank" rel="noopener">
+                    <i class="fab fa-instagram"></i></i></a></span>
+        </div>
+        <div>
+            <p class="mt-1 copy-right">Copyright © David & Yenny Collection 2021</p>
+        </div>
+    </div>
+</footer>
 {% endblock %}
