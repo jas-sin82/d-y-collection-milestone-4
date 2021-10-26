@@ -1595,6 +1595,37 @@ section ul .user-show.show-4 {
     text-align: center;
     margin-top:170px;
 }
+.image-center{
+    max-width:50%;
+    height:auto;
+    justify-content: center;
+    text-align: center;
+    margin-left:110px;
+}
+@media (max-width: 580px){
+    .image-center{
+        max-width:50%;
+       
+    }
+}
+@media (max-width: 450px){
+    .image-center{
+        max-width:50%;
+        margin-left:90px;
+    }
+}
+
+
+@media (max-width: 342px){
+  
+    .secure-check{
+        margin-top:10px;
+    }
+    .image-center{
+        max-width:50%;
+        margin-left:70px;
+    }
+}
 
 .shopping-message {
 
