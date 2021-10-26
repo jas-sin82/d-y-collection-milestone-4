@@ -40,9 +40,15 @@
                         </div>
                             <div class=" col-12 col-md-6">
                                 <p class="my-0"><small>{{ item.product.name }}</small></p>
-                                <p class="my-0">
+                                {% if item.product.on_sale is True %}
+                                   <p class=" mb-0 text-decoration-line-through  "> Price: € {{item.product.price }}</p>
+                                   <p class=" mb-0  card-text text-danger font-weight-bold "> Sale Price: € {{item.product.sale_price }}</p>
+                                {% else %}
+                                   <p class=" mb-0 card-text  font-weight-bold"> Price:€ {{ item.product.price }}</p>
+                                {% endif %}
+                                <!--<p class="my-0">
                                 <strong> €{{ item.product.price | calc_subtotal:item.quantity }}</strong>
-                                </p>   
+                                </p>-->   
                                 <p class="my-0 small text-muted"><small>SKU: {{ item.product.sku|upper }}</small></p>
                                 <p class="my-0">
                                     <small>Size:  {% if item.product.size %}
@@ -151,8 +157,12 @@
                                 <td class="py-3">
                                    <p class="my-0"><small>{{ item.product.name }}</small></p>
                                    <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
-                                   <p class="my-0">
-                                    <strong>Price: €{{ item.product.price}}</strong> </p>
+                                   {% if item.product.on_sale is True %}
+                                   <p class=" mb-0 text-decoration-line-through  "> Price: € {{item.product.price }}</p>
+                                   <p class=" mb-0  card-text text-danger font-weight-bold "> Sale Price: € {{item.product.sale_price }}</p>
+                                {% else %}
+                                   <p class=" mb-0 card-text  font-weight-bold"> Price:€ {{ item.product.price }}</p>
+                                {% endif %}
                                 </td>
                                 <td class="py-3">
                                     {% if item.product.size %}
