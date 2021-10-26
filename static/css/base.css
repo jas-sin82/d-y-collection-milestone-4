@@ -1626,6 +1626,9 @@ section ul .user-show.show-4 {
         max-width:50%;
         margin-left:70px;
     }
+    .selector{
+         width:100px;
+    }
 }
 
 .shopping-message {
