@@ -36,7 +36,7 @@
                         <p class="text-danger discount text-decoration-none "><small>-{{ product.discount_percent }}% Sale</small>
                             </p>
                          {% endif %}
-                        <p class="my-0 small">Size: {% if item.product.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}</p>
+                        <p class="my-0 small">Size: {% if item.product.size %}{{ item.size|upper }}{% else %}N/A{% endif %}</p>
                         <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
                         {% if item.product.on_sale is True %}
                             <p class="my-0 text-danger"> €{{ item.product.sale_price | calc_subtotal_offer:item.quantity }}</p>

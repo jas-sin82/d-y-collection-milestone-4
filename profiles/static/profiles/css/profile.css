@@ -19,3 +19,34 @@
         6px 6px 10px -1px rgb(0, 0, 0, 0.5);
     
  }
+
+ #profile-update-form .form-control {
+    color: #000;
+}
+
+#profile-update-form input::placeholder {
+    color: #aab7c4;
+}
+#profile-update-form input {
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+#id_default_country,
+#id_default_country option:not(:first-child) {
+    color: #000;
+}
+
+#id_default_country option:first-child {
+    color: #aab7c4;
+}
+
+.btn-outline-black-checkout {
+    background: black;
+    color: white !important; 
+    border: 1px solid black;
+  }
+  .btn-outline-black-checkout:hover {
+    background:orangered;
+    
+  }
