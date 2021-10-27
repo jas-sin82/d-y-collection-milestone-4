@@ -1879,4 +1879,8 @@ transition: color .15s ease-in-out,background-color .15s ease-in-out,border-colo
          font-family: 'Playfair Display SC', serif;
      }
     
-   
+     @media (max-width:1080px){
+        .header-container-3{
+            margin-top:120px;
+    }
+    }

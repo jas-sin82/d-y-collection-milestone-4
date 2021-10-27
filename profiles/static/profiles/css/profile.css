@@ -1,11 +1,12 @@
 .header-container-2{
     margin-top:200px;
+    font-family: 'Playfair Display SC', serif;
 }
 
 .footer-style-2{
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: -200px;
     display: block;
     text-align: center;
     align-items: center;
@@ -49,4 +50,21 @@
   .btn-outline-black-checkout:hover {
     background:orangered;
     
-  }
+}
+.order-history {
+    max-height: 416px; /* height of profile form + submit button */
+    overflow-y: auto;
+}
+
+@media (max-width: 1080px){
+    .header-container-2{
+        margin-top:120px;
+    }
+    .order-save{
+        font-size:14px;
+    }
+}
+
+.order-title{
+    font-family: 'Playfair Display SC', serif;
+}
