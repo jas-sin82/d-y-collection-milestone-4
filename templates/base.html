@@ -68,7 +68,7 @@
             {% include 'includes/mobile-top-header.html' %}
             {% include 'includes/main-nav.html' %}
         </nav>
-        <!--search bar -->
+        <!--search bar-->
         <div class="search-bar find">
             <form method="GET" action="{% url 'products' %}">
                 <div class="input-group w-100">
@@ -84,7 +84,7 @@
                 </div>
             </form>
         </div>
-        <!--end search bar of main nav-->
+        <!--end search bar-->
         <!--user Account and shopping bag-->
         <ul class=" check-out">
             <li class="list-inline-item dropdown user-account ">
@@ -196,7 +196,9 @@
 
     </script>
     {% endblock %}
+    
     <script>
+        // mobile menu navigation  sidenav push
         function openMenu() {
             document.getElementById("menu_bar").style.width = "250px";
             document.getElementById("menu_bar").style.left = "0px";

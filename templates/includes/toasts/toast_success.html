@@ -18,46 +18,48 @@
             </div>
         </div>
         {% if grand_total and not on_profile_page %}
-            <p class="logo-font bg-white text-black py-1">Your Bag ({{ product_count }})</p>
-            <div class="bag-notification-wrapper">
+        <p class="logo-font bg-white text-black py-1">Your Bag ({{ product_count }})</p>
+        <div class="bag-notification-wrapper">
             {% for item in bag_items %}
-                <div class="row">
-                    <div class="col-3 my-1">
-                        {% if item.product.image_a %}
-                            <img class="w-100" src="{{ item.product.image_a.url }}" alt="{{ item.product.name }}">
-                        {% else %}
-                            <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
-                        {% endif %}
-                    </div>
-                    <div class="col-9">
-                        <p class="my-0"><strong>{{ item.product.name }}</strong></p>
-                        {% if product.on_sale is True %}
-                        <!-- Sale badge-->
-                        <p class="text-danger discount text-decoration-none "><small>-{{ product.discount_percent }}% Sale</small>
-                            </p>
-                         {% endif %}
-                        <p class="my-0 small">Size: {% if item.product.size %}{{ item.size|upper }}{% else %}N/A{% endif %}</p>
-                        <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
-                        {% if item.product.on_sale is True %}
-                            <p class="my-0 text-danger"> €{{ item.product.sale_price | calc_subtotal_offer:item.quantity }}</p>
-                        {% else %}
-                            <p class="my-0">
-                            <strong> €{{ item.product.price | calc_subtotal:item.quantity }}</strong>
-                          </p>
-                    {% endif %}
-                    </div>
-                </div>
-            {% endfor %}
-            </div>
             <div class="row">
+                <div class="col-3 my-1">
+                    {% if item.product.image_a %}
+                    <img class="w-100" src="{{ item.product.image_a.url }}" alt="{{ item.product.name }}">
+                    {% else %}
+                    <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
+                    {% endif %}
+                </div>
+                <div class="col-9">
+                    <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                    <!--if product on sale -->
+                    {% if product.on_sale is True %}
+                    <!-- Sale badge-->
+                    <p class="text-danger discount text-decoration-none "><small>-{{ product.discount_percent }}%
+                            Sale</small>
+                    </p>
+                    {% endif %}
+                    <p class="my-0 small">Size: {% if item.product.size %}{{ item.size|upper }}{% else %}N/A{% endif %}
+                    </p>
+                    <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
+                    {% if item.product.on_sale is True %}
+                    <p class="my-0 text-danger"> €{{ item.product.sale_price | calc_subtotal_offer:item.quantity }}</p>
+                    {% else %}
+                    <p class="my-0">
+                        <strong> €{{ item.product.price | calc_subtotal:item.quantity }}</strong>
+                    </p>
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <!--delivery payment and grand total -->
+        <div class="row">
             <div class="col-3">
                 <p>
                     Total{% if free_delivery_delta > 0 %} (Exc. delivery){% endif %}:</p>
             </div>
             <div class="col-9">
-                
                 <p>€{{ total|floatformat:2 }}</p>
-                
             </div>
             {% if free_delivery_delta > 0 %}
             <div class="d-grid gap-2">
@@ -66,14 +68,14 @@
                 </p>
             </div>
             {% endif %}
-                    <a href="{% url 'view_bag' %}" class="btn btn-outline-black btn-black btn-block rounded-0">
-                        <span class="text-uppercase">Go To Secure Checkout</span>
-                        <span class="icon">
-                            <i class="fas fa-lock"></i>
-                        </span>
-                    </a>
-                </div>
-            </div>
-        {% endif %}
+            <a href="{% url 'view_bag' %}" class="btn btn-outline-black btn-black btn-block rounded-0">
+                <span class="text-uppercase">Go To Secure Checkout</span>
+                <span class="icon">
+                    <i class="fas fa-lock"></i>
+                </span>
+            </a>
+        </div>
     </div>
+    {% endif %}
+</div>
 </div>

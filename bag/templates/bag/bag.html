@@ -4,7 +4,7 @@
 
 
 {% block content %}
-
+<!--bag page hero image-->
 <div class="container shopping-cart mb-4">
     <div class="row">
         <div class="col-12">
@@ -20,7 +20,7 @@
         </div>
     </div>
 </div>
-<!---bag section------->
+<!---bag heading------->
 <section>
     <div Class="container">
         <div class="row">
@@ -32,7 +32,7 @@
         <div class="row">
             <div class="col">
                 {% if bag_items %}
-                <!--medium and small screen table-->
+                <!-- on medium and small screen bag -->
                 <div class="d-block d-md-none ">
                     {% for item in bag_items %}
                         <div class="col-12 col-md-6 mt-2 mb-2 text-center image-center">
@@ -40,15 +40,13 @@
                         </div>
                             <div class=" col-12 col-md-6">
                                 <p class="my-0"><small>{{ item.product.name }}</small></p>
+                                <!--if product on sale-->
                                 {% if item.product.on_sale is True %}
                                    <p class=" mb-0 text-decoration-line-through  "> Price: € {{item.product.price }}</p>
                                    <p class=" mb-0  card-text text-danger font-weight-bold "> Sale Price: € {{item.product.sale_price }}</p>
                                 {% else %}
                                    <p class=" mb-0 card-text  font-weight-bold"> Price:€ {{ item.product.price }}</p>
                                 {% endif %}
-                                <!--<p class="my-0">
-                                <strong> €{{ item.product.price | calc_subtotal:item.quantity }}</strong>
-                                </p>-->   
                                 <p class="my-0 small text-muted"><small>SKU: {{ item.product.sku|upper }}</small></p>
                                 <p class="my-0">
                                     <small>Size:  {% if item.product.size %}
@@ -59,6 +57,7 @@
                                 </small>
                                 </p>
                                 </div>
+                                <!--update quantity-->
                                 <div class=" col-3 mt-2">
                                     <form class="form  update-form" method="POST"
                                     action="{% url 'adjust_bag' item.item_id %}">
@@ -92,6 +91,7 @@
                                         </div>
                                     </div>
                                 </form>
+                                <!--edit and delete product from bag -->
                                 <a class="update-link p-2 text-success "><small><i class="fas fa-sync-alt"></i></small></a>
                                 <a class="remove-item p-2 text-danger  text-right" id="remove_{{ item.item_id }}"
                                 data-product_size="{{ item.size }}"><small><i class="fas fa-trash-alt"></i></small></a>
@@ -105,6 +105,7 @@
                                     </p>
                                     {% endif %}
                                 </div>
+                                <!--on small screen border bottom after each product in bag -->
                                 {% if forloop.counter|divisibleby:1 %}
                                 <div class="col-12 d-md-none mt-3 mb-3">
                                     <hr>
@@ -112,6 +113,7 @@
                                 {% endif %}
                                 {% endfor %}
                               <div>
+                                  <!-- bag total-->
                                 <h6><strong>Bag Total: €{{ total|floatformat:2 }}</strong></h6>
                                 <h6>Delivery: €{{ delivery|floatformat:2 }}</h6>
                                 <h4 class="mt-4"><strong>Grand Total: €{{ grand_total|floatformat:2 }}</strong></h4>
@@ -137,6 +139,7 @@
                     </div>
                 </div>
                 <!--medium and small screen table end here-->
+                <!--here starts table for large screen -->
                     <div class="table-responsive  rounded">
                         <table class="table table-sm table-border d-none d-md-block">
                            <thead class="text-black">
@@ -171,6 +174,7 @@
                                       <p>N/A</p>
                                     {% endif %}
                                 </td>
+                                 <!--update quantity-->
                                 <td class="py-3 ">
                                    <form class="form update-form" method="POST"
                                        action="{% url 'adjust_bag' item.item_id %}">
@@ -204,6 +208,7 @@
                                         </div>
                                     </div>
                                 </form>
+                                <!--edit and delete product from bag -->
                                 <a class="update-link p-2 text-success "><small><i class="fas fa-sync-alt"></i></small></a>
                                 <a class="remove-item p-2 text-danger  text-right" id="remove_{{ item.item_id }}"
                                 data-product_size="{{ item.size }}"><small><i class="fas fa-trash-alt"></i></small></a>

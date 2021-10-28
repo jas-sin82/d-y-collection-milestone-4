@@ -1,15 +1,14 @@
 {% extends "base.html" %}
 {% load static %}
 
-
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
 {% endblock %}
 
 
-
 {% block content %}
 
+<!-- customer order conformation / detail -->
 <div class="container header-container mb-5">
     <div class="row">
         <div class="col">
@@ -24,16 +23,17 @@
             <small class="bold ">Order/Product Details:</small>
         </div>
     </div>
+    <!--product discription-->
     <div class="row">
         {% for item in order.lineitems.all %}
-            <div class="col-sm-6 col-md-4 col-lg-3 ">
-               <div class="card h-100 border-0">
-                   {% if item.product.image_a %}
-                       <img class="card-img-top img-fluid  " src="{{ item.product.image_a.url }}"
-                        alt="{{ item.product.name }}">
-                    {% else %}
-                        <img class="card-img-top img-fluid " src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
-                    {% endif %}
+        <div class="col-sm-6 col-md-4 col-lg-3 ">
+            <div class="card h-100 border-0">
+                {% if item.product.image_a %}
+                <img class="card-img-top img-fluid  " src="{{ item.product.image_a.url }}"
+                    alt="{{ item.product.name }}">
+                {% else %}
+                <img class="card-img-top img-fluid " src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
+                {% endif %}
                 <div class="card-body">
                     <p class="small card-text mb-0 text-black font-weight-bold">
                         Product Name: {{ item.product.name }}
@@ -45,8 +45,9 @@
                 </div>
             </div>
         </div>
-       {% endfor %}
+        {% endfor %}
     </div>
+    <!--customer receipt with personal and order information-->
     <div class="container mt-3 mb-5">
         <div class="row">
             <div class="col">
@@ -99,14 +100,14 @@
                         </div>
                     </div>
                     {% if order.street_address2 %}
-                        <div class="row">
+                    <div class="row">
                         <div class="col-12 col-md-4">
                             <p class="mb-0 text-black font-weight-bold">Address 2</p>
                         </div>
                         <div class="col-12 col-md-8 text-md-right">
                             <p class="mb-0">{{ order.street_address1 }}</p>
                         </div>
-                        </div>
+                    </div>
                     {% endif %}
                     {% if order.county %}
                     <div class="row">
@@ -127,14 +128,14 @@
                         </div>
                     </div>
                     {% if order.postcode %}
-                        <div class="row">
-                           <div class="col-12 col-md-4">
-                               <p class="mb-0 text-black font-weight-bold">Postal Code</p>
-                            </div>
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <p class="mb-0 text-black font-weight-bold">Postal Code</p>
+                        </div>
                         <div class="col-12 col-md-8 text-md-right">
                             <p class="mb-0">{{ order.postcode }}</p>
                         </div>
-                        </div>
+                    </div>
                     {% endif %}
                     <div class="row">
                         <div class="col-12 col-md-4">
@@ -187,19 +188,19 @@
         <div class="row">
             <div class="col-12 col-lg-7 text-right">
                 {% if from_profile %}
-                    <a href="{% url 'profile' %}" class="btn btn-black btn-outline-black-checkout rounded-0 my-2">
-                        <span class="icon mr-2">
-                            <i class="fas fa-angle-left"></i>
-                        </span>
-                        <span class="text-uppercase">Back to Profile</span>
-                    </a>
+                <a href="{% url 'profile' %}" class="btn btn-black btn-outline-black-checkout rounded-0 my-2">
+                    <span class="icon mr-2">
+                        <i class="fas fa-angle-left"></i>
+                    </span>
+                    <span class="text-uppercase">Back to Profile</span>
+                </a>
                 {% else %}
                 <a href="{% url 'sale_products' %}"
-                 class="btn btn-black  btn-small btn-outline-black-checkout  rounded-0 my-2">
-                <span class="icon mr-2">
-                    <i class="fas fa-gifts"></i>
-                </span>
-                <span class="text-uppercase">latest Sale!</span>
+                    class="btn btn-black  btn-small btn-outline-black-checkout  rounded-0 my-2">
+                    <span class="icon mr-2">
+                        <i class="fas fa-gifts"></i>
+                    </span>
+                    <span class="text-uppercase">latest Sale!</span>
                 </a>
                 {% endif %}
             </div>
@@ -233,13 +234,13 @@
             </div>
         </div>
     </footer>
-{% endblock %}
+    {% endblock %}
 
-{% block postloadjs %}
-{{ block.super }}
-<script>
-    $('.btt-link').click(function (e) {
-        window.scrollTo(0, 0)
-    })
-</script>
-{% endblock %}
+    {% block postloadjs %}
+    {{ block.super }}
+    <script>
+        $('.btt-link').click(function (e) {
+            window.scrollTo(0, 0)
+        })
+    </script>
+    {% endblock %}
