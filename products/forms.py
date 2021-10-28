@@ -16,8 +16,7 @@ class ProductForm(forms.ModelForm):
     image_c = forms.ImageField(
         label='Image_c', required=False, widget=CustomClearableFileInput)
     image_d = forms.ImageField(
-        label='Image_d', required=False, widget=CustomClearableFileInput)    
-
+        label='Image_d', required=False, widget=CustomClearableFileInput)
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -26,7 +25,6 @@ class ProductForm(forms.ModelForm):
         friendly_names = [(c.id, c.get_friendly_name()) for c in categories]
         friendly_names_brand = [(b.id, b.get_friendly_name()) for b in brands]
 
-    
         self.fields['category'].choices = friendly_names
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'border-black rounded-0'
@@ -34,6 +32,7 @@ class ProductForm(forms.ModelForm):
         self.fields['brand'].choices = friendly_names_brand
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'rounded-0 form-fields'
+
 
 class ReviewForm(forms.ModelForm):
 

@@ -4,12 +4,14 @@ from django.db.models import Avg, Count, Sum
 from django.contrib.auth.models import User
 from decimal import Decimal
 
-# Create your models here.
-class Category(models.Model):
 
+# Create your models here.
+
+
+class Category(models.Model):
     class Meta:
         verbose_name_plural = 'Categories'
-        
+
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
 
@@ -32,18 +34,17 @@ class Brand(models.Model):
         return self.friendly_name
 
 
-
 class Product(models.Model):
-    
+
     GENDER = [
-        ('f', 'f'), 
+        ('f', 'f'),
         ('m', 'm'),
     ]
 
     category = models.ForeignKey(
         'Category', null=True, blank=True, on_delete=models.SET_NULL)
     brand = models.ForeignKey('Brand', null=True, blank=True,
-                              on_delete=models.SET_NULL)    
+                              on_delete=models.SET_NULL)
     sku = models.CharField(max_length=254, null=True, blank=True)
     name = models.CharField(max_length=254)
     description = models.TextField()
@@ -64,14 +65,14 @@ class Product(models.Model):
     def __str__(self):
         return self.name
 
-
-    # credit to : https://helperbyte.com/questions/77886/django-how-to-make-a-discount-for-the-item
-    #Calculate price with discount percentage
+    # credit to : https://helperbyte.com/questions/77886/django
+    # how-to-make-a-discount-for-the-item
+    # Calculate price with discount percentage
     def sale_price(self):
-        
+
         sale = Decimal(self.price * (
             100 - self.discount_percent) / 100).quantize(Decimal('0.00'))
-        
+
         return sale
 
 
