@@ -84,7 +84,7 @@ class ProductReview(models.Model):
         ordering = ['-date_added']
         verbose_name_plural = 'Product Reviews'
 
-    rating_selection = (
+    RATING = (
         (1, '1'),
         (2, '2'),
         (3, '3'),
@@ -98,7 +98,7 @@ class ProductReview(models.Model):
                              on_delete=models.CASCADE)
     title = models.CharField(max_length=254)
     review_text = models.TextField()
-    review_rating = models.IntegerField(choices=rating_selection, default=5)
+    review_rating = models.IntegerField(choices=RATING, default=5)
     date_added = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
