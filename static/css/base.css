@@ -1412,12 +1412,14 @@ section ul .user-show.show-4 {
     margin-bottom: 0px;
 
 }
+
 .product-detail-1 {
     margin-bottom: 130px;
-    
+
 
 }
-.product-display-2{
+
+.product-display-2 {
     font-family: 'Playfair Display SC', serif;
 }
 
@@ -1446,23 +1448,23 @@ section ul .user-show.show-4 {
     max-width: 30%;
 }
 
-.user-login{
-    font-size:20px;
+.user-login {
+    font-size: 20px;
     font-family: 'Playfair Display SC', serif;
-    color:orangered;
+    color: orangered;
     letter-spacing: 2px;
     text-decoration: none;
 
 }
-.bg-color{
- background-color:#ececec;
- 
 
-    
+
+.bg-color {
+    background-color: #ececec;
 
 }
-.fa-star{
-    color:orangered;
+
+.fa-star {
+    color: orangered;
 }
 
 
@@ -1481,20 +1483,22 @@ section ul .user-show.show-4 {
         width: 100%;
         margin-bottom: 60px;
     }
-    .carousel-inner{
-        margin-top:-50px;
+
+    .carousel-inner {
+        margin-top: -50px;
     }
 
 }
-@media (max-width: 730px){
-    .product-name{
-        font-size:12px;
+
+@media (max-width: 730px) {
+    .product-name {
+        font-size: 12px;
     }
 }
 
-@media (max-width: 650px){
-    .product-name{
-        font-size:10px;
+@media (max-width: 650px) {
+    .product-name {
+        font-size: 10px;
     }
 }
 
@@ -1986,4 +1990,3 @@ section ul .user-show.show-4 {
     opacity: 0;
     cursor: pointer;
 }
-

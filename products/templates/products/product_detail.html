@@ -201,19 +201,16 @@
    <div class="col-12 col-md-6  ">
        <h1 class="text-center product-heading ">Reviews</h1>
        {% for review in product.reviews.all %}
-           <div class="card card-border mt-1 rounded-0 " style>
+           <div class="card card-border mt-1 rounded-0 ">
         <!----- Review Card ----->
-            <div class="card-body">
-               <p class="small text-muted">by {{ review.user }} on {{ review.date_added|date:"d-m-Y"}} </p>
-               <p class="card-title">{{ review.title }}<i class="mx-2 fas fa-star"></i>{{ review.review_rating }}/5</p>
-               <p class=" card-text lead"> <small>{{ review.review_text }}</small></p>
+                <div class="card-body">
+                   <p class="small text-muted">by {{ review.user }} on {{ review.date_added|date:"d-m-Y"}} </p>
+                   <p class="card-title">{{ review.title }}<i class="mx-2 fas fa-star"></i>{{ review.review_rating }}/5</p>
+                    <p class=" card-text lead"> <small>{{ review.review_text }}</small></p>
+                {% if request.user.is_superuser %}
+                   <a class="" href="{% url 'delete_review' review.id %}">Remove</button>
+                {% endif %}
             </div>
-            {% if review.user == request.user or request.user.is_superuser %}
-            <div class="">
-               <a class="btn" href="{% url 'edit_review' review.id %}#reviews">
-               <i class="fas fa-edit"></i> Edit Review</a>
-           </div>
-        {% endif %}
         </div>
 {% empty %}
 <!----- If No Reviews ----->
@@ -222,47 +219,29 @@
     </div>
 {% endfor%}
 </div>
-
-
 <!--review form-->
-
 <div class="col-12 col-md-6 mb-5 mt-sm-5 " id="reviews">
     {% if request.user.is_authenticated %}
       <h2 class=" text-center product-heading">Add Reviews</h2>
         <div class="card bg-color boder-0" >
            <div class="card-body">
-               
-                {% if Update %}
-                    <!----- Edit Existing Review ----->
-                    <form method="POST" action="{% url 'edit_review' review.id %}#reviews">
-                    {% csrf_token %}
-                    {{ form|crispy }}
-                    <div class="text-center mt-3">
-                        <button class="btn bb1 rounded-0 text-uppercase" type="submit">Update Review</button>
-                        </div>
-                        </form>
-                    {% else %}
-                        <!----- Submit New Review ----->
-                        <form method="POST" action="{% url 'add_review' product.id %}#reviews">
-                            {% csrf_token %}
-                            {{ form|crispy }}
-                            <div class="text-center mt-3">
-                                <button class="btn bb1 rounded-0 text-uppercase" type="submit">Submit Review</button>
-                            </div>
-                        </form>
-                    {% endif %}
-                    {% else %}
+            <form method="POST" action="{% url 'add_review' product.id %}#reviews">
+                {% csrf_token %}
+                {{ form|crispy }}
+                   <div class="text-center mt-3">
+                    <button class="btn bb1 rounded-0 text-uppercase" type="submit">Submit Review</button>
+                    </div>
+                   </form>
+                   {% else %}
                     <p class="review-text text-center mt-4">
-                        <a class="user-login" href="{% url 'account_signup' %}">Register</a> or <a class="user-login" href="{% url 'account_login' %}">Log In</a> to leave a review!
+                    <a class="user-login" href="{% url 'account_signup' %}">Register</a> or <a class="user-login" href="{% url 'account_login' %}">Log In</a> to leave a review!
                     </p>
-                
                 {% endif %}
-        
+                </div>
+                </div>
+            </div>
         </div>
-      </div>
-</div>
-</div>
-</div>
+    </div>
 </section>
 <hr class ="divider mt-3 col-12 col-lg-10 offset-lg-1 ">
 <!--related product section-->

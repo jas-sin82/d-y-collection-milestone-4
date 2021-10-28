@@ -233,35 +233,15 @@ def add_review(request, product_id):
 
 
 @login_required
-def edit_review(request, review_id):
-    """ Allow user to edit their review """
-
-    review = get_object_or_404(ProductReview, pk=review_id)
-    product = review.product
-    if not request.user.is_authenticated:
-        messages.error(request, 'Sorry, you need to be logged in \
-            to submit a review.')
-        return redirect(reverse('product_detail', args=[product.id]))
-
-    elif request.user.is_authenticated:   
-        if request.method == 'POST':
-            form = ReviewForm(request.POST, instance=review)
-            if form.is_valid():
-               form.save()
-               messages.success(request, 'Your review has been updated successfully!')
-               return redirect(reverse('product_detail', args=[product.id]))
-        else:
-            messages.error(request, 'Failed to update your \
-                review, please try it again!')
-
-    else:
-        form = ReviewForm(instance=review)
-
-    template = 'products/product_detail.html'
-    context = {
-        'form': form,
-        'review': review,
-        'product': product,
-        'Update': True,
-    }
-    return render(request, template, context)
+def delete_review(request, review_id):
+    """ Delete review """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry,just store owner can do that.')
+        return redirect(reverse('home'))
+    elif request.user.is_superuser:
+        review = ProductReview.objects.filter(pk=review_id).last()
+        product_id = review.product_id
+        review.delete()
+        messages.success(request, f"{ review.user }'s review has been \
+        removed!", extra_tags=' ')
+        return redirect(reverse('product_detail', args=[product_id]))
