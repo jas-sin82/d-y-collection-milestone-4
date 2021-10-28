@@ -6,10 +6,10 @@
 <div class=" container-fluid product-detail">
 <div class="row">
     <div class="col col-sm-6 col-12 product-display-2  mb-3  p-3 breadcrumb" style="--bs-breadcrumb-divider: '|';">
-    <p class="breadcrumb-item small"><a class=" text-dark  text-uppercase text-decoration-none" href="{% url 'home' %}">Home | </a><p>
-    <p class="breadcrumb-item small "><a class=" text-dark  text-uppercase text-decoration-none"
+    <p class="breadcrumb-item small product-name p-1"><a class=" text-dark  text-uppercase text-decoration-none" href="{% url 'home' %}">Home | </a><p>
+    <p class="breadcrumb-item  small product-name p-1 "><a class=" text-danger  text-uppercase text-decoration-none"
          href="{% url 'products' %}?category={{ product.category.name }}"> {{ product.category.friendly_name }}</a></p>
-    <p class="breadcrumb-item text-success small text-capitalize text-decoration-none active" aria-current="page">{{ product.name }}</p>
+    <p class="breadcrumb-item p-1 product-name text-success small text-capitalize text-decoration-none active" aria-current="page">{{ product.name }}</p>
     </div>
 </div>
 </div>
@@ -32,7 +32,7 @@
                             <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="3"
                                 aria-label="Slide 4"></button>
                         </div>
-                        <div class="carousel-inner   ">
+                        <div class="carousel-inner ">
                             <div class="carousel-item  active">
                                 {% if product.image_a %}
                                     <a href="{{ product.image_a.url }}" target="_blank">

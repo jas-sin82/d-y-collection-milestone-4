@@ -3,8 +3,8 @@ from django.contrib import messages
 from django.db.models.functions import Lower
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
-from .models import Product, Category, Brand
-from .forms import ProductForm
+from .models import Product, Category, Brand, ProductReview
+from .forms import ProductForm, ReviewForm
 
 
 # Create your views here.
@@ -81,6 +81,7 @@ def product_detail(request, product_id):
     """ A view to show individual product details """
 
     product = get_object_or_404(Product, pk=product_id)
+    form = ReviewForm()
 
     # to get related products of men's
     related_products_men = Product.objects.filter(
@@ -98,6 +99,7 @@ def product_detail(request, product_id):
         'product': product,
         'related_products_men': related_products_men,
         'related_products_women': related_products_women,
+        'form': form,
     }
 
     return render(request, 'products/product_detail.html', context)
@@ -202,3 +204,29 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
+
+
+@login_required
+def add_review(request, product_id):
+    """ Allow users to add  a product review """
+
+    product = get_object_or_404(Product, pk=product_id)
+
+    if request.user.is_authenticated:
+        if request.method == 'POST':
+            form = ReviewForm(request.POST)
+            if form.is_valid():
+                review = form.save(commit=False)
+                review.product = product
+                review.user = request.user
+                review.save()
+                messages.success(request, 'Thank You! Your review \
+                    has been successfully added!')
+                return redirect(reverse('product_detail', args=[product.id]))
+            else:
+                messages.error(request, 'something went wrong! \
+                    Please try to add your review again.')
+    context = {
+        'form': form
+    }
+    return render(request, context)
