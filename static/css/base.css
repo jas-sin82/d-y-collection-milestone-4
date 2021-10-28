@@ -1454,6 +1454,19 @@ section ul .user-show.show-4 {
     text-decoration: none;
 
 }
+.bg-color{
+ background-color:#ececec;
+ 
+
+    
+
+}
+.fa-star{
+    color:orangered;
+}
+
+
+
 
 @media (max-width: 1080px) {
     .product-detail {
