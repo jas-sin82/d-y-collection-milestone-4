@@ -197,24 +197,45 @@
 <hr class ="divider">
 <div class="container">
 <div class="row">
-<div class="col-12 col-md-10 col-lg-6 offset-lg-3  mb-5">
+<div class="col-12 col-md-6 mb-5">
     <h1 class="text-center product-heading ">Reviews</h1>
-    {% for review in product.reviews.all %}
+    
     <!----- If Review, Displays to User ----->
-    <div class="card mt-5 rounded-0">
+    <div class="card mt-5 mb-5 rounded-0">
         <!----- Review Card ----->
         <div class="card-body">
-            <p class="small text-muted"> by {{ review.user }} on {{ review.date_added|date:"d-m-Y"}}</p>
-            <p class="card-title">{{ review.title }}<i class="mx-2 fas fa-star"></i>{{ review.review_rating }}/5</p>
-            <p class="card-text lead">{{ review.review_text }}</p>
+            <p class="small text-muted">product nice </p>
+            <p class="card-title">product nice <i class="mx-2 fas fa-star"></i></p>
+            <p class="card-text lead"> product nice</p>
         </div>
     </div>
-    {% endfor%}
+    
 </div>
+<!--review form-->
+<div class="col-12 col-md-6 mb-5 " id="reviews">
+    {% if request.user.is_authenticated %}
+    <h1 class="text-center product-heading ">Review Form</h1>
+    <!----- Submit New Review ----->
+    <form method="POST" action="{% url 'add_review' product.id %}#reviews">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <div class="text-center mt-3">
+            <button class="btn bb1 rounded-0 text-uppercase" type="submit">Submit Review</button>
+        </div>
+    </form>
+{% else %}
+    <p class=" text-center mt-3">
+        <a class= "user-login" href="{% url 'account_signup' %}"> Register Please </a> or <a class= "user-login"  href="{% url 'account_login' %}"> Log In</a> to leave a review!
+    </p>
+    <!--display form-->
+    {% endif %}
+   
+
 
 </div>
 </div>
-<hr class ="divider">
+</div>
+<hr class ="divider col-12 col-lg-10 offset-lg-1 ">
 <section>
     <div class="container">
         <div class="col text-center  mt-4 mb-5">

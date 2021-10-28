@@ -1446,7 +1446,14 @@ section ul .user-show.show-4 {
     max-width: 30%;
 }
 
+.user-login{
+    font-size:20px;
+    font-family: 'Playfair Display SC', serif;
+    color:orangered;
+    letter-spacing: 2px;
+    text-decoration: none;
 
+}
 
 @media (max-width: 1080px) {
     .product-detail {
