@@ -1408,10 +1408,19 @@ section ul .user-show.show-4 {
 /*---product detail page--*/
 
 .product-detail {
-    margin-top: 220px;
-    margin-bottom: 100px;
+    margin-top: 160px;
+    margin-bottom: 10px;
 
 }
+.product-detail-1 {
+    margin-bottom: 100px;
+    
+
+}
+.product-display-2{
+    font-family: 'Playfair Display SC', serif;
+}
+
 
 .product-despt {
     font-family: 'Playfair Display SC', serif;
