@@ -10,7 +10,7 @@
     </div>
 </header>
 {% endblock %}
-
+<!--sale product heading-->
 {% block content %}
 <section>
 <div class="container-fluid">
@@ -20,7 +20,6 @@
         </div>
     </div>
 </div>
-<!----<div class="row">-->
 <div class="container">
     <div class="row mt-1 mb-3 ">
         <div class=" col-sm-6 col-12 product-display  p-3 breadcrumb order-md-first"
@@ -64,6 +63,7 @@
             </div>
         </div>
     </div>
+    <!--sale products cards -->
     <div class="row products-card">
         {% for product in products %}
         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
@@ -76,6 +76,7 @@
                         <p class="text-success discount text-decoration-none ">-{{ product.discount_percent }}%</p>
                     </div>
                 {% endif %}
+                <!--product images-->
                 {% if product.image_a %}
                 <a href="{% url 'product_detail' product.id %}">
                     <img class="card-img-top img-fluid" src="{{ product.image_a.url }}" alt="{{ product.name }}">
@@ -102,6 +103,7 @@
                         {% endif %}
                     </p>
                 </div>
+                <!--card footer-->
                 <div class="card-footer bg-light mb-5 pt-0 mt-2 text-center border-0 ">
                     <div class="row">
                         <div class="col">
@@ -135,20 +137,23 @@
 		})
 	</script>
 <script>
+    //Capture the change event from the sort-selector
     $('#sort-selector').change(function () {
         var selector = $(this);
         var currentUrl = new URL(window.location);
 
         var selectedVal = selector.val();
+        //If the value is not reset to the default on the products page
         if (selectedVal != "reset") {
             var sort = selectedVal.split("_")[0];
             var direction = selectedVal.split("_")[1];
 
             currentUrl.searchParams.set("sort", sort);
             currentUrl.searchParams.set("direction", direction);
-
+        //Replace the current location with the updated currentURL 
             window.location.replace(currentUrl);
         } else {
+            //Delete the sort & direction params
             currentUrl.searchParams.delete("sort");
             currentUrl.searchParams.delete("direction");
 

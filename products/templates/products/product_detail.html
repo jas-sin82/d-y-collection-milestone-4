@@ -4,14 +4,19 @@
 
 {% block content %}
 <div class=" container-fluid product-detail">
-<div class="row">
-    <div class="col col-sm-6 col-12 product-display-2  mb-3  p-3 breadcrumb" style="--bs-breadcrumb-divider: '|';">
-    <p class="breadcrumb-item small product-name p-1"><a class=" text-dark  text-uppercase text-decoration-none" href="{% url 'home' %}">Home | </a><p>
-    <p class="breadcrumb-item  small product-name p-1 "><a class=" text-danger  text-uppercase text-decoration-none"
-         href="{% url 'products' %}?category={{ product.category.name }}"> {{ product.category.friendly_name }}</a></p>
-    <p class="breadcrumb-item p-1 product-name text-success small text-capitalize text-decoration-none active" aria-current="page">{{ product.name }}</p>
+    <div class="row">
+        <div class="col col-sm-6 col-12 product-display-2  mb-3  p-3 breadcrumb" style="--bs-breadcrumb-divider: '|';">
+            <p class="breadcrumb-item small product-name p-1"><a class=" text-dark  text-uppercase text-decoration-none"
+                    href="{% url 'home' %}">Home | </a>
+                <p>
+                    <p class="breadcrumb-item  small product-name p-1 "><a
+                            class=" text-danger  text-uppercase text-decoration-none"
+                            href="{% url 'products' %}?category={{ product.category.name }}">
+                            {{ product.category.friendly_name }}</a></p>
+                    <p class="breadcrumb-item p-1 product-name text-success small text-capitalize text-decoration-none active"
+                        aria-current="page">{{ product.name }}</p>
+        </div>
     </div>
-</div>
 </div>
 <!-- Product detail section-->
 <section>
@@ -34,43 +39,44 @@
                         </div>
                         <div class="carousel-inner ">
                             <div class="carousel-item  active">
+                                <!--products image slider -->
                                 {% if product.image_a %}
-                                    <a href="{{ product.image_a.url }}" target="_blank">
+                                <a href="{{ product.image_a.url }}" target="_blank">
                                     <img src="{{ product.image_a.url }}" class="d-block w-100  "
-                                    alt="{{ product.name }}">
-                                   </a>
+                                        alt="{{ product.name }}">
+                                </a>
                                 {% else %}
-                                    <img src="{{ MEDIA_URL }}noimage.png" class="d-block w-100" alt="{{ product.name }}">
+                                <img src="{{ MEDIA_URL }}noimage.png" class="d-block w-100" alt="{{ product.name }}">
                                 {% endif %}
                             </div>
                             <div class="carousel-item">
                                 {% if product.image_b %}
-                                   <a href="{{ product.image_b.url }}" target="_blank">
+                                <a href="{{ product.image_b.url }}" target="_blank">
                                     <img src="{{ product.image_b.url }}" class="d-block w-100"
-                                    alt="{{ product.name }} Image_b">
-                                    </a>
+                                        alt="{{ product.name }} Image_b">
+                                </a>
                                 {% else %}
-                                    <img src="{{ MEDIA_URL }}noimage.png" class="d-block w-100" alt="{{ product.name }">
+                                <img src="{{ MEDIA_URL }}noimage.png" class="d-block w-100" alt="{{ product.name }">
                                 {% endif %}
                         </div>
                         <div class="carousel-item">
                             {% if product.image_c %}
                                 <a href="{{ product.image_c.url }}" target="_blank">
                                 <img src="{{ product.image_c.url }}" class="d-block w-100"
-                                alt="{{ product.name }} Image_c">
+                                    alt="{{ product.name }} Image_c">
                                 </a>
-                            {% else %}
+                                {% else %}
                                 <img src="{{ MEDIA_URL }}noimage.png" class="d-block w-100" alt="{{ product.name }}">
-                            {% endif %}
+                                {% endif %}
                             </div>
                             <div class="carousel-item">
                                 {% if product.image_d %}
-                                   <a href="{{ product.image_d.url }}" target="_blank">
+                                <a href="{{ product.image_d.url }}" target="_blank">
                                     <img src="{{ product.image_d.url }}" class="d-block w-100"
-                                     alt="{{ product.name }} Image_d">
-                                   </a>
+                                        alt="{{ product.name }} Image_d">
+                                </a>
                                 {% else %}
-                                     <img src="{{ MEDIA_URL }}noimage.png" class="d-block w-100" alt="{{ product.name }}">
+                                <img src="{{ MEDIA_URL }}noimage.png" class="d-block w-100" alt="{{ product.name }}">
                                 {% endif %}
                             </div>
                         </div>
@@ -95,42 +101,44 @@
                     {% if product.on_sale is True %}
                     <!-- Sale badge-->
                     <p class="text-danger mt-1 discount text-decoration-none ">-{{ product.discount_percent }}% Sale
-                        </p>
-                     {% endif %}
+                    </p>
+                    {% endif %}
                 </div>
+                <!--average rating-->
                 <div>
                     {% if product.average_rating %}
-                        <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.average_rating }} / 5</small>
+                    <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.average_rating }} / 5</small>
                     {% else %}
-                        <small class="text-muted">No Rating</small>
+                    <small class="text-muted">No Rating</small>
                     {% endif %}
                 </div>
-                    {% if request.user.is_superuser %}
-                        <small class="ml-3 ">
-                        <a href="{% url 'edit_product' product.id %}">Edit</a> | 
-                        <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
-                        </small>
-                    {% endif %}
+                <!-- super user can edit and delete product-->
+                {% if request.user.is_superuser %}
+                <small class="ml-3 ">
+                    <a href="{% url 'edit_product' product.id %}">Edit</a> |
+                    <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                </small>
+                {% endif %}
                 <div>
-                    <!-- Price -->
+                    <!--product Price and if sale  price -->
                     <small class="text-muted">Price:</small>
                     {% if product.on_sale is True %}
-                        <span class=" mb-0 text-decoration-line-through  ">€ {{ product.price }}</span>
-                        <span class=" mb-0  card-text text-danger font-weight-bold ">€ {{ product.sale_price }}</span></p>
+                    <span class=" mb-0 text-decoration-line-through  ">€ {{ product.price }}</span>
+                    <span class=" mb-0  card-text text-danger font-weight-bold ">€ {{ product.sale_price }}</span></p>
                     {% else %}
-                        <span class=" mb-0 card-text  font-weight-bold">€ {{ product.price }}</span>
+                    <span class=" mb-0 card-text  font-weight-bold">€ {{ product.price }}</span>
                     {% endif %}
                 </div>
                 {% if product.category %}
-                <!-- Category -->
-                    <p class="small mt-1 ">
+                <!--Category friendly name  -->
+                <p class="small mt-1 ">
                     <span id="text-category"><strong>Category:</strong></span>
                     <a href="{% url 'products' %}?category={{ product.category.name }}">
                         {{ product.category.friendly_name }}
                     </a>
-                    </p>
+                </p>
                 {% endif %}
-                    <p class="product-despt ">{{ product.description }}</p>
+                <p class="product-despt ">{{ product.description }}</p>
                 <!--submit form-->
                 <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
                     {% csrf_token %}
@@ -149,6 +157,7 @@
                             </select>
                         </div>
                         {% endif %}
+                        <!--quantity box-->
                         <div class="col-12">
                             <p class="mt-3"><strong>Quantity:</strong></p>
                             <div class="form-group quantity-option">
@@ -193,57 +202,60 @@
         </div>
     </div>
 </section>
-<hr class ="divider">
-<!--product review-->
+<hr class="divider">
+<!--product review section-->
 <section>
-<div class="container">
-  <div class="row">
-   <div class="col-12 col-md-6  ">
-       <h1 class="text-center product-heading ">Reviews</h1>
-       {% for review in product.reviews.all %}
-           <div class="card card-border mt-1 rounded-0 ">
-        <!----- Review Card ----->
-                <div class="card-body">
-                   <p class="small text-muted">by {{ review.user }} on {{ review.date_added|date:"d-m-Y"}} </p>
-                   <p class="card-title">{{ review.title }}<i class="mx-2 fas fa-star"></i>{{ review.review_rating }}/5</p>
-                    <p class=" card-text lead"> <small>{{ review.review_text }}</small></p>
-                {% if request.user.is_superuser %}
-                   <a class="" href="{% url 'delete_review' review.id %}">Remove</button>
-                {% endif %}
-            </div>
-        </div>
-{% empty %}
-<!----- If No Reviews ----->
-    <div class="text-center mt-3">
-    <p class="user-login">(No reviews yet!)</p>
-    </div>
-{% endfor%}
-</div>
-<!--review form-->
-<div class="col-12 col-md-6 mb-5 mt-sm-5 " id="reviews">
-    {% if request.user.is_authenticated %}
-      <h2 class=" text-center product-heading">Add Reviews</h2>
-        <div class="card bg-color boder-0" >
-           <div class="card-body">
-            <form method="POST" action="{% url 'add_review' product.id %}#reviews">
-                {% csrf_token %}
-                {{ form|crispy }}
-                   <div class="text-center mt-3">
-                    <button class="btn bb1 rounded-0 text-uppercase" type="submit">Submit Review</button>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-6  ">
+                <h1 class="text-center product-heading ">Reviews</h1>
+                {% for review in product.reviews.all %}
+                <div class="card card-border mt-1 rounded-0 ">
+                    <!----- Review Card ----->
+                    <div class="card-body">
+                        <p class="small text-muted">by {{ review.user }} on {{ review.date_added|date:"d-m-Y"}} </p>
+                        <p class="card-title">{{ review.title }}<i
+                                class="mx-2 fas fa-star"></i>{{ review.review_rating }}/5</p>
+                        <p class=" card-text lead"> <small>{{ review.review_text }}</small></p>
+                        {% if request.user.is_superuser %}
+                        <a class=" text-danger text-decoration-none" href="{% url 'delete_review' review.id %}">Delete
+                            Review</a>
+                        {% endif %}
                     </div>
-                   </form>
-                   {% else %}
-                    <p class="review-text text-center mt-4">
-                    <a class="user-login" href="{% url 'account_signup' %}">Register</a> or <a class="user-login" href="{% url 'account_login' %}">Log In</a> to leave a review!
-                    </p>
-                {% endif %}
                 </div>
+                {% empty %}
+                <!----- If No Reviews ----->
+                <div class="text-center mt-3">
+                    <p class="user-login">(No reviews yet!)</p>
+                </div>
+                {% endfor%}
+            </div>
+            <!-- product review form-->
+            <div class="col-12 col-md-6 mb-5 mt-sm-5 " id="reviews">
+                {% if request.user.is_authenticated %}
+                <h2 class=" text-center product-heading">Add Reviews</h2>
+                <div class="card bg-color boder-0">
+                    <div class="card-body">
+                        <form method="POST" action="{% url 'add_review' product.id %}#reviews">
+                            {% csrf_token %}
+                            {{ form|crispy }}
+                            <div class="text-center mt-3">
+                                <button class="btn bb1 rounded-0 text-uppercase" type="submit">Submit Review</button>
+                            </div>
+                        </form>
+                        {% else %}
+                        <p class="review-text text-center mt-4">
+                            <a class="user-login" href="{% url 'account_signup' %}">Register</a> or <a
+                                class="user-login" href="{% url 'account_login' %}">Log In</a> to leave a review!
+                        </p>
+                        {% endif %}
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<hr class ="divider mt-3 col-12 col-lg-10 offset-lg-1 ">
+<hr class="divider mt-3 col-12 col-lg-10 offset-lg-1 ">
 <!--related product section-->
 <section>
     <div class="container">
@@ -251,56 +263,60 @@
             <h1 class="logo-font product-heading"> Related Products</h1>
         </div>
         <div class="row ">
+            <!-- men's related products-->
             {% if product.gender == "m" %}
             {% for product in related_products_men %}
             <div class=" col-lg-3 col-6 border-0  ">
-               
-                <div class=" card main-cards-1 card-body  border-0 mb-5  card-size" style="width: 18rem;" >
+
+                <div class=" card main-cards-1 card-body  border-0 mb-5  card-size" style="width: 18rem;">
                     {% if product.on_sale is True %}
-                   <!-- Sale badge-->
-                        <div class="badge bg-danger border-0 text-white position-absolute" style="top: 1.6rem; left: 1.5rem">Sale
-                        </div>
-                        <div class=" text-left  position-absolute" style=" top: 2.9rem ;  left: 1.7rem" > 
+                    <!-- Sale badge-->
+                    <div class="badge bg-danger border-0 text-white position-absolute"
+                        style="top: 1.6rem; left: 1.5rem">Sale
+                    </div>
+                    <div class=" text-left  position-absolute" style=" top: 2.9rem ;  left: 1.7rem">
                         <p class="text-success discount text-decoration-none ">-{{ product.discount_percent }}%</p>
-                        </div>
+                    </div>
                     {% endif %}
+                    <!--products images -->
                     {% if product.image_a %}
-                       <a href="{% url 'product_detail' product.id %}">
-                       <img src="{{ product.image_a.url }}" class=" main-cards  card-img-top " alt="text">
-                      </a>
-                      <div class=" text-right position-absolute" style=" top: 1.6rem ;  right: 1.4rem" > 
+                    <a href="{% url 'product_detail' product.id %}">
+                        <img src="{{ product.image_a.url }}" class=" main-cards  card-img-top " alt="text">
+                    </a>
+                    <div class=" text-right position-absolute" style=" top: 1.6rem ;  right: 1.4rem">
                         <a class="text-success  " href=""><i class="fas fa-shopping-cart"></i></a>
-                   </div>
+                    </div>
                     {% else %}
-                       <a href="{% url 'product_detail' product.id %}">
-                       <img src="{{ MEDIA_URL }}noimage.png" class=" main-cards card-img-top " alt="text">
-                      </a> 
+                    <a href="{% url 'product_detail' product.id %}">
+                        <img src="{{ MEDIA_URL }}noimage.png" class=" main-cards card-img-top " alt="text">
+                    </a>
                     {% endif %}
                     <p class="mb-0 mt-1 card-title  small text-right ">{{ product.name }}</p>
-                    </div>
                 </div>
+            </div>
             {% endfor %}
             {% else %}
+            <!--women's related products-->
             {% for product in related_products_women %}
             <div class=" col-6 col-lg-3">
-                <div class=" card main-cards-1 border-0 card-body mb-5 card-size" style="width: 18rem;"  >
+                <div class=" card main-cards-1 border-0 card-body mb-5 card-size" style="width: 18rem;">
                     {% if product.image_a %}
-                        <a href="{% url 'product_detail' product.id %}">
+                    <a href="{% url 'product_detail' product.id %}">
                         <img src="{{ product.image_a.url }}" class=" main-cards card-img-top " alt="text">
-                        </a>
+                    </a>
                     {% else %}
-                       <a href="{% url 'product_detail' product.id %}">
-                       <img src="{{ MEDIA_URL }}noimage.png" class=" main-cards card-img-top " alt="text">
-                      </a> 
+                    <a href="{% url 'product_detail' product.id %}">
+                        <img src="{{ MEDIA_URL }}noimage.png" class=" main-cards card-img-top " alt="text">
+                    </a>
                     {% endif %}
                     <p class="mb-0 mt-1 card-title small text-right">{{ product.name }}</p>
-                    </div>
                 </div>
+            </div>
             {% endfor %}
             {% endif %}
         </div>
     </div>
-</section> 
+</section>
 {% endblock %}
 
 {% block postloadjs %}

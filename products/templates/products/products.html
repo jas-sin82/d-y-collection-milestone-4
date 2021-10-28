@@ -10,18 +10,17 @@
         </div>
 </header>
 {% endblock %}
-<!--products display section-->
+<!--products heading-->
 {% block content %}
 <section>
     <div class="container-fluid">
         <div class="row">
             <div class="col text-center  mt-3 mb-2 ">
                 <h1 class="logo-font product-heading"> All Products</h1>
-
             </div>
         </div>
     </div>
-  <div class="container">
+    <div class="container">
         <div class="row mt-1 mb-3 ">
             <div class=" col-sm-6 col-12 product-display  p-3 breadcrumb order-md-first"
                 style="--bs-breadcrumb-divider: '|';">
@@ -32,11 +31,11 @@
                     Products</a>
                 {% if current_categories %}
                 {% for c in current_categories %}
-                    <p class="breadcrumb-item active text-dark fw-bold text-uppercase">{{ c.friendly_name }}
+                <p class="breadcrumb-item active text-dark fw-bold text-uppercase">{{ c.friendly_name }}
                     ({{ products|length}})</p>
                 {% endfor %}
                 {% else %}
-                   <p class="breadcrumb-item active text-dark fw-bold text-uppercase">{{ products|length }}
+                <p class="breadcrumb-item active text-dark fw-bold text-uppercase">{{ products|length }}
                     products{% if search_term %} found for
                     <strong>"{{ search_term }}"</strong>
                     {% endif %}</p>
@@ -73,25 +72,28 @@
             {% for product in products %}
             <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                 <div class="card h-100 border-0">
+                    <!--if sale products -->
                     {% if product.on_sale is True %}
-                   <!-- Sale badge-->
-                        <div class="badge bg-danger border-0 text-white position-absolute" style="top: 0.5rem; left: 0.5rem">Sale
-                        </div>
-                        <div class=" text-left  position-absolute" style=" top: 0.3rem ;  right: 0.8rem" > 
+                    <!-- Sale badge-->
+                    <div class="badge bg-danger border-0 text-white position-absolute"
+                        style="top: 0.5rem; left: 0.5rem">Sale
+                    </div>
+                    <div class=" text-left  position-absolute" style=" top: 0.3rem ;  right: 0.8rem">
                         <p class="text-success discount text-decoration-none ">-{{ product.discount_percent }}%</p>
-                        </div>
+                    </div>
                     {% endif %}
+                    <!--product images -->
                     {% if product.image_a %}
-                        <a href="{% url 'product_detail' product.id %}">
-                           <img class="card-img-top img-fluid" src="{{ product.image_a.url }}" alt="{{ product.name }}">
-                        </a>
-                        <div class=" text-right position-absolute" style=" bottom: 13rem ;  right: 0.8rem" > 
-                             <a class="text-success  " href=""><i class="fas fa-shopping-cart"></i></a>
-                        </div>
+                    <a href="{% url 'product_detail' product.id %}">
+                        <img class="card-img-top img-fluid" src="{{ product.image_a.url }}" alt="{{ product.name }}">
+                    </a>
+                    <div class=" text-right position-absolute" style=" bottom: 13rem ;  right: 0.8rem">
+                        <a class="text-success  " href=""><i class="fas fa-shopping-cart"></i></a>
+                    </div>
                     {% else %}
-                        <a href="{% url 'product_detail' product.id %}">
-                           <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
-                         </a>
+                    <a href="{% url 'product_detail' product.id %}">
+                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                    </a>
                     {% endif %}
                     <div class="card-body text-left font pb-0">
                         <p class="mb-0 small">{{ product.name }}</p>
@@ -100,28 +102,30 @@
                                 <i class="fas fa-tag text-success mr-1"></i>{{ product.category.friendly_name }}
                             </a>
                             {% if request.user.is_superuser %}
-                                <small class="ml-3 p-2 ">
-                                <a href="{% url 'edit_product' product.id %}">Edit</a> | 
+                            <small class="ml-3 p-2 ">
+                                <a href="{% url 'edit_product' product.id %}">Edit</a> |
                                 <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
-                                </small>
+                            </small>
                             {% endif %}
                         </p>
                     </div>
+                    <!--card footer-->
                     <div class="card-footer bg-light mb-5 mt-2 text-center p-2 border-0 text-left">
                         <div class="row">
                             <div class="col">
                                 {% if product.on_sale is True %}
-                                   <span class=" mb-0 text-decoration-line-through  ">€ {{ product.price }}</span>
-                                   <span class=" mb-0  card-text text-danger font-weight-bold ">€ {{ product.sale_price }}</span></p>
+                                <span class=" mb-0 text-decoration-line-through  ">€ {{ product.price }}</span>
+                                <span class=" mb-0  card-text text-danger font-weight-bold ">€
+                                    {{ product.sale_price }}</span></p>
                                 {% else %}
-                                   <span class=" mb-0 card-text  font-weight-bold">€ {{ product.price }}</span>
+                                <span class=" mb-0 card-text  font-weight-bold">€ {{ product.price }}</span>
                                 {% endif %}
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-         {% endfor %}
+            {% endfor %}
         </div>
     </div>
     <div class="btt-button shadow-sm rounded-0 border border-black">
@@ -140,20 +144,23 @@
     })
 </script>
 <script>
+    //Capture the change event from the sort-selector
     $('#sort-selector').change(function () {
         var selector = $(this);
         var currentUrl = new URL(window.location);
 
         var selectedVal = selector.val();
+         //If the value is not reset to the default on the products page
         if (selectedVal != "reset") {
             var sort = selectedVal.split("_")[0];
             var direction = selectedVal.split("_")[1];
 
             currentUrl.searchParams.set("sort", sort);
             currentUrl.searchParams.set("direction", direction);
-
+        //Replace the current location with the updated currentURL 
             window.location.replace(currentUrl);
         } else {
+            //Delete the sort & direction params
             currentUrl.searchParams.delete("sort");
             currentUrl.searchParams.delete("direction");
 
@@ -161,6 +168,5 @@
         }
     })
 </script>
-
 
 {% endblock %}

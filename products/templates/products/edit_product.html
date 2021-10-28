@@ -10,37 +10,39 @@
         </div>
 </header>
 {% endblock %}
-
+<!--product update -->
 {% block content %}
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-md-6">
-                <h2 class="logo-font style-header mb-4">Product Management</h2>
-                <hr>
-                <h4 class=" style-header  text-muted ">Update Product</h4>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12 col-md-6 product-add-form mt-4">
-                <form  method="POST" action="{% url 'edit_product' product.id %}" class="form mb-2" enctype="multipart/form-data">
-                    {% csrf_token %}
-                    {{ form | crispy }}
-                    <div class="text-right mt-3">
-                        <a class="btn btn-outline-black rounded-0" href="{% url 'products' %}">Cancel</a>
-                        <button class="btn btn-black btn-outline-black rounded-0" type="submit">Update Product</button>
-                    </div>
-                </form>
-            </div>            
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <h2 class="logo-font style-header mb-4">Product Management</h2>
+            <hr>
+            <h4 class=" style-header  text-muted ">Update Product</h4>
         </div>
     </div>
+    <!-- crispy form to update products -->
+    <div class="row">
+        <div class="col-12 col-md-6 product-add-form mt-4">
+            <form method="POST" action="{% url 'edit_product' product.id %}" class="form mb-2"
+                enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form | crispy }}
+                <div class="text-right mt-3">
+                    <a class="btn btn-outline-black rounded-0" href="{% url 'products' %}">Cancel</a>
+                    <button class="btn btn-black btn-outline-black rounded-0" type="submit">Update Product</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 {% endblock %}
 
 {% block postloadjs %}
-    {{ block.super }}
-    <script type="text/javascript">
-        $('#new-image').change(function() {
-            var file = $('#new-image')[0].files[0];
-            $(this).parent().next().text(`Image will be set to: ${file.name}`);
-        });
-    </script>
+{{ block.super }}
+<script type="text/javascript">
+    $('#new-image').change(function () {
+        var file = $('#new-image')[0].files[0];
+        $(this).parent().next().text(`Image will be set to: ${file.name}`);
+    });
+</script>
 {% endblock %}
