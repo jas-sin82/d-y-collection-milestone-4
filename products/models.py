@@ -64,7 +64,7 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
-
+    
     # credit to : https://helperbyte.com/questions/77886/django
     # how-to-make-a-discount-for-the-item
     # Calculate price with discount percentage
@@ -74,7 +74,7 @@ class Product(models.Model):
             100 - self.discount_percent) / 100).quantize(Decimal('0.00'))
 
         return sale
-
+        
 
 class ProductReview(models.Model):
     """

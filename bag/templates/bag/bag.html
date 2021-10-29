@@ -97,8 +97,8 @@
                                 data-product_size="{{ item.size }}"><small><i class="fas fa-trash-alt"></i></small></a>
                                 </div>
                                 <div class=" col-sm-3 ">
-                                {% if item.product.on_sale is True %}
-                                        <p class="my-0 mt-2 text-danger "> Sub Total: €{{ item.product.sale_price | calc_subtotal:item.quantity }}</p>
+                                {% if item.product.on_sale %}
+                                        <p class="my-0 mt-2 text-danger "> Sub Total: €{{ item.product.sale_price | calc_subtotal_offer:item.quantity }}</p>
                                     {% else %}
                                     <p class="my-0 mt-2 ">
                                      Sub Total: €{{ item.product.price | calc_subtotal:item.quantity }}
