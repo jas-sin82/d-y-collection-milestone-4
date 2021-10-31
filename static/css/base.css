@@ -746,13 +746,23 @@ section ul .user-show.show-4 {
 
 
 @media (max-width:485px) {
-    .shop-button {
-        font-size: 10px;
-        max-width: 120px;
-    }
-
     .img-hero {
         margin-top: 90px;
+    }
+    .title-owner {
+
+        display: none;
+
+    }
+
+    .shop-button {
+        display: none;
+
+    }
+    .slogan {
+        font-size: 20px;
+        letter-spacing: 4px;
+
     }
 }
 
@@ -765,16 +775,6 @@ section ul .user-show.show-4 {
 
     }
 
-    .title-owner {
-
-        display: none;
-
-    }
-
-    .shop-button {
-        display: none;
-
-    }
 }
 
 /*--home page flickity carousel------*/
@@ -798,14 +798,51 @@ section ul .user-show.show-4 {
     top: 0px;
 }
 
-.badge:hover {
-    color: white;
+.carousel-cell {
+    width: 15%;
+    min-height: 400px;
+    object-fit: contain;
+    counter-increment: carousel-cell;
 
 }
 
-.card-border {
-    border: none;
+/*--- media query flickity carousel--*/
 
+@media (max-width: 1450px) {
+    .carousel-cell {
+        width: 20%;
+    }
+}
+
+@media (max-width: 1080px) {
+    .carousel-cell {
+        width: 30%;
+    }
+}
+
+@media (max-width: 767px) {
+    .carousel-cell {
+        width: 50%;
+    }
+    .badge-size{
+        font-size:10px;
+     }
+}
+
+@media (max-width:480px) {
+    .carousel-cell {
+        width: 60%;
+    }
+
+}
+
+@media (max-width:400px) {
+ 
+    .carousel-cell {
+        width:90%;
+     }
+   
+ 
 }
 
 /* home page men's and women's section---*/
@@ -1068,20 +1105,33 @@ section ul .user-show.show-4 {
 
     .heading-1 {
         font-size: 35px;
+        margin-top:30px;
 
+    }
+}
+
+@media (max-width:768px) {
+    .heading {
+      font-size: 35px;
+      margin-bottom:30px ;
+    }
+
+    .heading-1 {
+     font-size: 35px;
+     margin-top:30px;
 
     }
 }
 
 @media (max-width:580px) {
     .heading {
-        font-size: 20px;
-        margin-top: 20px;
+       font-size: 20px;
+       margin-top: 20px;
     }
 
     .heading-1 {
         font-size: 20px;
-        margin-top: 20px;
+        
     }
 
     .heading .badge {

@@ -31,21 +31,21 @@
     <div class="carousel mt-lg-4  mt-md-4" data-flickity='{ "wrapAround": "true", "imagesLoaded": "true"}'>
         {% for product in products %}
         <div class="carousel-cell">
-            <div class="card h-100 m-2 card-border" style="width: 18rem;">
+            <div>
                 {% if product.image_a %}
-                <a href=" {% url 'product_detail' product.id %}">
-                    <img class="card-img-top " src="{{ product.image_a.url }}" alt="{{ product.name }}">
-                    <div class="badge bg-success text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
+                <a class="text-decoration-none" href=" {% url 'product_detail' product.id %}">
+                    <img class="img-fluid" src="{{ product.image_a.url }}" alt="{{ product.name }}">
+                    <div class="badge badge-size bg-success text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
                         New</div>
+                    <div class="text-center text-success mt-1 small  pb-0">
+                        <p class="mb-0">{{ product.name }}</p>
+                    </div>
                 </a>
                 {% else %}
                 <a href="{% url 'product_detail' product.id %}">
-                    <img class="card-img-top " src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                    <img  src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                 </a>
                 {% endif %}
-                <div class="card-body text-center small  pb-0">
-                    <p class="mb-0">{{ product.name }}</p>
-                </div>
             </div>
         </div>
         {% endfor %}
@@ -54,8 +54,8 @@
 <!--men's and women's collection section"-->
 <section>
     <div class="container text-center  ">
-        <div class="row mt-lg-5 mt-md-4 mt-sm-4 ">
-            <div class="col-12 ">
+        <div class="row  ">
+            <div class="col-12 mt-xl-5 mt-lg-4 ">
                 <h2 class=" heading-1 "> D & Y Collection </h2>
             </div>
         </div>
