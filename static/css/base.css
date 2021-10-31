@@ -1712,6 +1712,13 @@ section ul .user-show.show-4 {
     text-align: center;
     margin-left: 110px;
 }
+.footer-style-bag{
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+ }
 
 @media (max-width: 580px) {
     .image-center {
@@ -1814,6 +1821,7 @@ section ul .user-show.show-4 {
     .shopping-image {
         min-width: 100vw;
     }
+   
 }
 
 @media (max-width:850px) {
@@ -1973,25 +1981,6 @@ section ul .user-show.show-4 {
 .allauth-form-inner-content a {
     color: #17a2b8;
     /* text-info */
-}
-
-.footer-style-4 {
-
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    display: block;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 160px;
-    background: #abbaab;
-    background: -webkit-linear-gradient(to bottom, #ffffff, #abbaab);
-    background: linear-gradient(to bottom, #ffffff, #abbaab);
-    box-shadow: -6px -6px 10px -1px rgb(255, 255, 255, 0.7),
-        6px 6px 10px -1px rgb(0, 0, 0, 0.5);
-
 }
 
 .header-container-3 {
