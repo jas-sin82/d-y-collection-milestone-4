@@ -283,9 +283,6 @@
                     <a href="{% url 'product_detail' product.id %}">
                         <img src="{{ product.image_a.url }}" class=" main-cards  card-img-top " alt="text">
                     </a>
-                    <div class=" text-right position-absolute" style=" top: 1.6rem ;  right: 1.4rem">
-                        <a class="text-success  " href=""><i class="fas fa-shopping-cart"></i></a>
-                    </div>
                     {% else %}
                     <a href="{% url 'product_detail' product.id %}">
                         <img src="{{ MEDIA_URL }}noimage.png" class=" main-cards card-img-top " alt="text">

@@ -749,6 +749,7 @@ section ul .user-show.show-4 {
     .img-hero {
         margin-top: 90px;
     }
+
     .title-owner {
 
         display: none;
@@ -759,6 +760,7 @@ section ul .user-show.show-4 {
         display: none;
 
     }
+
     .slogan {
         font-size: 20px;
         letter-spacing: 4px;
@@ -824,9 +826,10 @@ section ul .user-show.show-4 {
     .carousel-cell {
         width: 50%;
     }
-    .badge-size{
-        font-size:10px;
-     }
+
+    .badge-size {
+        font-size: 10px;
+    }
 }
 
 @media (max-width:480px) {
@@ -837,12 +840,12 @@ section ul .user-show.show-4 {
 }
 
 @media (max-width:400px) {
- 
+
     .carousel-cell {
-        width:90%;
-     }
-   
- 
+        width: 90%;
+    }
+
+
 }
 
 /* home page men's and women's section---*/
@@ -1105,33 +1108,33 @@ section ul .user-show.show-4 {
 
     .heading-1 {
         font-size: 35px;
-        margin-top:30px;
+        margin-top: 30px;
 
     }
 }
 
 @media (max-width:768px) {
     .heading {
-      font-size: 35px;
-      margin-bottom:30px ;
+        font-size: 35px;
+        margin-bottom: 30px;
     }
 
     .heading-1 {
-     font-size: 35px;
-     margin-top:30px;
+        font-size: 35px;
+        margin-top: 30px;
 
     }
 }
 
 @media (max-width:580px) {
     .heading {
-       font-size: 20px;
-       margin-top: 20px;
+        font-size: 20px;
+        margin-top: 20px;
     }
 
     .heading-1 {
         font-size: 20px;
-        
+
     }
 
     .heading .badge {
@@ -1712,13 +1715,8 @@ section ul .user-show.show-4 {
     text-align: center;
     margin-left: 110px;
 }
-.footer-style-bag{
-    position: fixed;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    margin-bottom: 0px;
- }
+
+/*---bag table product image ---*/
 
 @media (max-width: 580px) {
     .image-center {
@@ -1821,68 +1819,14 @@ section ul .user-show.show-4 {
     .shopping-image {
         min-width: 100vw;
     }
-   
+
 }
 
 @media (max-width:850px) {
     .shopping-day h2 {
-        font-size: 50px;
+        font-size: 25px;
         font-weight: 700;
         letter-spacing: 4px;
-        color: white !important;
-
-    }
-
-    .shopping-day h3 {
-
-        font-size: 30px;
-        font-weight: 700;
-        letter-spacing: 0px;
-        color: black;
-        letter-spacing: 2px;
-        color: white !important;
-
-    }
-
-    .shopping-message {
-        left: 50%;
-    }
-}
-
-@media (max-width:767px) {
-    .shopping-day h2 {
-        font-size: 45px;
-        font-weight: 700;
-        letter-spacing: 3px;
-        color: white !important;
-
-    }
-
-    .shopping-day h3 {
-
-        font-size: 30px;
-        font-weight: 700;
-        letter-spacing: 0px;
-        color: black;
-        letter-spacing: 2px;
-        color: white !important;
-
-    }
-
-    .shopping-message {
-
-        right: -20%;
-
-    }
-
-}
-
-@media (max-width:580px) {
-    .shopping-day h2 {
-
-        font-size: 35px;
-        font-weight: 700;
-        letter-spacing: 3px;
         color: white !important;
 
     }
@@ -1898,19 +1842,20 @@ section ul .user-show.show-4 {
 
     }
 
-    .bag-image {
-        width: 30%;
+    .shopping-message {
+        left: 30%;
     }
-
 }
 
-@media (max-width:380px) {
+
+@media (max-width:580px) {
     .shopping-day h2 {
 
-        font-size: 25px;
+        font-size: 20px;
         font-weight: 700;
         letter-spacing: 3px;
         color: white !important;
+
     }
 
     .shopping-day h3 {
@@ -1924,7 +1869,35 @@ section ul .user-show.show-4 {
 
     }
 
+    .bag-image {
+        width: 30%;
+    }
+
 }
+
+@media (max-width:480px) {
+    .shopping-day h2 {
+
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: 3px;
+        color: white !important;
+
+    }
+
+    .shopping-day h3 {
+
+        display: none;
+
+
+    }
+
+    .bag-image {
+        width: 30%;
+    }
+
+}
+
 
 /* Allauth form formatting */
 

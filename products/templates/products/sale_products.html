@@ -81,9 +81,6 @@
                 <a href="{% url 'product_detail' product.id %}">
                     <img class="card-img-top img-fluid" src="{{ product.image_a.url }}" alt="{{ product.name }}">
                 </a>
-                <div class=" text-right position-absolute" style=" bottom: 13rem ;  right: 0.8rem" > 
-                    <a class="text-warning  " href=""><i class="fas fa-shopping-cart"></i></a>
-                </div>
                 {% else %}
                 <a href="{% url 'product_detail' product.id %}">
                     <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
