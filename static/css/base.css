@@ -1755,6 +1755,10 @@ section ul .user-show.show-4 {
     font-size: 20px;
 }
 
+.table-bottom {
+    margin-bottom: 160px;
+}
+
 @media (max-width:1300px) {
 
     .shopping-message {
