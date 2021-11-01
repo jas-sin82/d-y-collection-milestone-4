@@ -98,13 +98,13 @@
                 <ul class="dropdown-menu account-menu border-0" aria-labelledby="user-options">
                     {% if request.user.is_authenticated %}
                     {% if request.user.is_superuser %}
-                    <li><a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a></li>
+                       <li><a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a></li>
                     {% endif %}
-                    <li><a href="{% url 'profile' %}" class="dropdown-item">My Profile</a></li>
-                    <li><a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a></li>
+                       <li><a href="{% url 'profile' %}" class="dropdown-item">My Profile</a></li>
+                       <li><a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a></li>
                     {% else %}
-                    <li><a href="{% url 'account_signup' %}" class="dropdown-item">Register</a></li>
-                    <li><a href="{% url 'account_login' %}" class="dropdown-item">Login</a></li>
+                       <li><a href="{% url 'account_signup' %}" class="dropdown-item">Register</a></li>
+                       <li><a href="{% url 'account_login' %}" class="dropdown-item">Login</a></li>
                     {% endif %}
                 </ul>
             </li>
@@ -175,16 +175,15 @@
                 <span class="social link"><a href="http://www.youtube.com" target="_blank" rel="noopener"> <i
                             class="fab fa-youtube"></i></a></span>
                 <span class="social link"><a href="https://www.instagram.com" target="_blank" rel="noopener">
-                        <i class="fab fa-instagram"></i></i></a></span>
+                        <i class="fab fa-instagram"></i></a></span>
             </div>
             <div>
                 <p class="mt-1 copy-right">Copyright © David & Yenny Collection 2021</p>
             </div>
         </div>
     </footer>
+{% endblock %}
 
-    {% endblock %}
-    
 
     {% block postloadjs %}
 

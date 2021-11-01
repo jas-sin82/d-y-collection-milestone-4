@@ -124,13 +124,13 @@
                     <small class="text-muted">Price:</small>
                     {% if product.on_sale is True %}
                    <span class=" mb-0 text-decoration-line-through  ">€ {{ product.price }}</span>
-                    <span class=" mb-0  card-text text-danger font-weight-bold ">€{{ product.sale_price }}</span></p>
+                    <span class=" mb-0  card-text text-danger font-weight-bold ">€{{ product.sale_price }}</span>
                     {% else %}
                     <span class=" mb-0 card-text  font-weight-bold">€ {{ product.price }}</span>
                     {% endif %}
                 </div>
                 {% if product.category %}
-                <!--Category friendly name  -->
+                <!--Category friendly name-->
                 <p class="small mt-1 ">
                     <span id="text-category"><strong>Category:</strong></span>
                     <a href="{% url 'products' %}?category={{ product.category.name }}">
@@ -211,7 +211,7 @@
                 <h1 class="text-center product-heading ">Reviews</h1>
                 {% for review in product.reviews.all %}
                 <div class="card card-border mt-1 rounded-0 ">
-                    <!----- Review Card ----->
+                    <!--Review Card-->
                     <div class="card-body">
                         <p class="small text-muted">by {{ review.user }} on {{ review.date_added|date:"d-m-Y"}} </p>
                         <p class="card-title">{{ review.title }}<i
@@ -224,13 +224,13 @@
                     </div>
                 </div>
                 {% empty %}
-                <!----- If No Reviews ----->
+                <!--If No Reviews-->
                 <div class="text-center mt-3">
                     <p class="user-login">(No reviews yet!)</p>
                 </div>
                 {% endfor%}
             </div>
-            <!-- product review form-->
+            <!--product review form-->
             <div class="col-12 col-md-6 mb-5 mt-sm-5 " id="reviews">
                 {% if request.user.is_authenticated %}
                 <h2 class=" text-center product-heading">Add Reviews</h2>
@@ -263,14 +263,14 @@
             <h1 class="logo-font product-heading"> Related Products</h1>
         </div>
         <div class="row ">
-            <!-- men's related products-->
+            <!--men's related products-->
             {% if product.gender == "m" %}
             {% for product in related_products_men %}
             <div class=" col-lg-3 col-6 border-0  ">
 
                 <div class=" card main-cards-1 card-body  border-0 mb-5  card-size" style="width: 18rem;">
                     {% if product.on_sale is True %}
-                    <!-- Sale badge-->
+                    <!--Sale badge-->
                     <div class="badge bg-danger border-0 text-white position-absolute"
                         style="top: 1.6rem; left: 1.5rem">Sale
                     </div>

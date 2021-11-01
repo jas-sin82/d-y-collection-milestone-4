@@ -8,6 +8,7 @@
             <div class="col-12">
             </div>
         </div>
+    </div>
 </header>
 {% endblock %}
 <!--products heading-->
@@ -113,7 +114,7 @@
                                 {% if product.on_sale is True %}
                                 <span class=" mb-0 text-decoration-line-through  ">€ {{ product.price }}</span>
                                 <span class=" mb-0  card-text text-danger font-weight-bold ">€
-                                    {{ product.sale_price }}</span></p>
+                                    {{ product.sale_price }}</span>
                                 {% else %}
                                 <span class=" mb-0 card-text  font-weight-bold">€ {{ product.price }}</span>
                                 {% endif %}
