@@ -725,12 +725,11 @@ section ul .user-show.show-4 {
         letter-spacing: 4px;
 
     }
-
     .shop-button {
-        margin-top: 8px;
-        max-width: 150px;
-    }
+        display: none;
 
+    }
+  
     .title-owner {
 
         font-size: 16px;
@@ -752,11 +751,6 @@ section ul .user-show.show-4 {
 
     .title-owner {
 
-        display: none;
-
-    }
-
-    .shop-button {
         display: none;
 
     }
@@ -800,53 +794,17 @@ section ul .user-show.show-4 {
     top: 0px;
 }
 
-.carousel-cell {
-    width: 15%;
-    min-height: 400px;
-    object-fit: contain;
-    counter-increment: carousel-cell;
-
-}
-
-/*--- media query flickity carousel--*/
-
-@media (max-width: 1450px) {
-    .carousel-cell {
-        width: 20%;
-    }
-}
-
-@media (max-width: 1080px) {
-    .carousel-cell {
-        width: 30%;
-    }
-}
-
 @media (max-width: 767px) {
-    .carousel-cell {
-        width: 50%;
-    }
-
     .badge-size {
         font-size: 10px;
     }
 }
 
-@media (max-width:480px) {
-    .carousel-cell {
-        width: 60%;
-    }
-
+.carousel-cell {
+    min-height: 400px;
+    margin-left:10px;
 }
 
-@media (max-width:400px) {
-
-    .carousel-cell {
-        width: 90%;
-    }
-
-
-}
 
 /* home page men's and women's section---*/
 
@@ -1108,7 +1066,7 @@ section ul .user-show.show-4 {
 
     .heading-1 {
         font-size: 35px;
-        margin-top: 30px;
+        margin-top: 20px;
 
     }
 }
