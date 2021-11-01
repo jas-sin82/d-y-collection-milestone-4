@@ -107,8 +107,8 @@ html {
 }
 
 .dropdown-menu {
-    background-color: white;
-    border-radius: none;
+    background-color: #ececec;
+    border-radius: 0;
     margin-top: 10px;
     border: none;
 }
@@ -725,11 +725,12 @@ section ul .user-show.show-4 {
         letter-spacing: 4px;
 
     }
+
     .shop-button {
         display: none;
 
     }
-  
+
     .title-owner {
 
         font-size: 16px;
@@ -802,7 +803,7 @@ section ul .user-show.show-4 {
 
 .carousel-cell {
     min-height: 400px;
-    margin-left:10px;
+    margin-left: 10px;
 }
 
 
@@ -973,7 +974,6 @@ section ul .user-show.show-4 {
     }
 
     h3.slogan-1 {
-        font-size: 35px;
         letter-spacing: 7px;
         font-weight: 700;
     }
@@ -1002,7 +1002,6 @@ section ul .user-show.show-4 {
     }
 
     h3.slogan-2 {
-        font-size: 35x;
         letter-spacing: 5px;
         font-weight: 700;
     }
