@@ -1968,9 +1968,6 @@ section ul .user-show.show-4 {
 
 .error-page{
  
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  margin-top:250px;
 }
 
