@@ -3,11 +3,35 @@
 
 
 {% block content %}
-<div class="container product-page ">
+<div class="container error-page ">
     <p>Sorry, the page you're looking for does not exist!</p>
     <div class="pb-4 pt-2"><a href="{% url 'products' %}" class="btn btn-lg btn-dark text-uppercase">
-        <i class="las la-angle-left"></i>Back to shopping </a>
+            <i class="las la-angle-left"></i>Back to shopping </a>
     </div>
 </div>
 
+{% endblock %}
+
+{% block page_footer %}
+<!-- Footer-->
+<footer>
+    <div class="footer-style d-none">
+        <div class="footer-heading p-4">
+            <h5> David & Yenny <span class="magic-font p-1 magic-font-1">Collection since 2018</span> </h5>
+        </div>
+        <div class="social-link-1">
+            <span class="social link"><a href="http://www.facebook.com" target="_blank" rel="noopener">
+                    <i class="fab fa-facebook"></i> </a></span>
+            <span class="social link"><a href="http://www.twitter.com" target="_blank" rel="noopener">
+                    <i class="fab fa-twitter"></i> </a></span>
+            <span class="social link"><a href="http://www.youtube.com" target="_blank" rel="noopener"> <i
+                        class="fab fa-youtube"></i></a></span>
+            <span class="social link"><a href="https://www.instagram.com" target="_blank" rel="noopener">
+                    <i class="fab fa-instagram"></i></a></span>
+        </div>
+        <div>
+            <p class="mt-1 copy-right">Copyright © David & Yenny Collection 2021</p>
+        </div>
+    </div>
+</footer>
 {% endblock %}

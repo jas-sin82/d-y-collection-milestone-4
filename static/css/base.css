@@ -1963,3 +1963,11 @@ section ul .user-show.show-4 {
     opacity: 0;
     cursor: pointer;
 }
+
+/*---error-page---*/
+
+.error-page{
+  margin-top: 180px;
+    
+}
+
