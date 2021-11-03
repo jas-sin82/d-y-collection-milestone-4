@@ -1967,7 +1967,10 @@ section ul .user-show.show-4 {
 /*---error-page---*/
 
 .error-page{
-  margin-top: 180px;
-    
+ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 

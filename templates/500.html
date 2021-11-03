@@ -3,12 +3,14 @@
 
 
 {% block content %}
-<div class="container error-page">
-    <p>Sorry, there seems to be an error at the moment!</p>
-    <div class="pb-4 pt-2"><a href="{% url 'products' %}" class="btn btn-lg btn-dark text-uppercase">
-            <i class="las la-angle-left"></i>Back to shopping </a>
+<section>
+    <div class="error-page ">
+        <p>Sorry, there seems to be an error at the moment!</p>
+        <div class="pb-4 pt-2"><a href="{% url 'products' %}" class="btn btn-lg btn-dark text-uppercase">
+                <i class="las la-angle-left"></i>Back to shopping </a>
+        </div>
     </div>
-</div>
+</section>
 {% endblock %
 
 {% block page_footer %}
