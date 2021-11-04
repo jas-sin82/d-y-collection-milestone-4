@@ -475,7 +475,31 @@ I used push command in Gitpod to save changes into GitHub.
 
    9. As a new database has been connected the migrations will need to run again to setup the database. Type in the following commands in Gitpod to run the migrations.
     
-  * `python3 manage.py makemigrations`
-  * `python3 manage.py migrate`
+      * `python3 manage.py makemigrations`
+      * `python3 manage.py migrate`
+
+  [Back to Highlights ](#highlights)
+
+  10. The database can be populated using the fixtures and JSON files. Run the following commands to load the data into the Postgres database:
+    
+      * `python3 manage.py loaddata Categories `
+      * `python3 manage.py loaddata  Brands `
+      * `python3 manage.py loaddata products`
+
+  11. Create a superuser account for Django Administrator Panel using command    
+
+        `python3 manage.py createsuperuser`.
+
+  12. For the app to run the Gunicorn webserver package is required. To install this package run command 
+  
+        `pip3 install gunicorn`.
+
+  13. Freeze the requirements by running command 
+  
+        `pip3 freeze > requirements.txt`.
+
+  14. In the root directory of the project create a Procfile by running command `touch Procfile`.
+
+  15. Open the Procfile copy  web: `gunicorn david_yenny_collection.wsgi:application`.      
    
   
