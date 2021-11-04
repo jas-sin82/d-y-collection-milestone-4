@@ -501,5 +501,37 @@ I used push command in Gitpod to save changes into GitHub.
   14. In the root directory of the project create a Procfile by running command `touch Procfile`.
 
   15. Open the Procfile copy  web: `gunicorn david_yenny_collection.wsgi:application`.      
+
+  16. Login to Heroku using the `heroku login -i` command.
+
+  17. Enter the following command to set DISABLE_COLLECTSTATIC:
+
+        `heroku config:set DISABLE_COLLECTSTATIC=1 --app app-name`
+
+  18. In the settings.py file add the Heroku app the list of allowed hosts. Also add in localhost to ensure the app still works in Gitpod.
+      
+      `ALLOWED_HOSTS = ['app-name.herokuapp.com', 'localhost']`
+
+  19. Commit & push to GitHub.
+
+  20. Initialise the Heroku repository using command: 
+    
+       `heroku git:remote -a app-name`.
+
+  21. In Heroku on the Deploy tab select GitHub as Deployment method.
+
+  22. Search for respository and click Connect.
+
+  23. Click Enable Automatic Deploys.
+
+  24. Create a new Django secret key using the [Django Secret Key Generator](https://miniwebtool.com/django-secret-key-generator/) website.
+
+  25. In Heroku under the Settings tab create a new Config Var with a key name of SECRET_KEY with the value set to the key generated in the previous step.
+
+  26. To ensure the Heroku app picks up this key add the following to the settings.py file:
+
+      `SECRET_KEY = os.environ.get('SECRET_KEY', '')`
+
+  27. Commit the changes to Github. Heroku should pickup the changes from Github and deploy the site to app-name.herokuapp.com.
    
   
