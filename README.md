@@ -459,3 +459,23 @@ I used push command in Gitpod to save changes into GitHub.
      * `pip3 install dj_database_url`
      * `pip3 install psycopg2-binary`
 
+  6.  Freeze the requirements in Gitpod by typing `pip3 freeze > requirements.txt`. Heroku will use the requirements.txt file to install these packages during  deployment.
+
+  7.  Open the settings.py file and import the dj_database_url package by adding `import dj_database_url` at the top of the file.
+
+  8. In the database section comment out the default configuration and replace with the code below. The DATABASE_URL can be found under the settings tab in Heroku in the Config Vars section.
+
+     
+   ```
+    DATABASES = {
+        'default': dj_database_url.parse('DATABASE_URL')
+    }
+   
+   ```
+
+   9. As a new database has been connected the migrations will need to run again to setup the database. Type in the following commands in Gitpod to run the migrations.
+    
+  * `python3 manage.py makemigrations`
+  * `python3 manage.py migrate`
+   
+  
