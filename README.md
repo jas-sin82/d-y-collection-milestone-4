@@ -335,4 +335,27 @@ This project presents a Online Fashion Boutique call David & Yenny Collection. B
 
   * If the user is super user/ author! there is some addition links on each item allow the  super user to edit/delete the product.
 
+
+ ### Product Detail
+
+  * This will display all data associated with a particular product. There will be button to allow the user to add the product to their shopping basket.
+
+  * If the user is super user/author! there is some addition links on each item allow the  super user to edit/delete the product.
+
+  * There is product review section where loged in user can add their product review.
+
+  * At the bottom of the page there is product related section where user is able to see some extra products which will be related to users choosen product.
+
+ ### Shopping Bag Page
+
+  * The shopping bag will display all items that that have been added by the user.
   
+  * For each item it will show the unit price, quantity and subtotal.
+
+  * The user can change the quantity against each item and also remove it from their back if they no longer wish to purchase the product.
+
+  * At the bottom of the page the basket total, delivery cost and order total will be displayed.
+
+  * A Keep Shopping & Checkout button will also be displayed at the bottom of the page.
+
+  [Back to Highlights ](#highlights)
