@@ -574,3 +574,32 @@ I used push command in Gitpod to save changes into GitHub.
     ]
 ```
 
+8. In the Permissions tab go to the Bucket policy section and click the Edit button. Click the Policy Generator button to create a new security policy.
+
+* Policy Type: S3 Bucket Policy
+    * Principal: *
+    * Actions: GetObject
+    * ARN: Copy the ARN from the Bucket Policy tab and paste here.
+    * Click Add Statement then Generate Policy.
+    * Copy the new policy and paste into the Bucket Policy editor.
+    * To allow access to all resources add a "/*" onto the end of the Resource key value.
+    * Save the new policy.
+
+9. In the Permissions tab go to the Access Control section and click the Edit button. On the "Everyone (public access)" line check the List checkbox and click Save changes.
+
+10. Go back to the services and select IAM (Identity and Access Management) to add a new user. IAM will be used to create new group, create an access policy giving the group access to the S3 bucket and to assign a user to the group so they can use the policy to access the files in the S3 bucket.
+
+11. Under User Groups click the Create Group button. Enter a group name then scroll to the bottom and click Create group.
+
+12. Under Policies click the Create Policy button.
+
+    * Go to the JSON tab and select Import managed policy.
+    * Search for the `AmazonS3FullAccess` policy and Import this.
+    * From the S3 Bucket Policy page copy the ARN and paste this twice into 
+    the Resource key.
+    ```
+        "Resource": [
+            "arn:aws:s3:::s3-bucket-name",
+            "arn:aws:s3:::s3--bucket-name/*"
+        ]
+    ```
