@@ -139,3 +139,17 @@ This project presents a Online Fashion Boutique call David & Yenny Collection. B
 
    * There will be two fonts used throughout the website. Roboto , Playfair Display SC and Serif specific so that will be used for the fall back font,
       Playfair Display SC font used in  webpage headings and 80% content to make more user intractive.
+
+  #### Imagery
+
+   * Choices of the images is an important component of this website both product images and the other images used through out the website. I choosed clean images that will intract Visitors. Hero image at the home page to catch the visitors intrerest and strategically add Flickity carousel which contains some stunning new arrival products images and bottom of the page christmas day timer which count down the christmas sale, which will help to attract visitors to look more in side webpage.
+
+   * Brand logo D & Y is represents a family brand name David & Yenny which is it self great attraction for user to know more about brand and products.
+
+  #### Icons 
+
+   * All icons used has taken from Font Awesome [Font Awesome.](https://fontawesome.com/). I have used search button icon,bag icon, user account icon, 
+     direction icon used in keep shopping buttons, edit ,delete ,add produts and product review, dropdown menu and for external links social media
+     icon in the footer.
+
+     
