@@ -165,7 +165,6 @@ This project presents a Online Fashion Boutique call David & Yenny Collection. B
   [Bag Page](https://share.balsamiq.com/c/tSDn1chacg569Ut1fLti8M.png)
 
 
-  
   ### Responsive Screenshots
 
   <img src="responsive/ipad.png">
@@ -178,4 +177,78 @@ This project presents a Online Fashion Boutique call David & Yenny Collection. B
 
   <div><img src="responsive/nest-hub.png"></div>
 
+  [Back to Highlights ](#highlights)
+
+
+# Database Model
+
+ During development the website will use SQLite3 which is the default database used by Django. Once deployed the website will use a PostgreSQL database which can be added/hosted by Heroku.
+
+
+ The database schema was captured using [DB Diagram](https://dbdiagram.io/home)
+
+ <div><img src="responsive/d&Y-db-project-4.png"></div>
   
+
+### Profile App
+#### User Profile Model
+
+|Name             |Database Key            |Field Type         | Validation Requirements                     |
+|-----------------|------------------------|-------------------|---------------------------------------------|
+|User             |user                    |OneToOneField(User)|on_delete=models.CASCADE                     |
+|Phone Number     |default_phone_number    |CharField          |max_length=20, null=True, blank=True         |
+|Street Address 1 |default_street_address1 |CharField          |max_length=80, null=True, blank=True         |
+|Street Address 2 |default_street_address2 |CharField          |max_length=80, null=True, blank=True         |
+|Town or City     |default_town_or_city    |CharField          |max_length=40, null=True, blank=True         |
+|County           |default_county          |CharField          |max_length=80, null=True, blank=True         |
+|Postcode         |default_postcode        |CharField          |max_length=20, null=True, blank=True         |
+|Country          |default_country         |CountryField       |blank_label='Country', null=True, blank=True |
+
+
+### Products App
+
+
+#### Category Model
+| Name             | Database Key            | Field Type              | Validation Requirements                               |
+|------------------|-------------------------|-------------------------|-------------------------------------------------------|
+| Name             | name                    | CharField               | max_length=254                                        |
+| Friendly Name    | friendly_name           | CharField               | max_length=254, null=True, blank=True                 |
+
+
+#### Brand Model
+| Name             | Database Key            | Field Type              | Validation Requirements                               |
+|------------------|-------------------------|-------------------------|-------------------------------------------------------|
+| Name             | name                    | CharField               | max_length=254                                        |
+| Friendly Name    | friendly_name           | CharField               | max_length=254, null=True, blank=True                 |
+
+
+#### Product Model
+| Name             | Database Key            | Field Type              | Validation Requirements                               |
+|------------------|-------------------------|-------------------------|-------------------------------------------------------|
+| Sku              | sku                     | CharField               | max_length=254, default="", blank=True                |
+| Category         | category                | ForeignKey              | null=True, blank=True, on_delete=models.SET_NULL      |
+| Brand            | brand                   | ForeignKey              | null=True, blank=True, on_delete=models.SET_NULL      |
+| Name             | name                    | CharField               | max_length=254L                                       |    
+| Description      | description             | TextField               | None                                                  |        
+| Price            | price                   | DecimalField            | max_digits=6, decimal_places=2                        |    
+| On Sale          | on_sale                 | BooleanField            | default=False, blank=True                             |
+| Discount Percent | discount_percent        | DecimalField            | max_digits=2, decimal_places=0, blank=True, null=True |
+| Image A          | image_a                 | ImageField              | null=True, blank=True                                 |
+| Image B          | image_b                 | ImageField              | null=True, blank=True                                 |
+| Image c          | image_c                 | ImageField              | null=True, blank=True                                 |
+| Image d          | image_d                 | ImageField              | null=True, blank=True                                 |   
+| Average Rating   | average_rating          | DecimalField            | max_digits=4, decimal_places=2, null=True, blank=True |   
+| Gender           | gender                  | CharField               | max_length=1, choices=GENDER                          |
+| Size             | size                    | BooleanField            | default=False, null=True, blank=True                  |   
+| Date Added       | date_added              | DateTimeField           | default=timezone.now                                  |
+
+#### Review Model
+| Name            | Database Key   | Field Type           | Validation                                                                |
+| --------------- | -------------- | ---------------------| --------------------------------------------------------------------------|
+| User            | User           | ForeignKey(User)     | on_delete=models.CASCADE, null=False, blank=False, related_name='review'  |
+| Product         | product        | ForeignKey(Product)  | on_delete=models.CASCADE, null=False, blank=False, related_name='product' |
+| Title           | title          | CharField            | max_length=254                                                            |
+| Review Text     | review_text    | TextField            | None                                                                      |
+| Review Rating   | review_rating  | IntegerField         | choices=RATING, default=5                                                 |
+| Date Added      | date_added     | DateTimeField        | auto_now_add=True                                                         |
+
