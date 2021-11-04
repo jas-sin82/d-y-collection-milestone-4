@@ -125,7 +125,7 @@ This project presents a Online Fashion Boutique call David & Yenny Collection. B
 
 # Design
 
-  #### Colors 
+  ### Colors 
 
   * Themecolor of the webpage is white. White color has used as background color through out the whole website.I have placed three buttons on the home page color of orange And black background with white text.The main purpose behind to use just white background, black text and the images with light background used through out the project is to make user intraction above.
 
@@ -135,24 +135,24 @@ This project presents a Online Fashion Boutique call David & Yenny Collection. B
 
   * Fade color #abbaab and box shadow used in footer which is perfectly good combination with rest of the website and more user intrative.
 
-  #### Typography 
+  ### Typography 
 
    * There will be two fonts used throughout the website. Roboto , Playfair Display SC and Serif specific so that will be used for the fall back font,
       Playfair Display SC font used in  webpage headings and 80% content to make more user intractive.
 
-  #### Imagery
+  ### Imagery
 
    * Choices of the images is an important component of this website both product images and the other images used through out the website. I choosed clean images that will intract Visitors. Hero image at the home page to catch the visitors intrerest and strategically add Flickity carousel which contains some stunning new arrival products images and bottom of the page christmas day timer which count down the christmas sale, which will help to attract visitors to look more in side webpage.
 
    * Brand logo D & Y is represents a family brand name David & Yenny which is it self great attraction for user to know more about brand and products.
 
-  #### Icons 
+  ### Icons 
 
    * All icons used has taken from Font Awesome [Font Awesome.](https://fontawesome.com/). I have used search button icon,bag icon, user account icon, 
      direction icon used in keep shopping buttons, edit ,delete ,add produts and product review, dropdown menu and for external links social media
      icon in the footer.
 
-  #### Wireframes of website
+  ### Wireframes of website
 
   I used a balsamiq to create a wireframe. Here is link [balsamiq](https://www.balsamiq.com/)
 
@@ -164,4 +164,17 @@ This project presents a Online Fashion Boutique call David & Yenny Collection. B
 
   [Bag Page](https://share.balsamiq.com/c/tSDn1chacg569Ut1fLti8M.png)
 
+
   
+  ### Responsive Screenshots
+
+
+  ![screenshot](static/images/responsive-screenshots/ipad.png)
+
+  ![screenshot](static/images/responsive-screenshots/nest-hub-max.png)
+
+  ![screenshot](static/images/responsive-screenshots/iphone-5.png)
+
+  ![screenshot](static/images/responsive-screenshots/iphone-6.png)
+
+  ![screenshot](static/images/responsive-screenshots/nest-hub.png)
