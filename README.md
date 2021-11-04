@@ -409,7 +409,7 @@ This project presents a Online Fashion Boutique call David & Yenny Collection. B
    * [Postgres](https://www.postgresql.org/) - Relational database, hosted and deployed via Heroku.
 
    ### Tools
-   
+
   * [Balsamiq](https://balsamiq.com/): was used to made the initial wireframe models of the website.
   * [DB Diagram](https://dbdiagram.io/home) : was used to made the database structure and relationships.
   * [GitPod](https://gitpod.io/): was use as the development environment.
@@ -422,6 +422,26 @@ This project presents a Online Fashion Boutique call David & Yenny Collection. B
     [Back to Highlights ](#highlights)
 
   
+# Testing
 
+
+# Deployment
+
+## Version control
+
+The project was deployed on GitHub Pages. I used Gitpod as a work space where I commited all changes to git version control system. 
+I used push command in Gitpod to save changes into GitHub.
+
+
+### To run localy
+
+   * Log in to GitHub and click on repository to download ([Milestone Project 4](https://github.com/jas-sin82/d-y-collection-milestone-4.git)).
+   
+   * Select `Code` and click Download the ZIP file.
+   
+   * After download you can extract the file and use in your local environment.
+   
+   * Second option is you can [Clone](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/ cloning-a-repository)
+     or [fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) this repository ([Milestone Project 4](https://github.com/jas-sin82/d-y-collection-milestone-4.git) into your github account.
 
 
