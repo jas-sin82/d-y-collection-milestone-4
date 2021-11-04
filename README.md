@@ -190,8 +190,9 @@ This project presents a Online Fashion Boutique call David & Yenny Collection. B
  <img src="responsive/database-schema.png">
   
 
-### Profile App
-#### User Profile Model
+## Profile App
+
+### User Profile Model
 
 |Name             |Database Key            |Field Type         | Validation Requirements                     |
 |-----------------|------------------------|-------------------|---------------------------------------------|
@@ -205,24 +206,24 @@ This project presents a Online Fashion Boutique call David & Yenny Collection. B
 |Country          |default_country         |CountryField       |blank_label='Country', null=True, blank=True |
 
 
-### Products App
+## Products App
 
 
-#### Category Model
+### Category Model
 | Name             | Database Key            | Field Type              | Validation Requirements                               |
 |------------------|-------------------------|-------------------------|-------------------------------------------------------|
 | Name             | name                    | CharField               | max_length=254                                        |
 | Friendly Name    | friendly_name           | CharField               | max_length=254, null=True, blank=True                 |
 
 
-#### Brand Model
+### Brand Model
 | Name             | Database Key            | Field Type              | Validation Requirements                               |
 |------------------|-------------------------|-------------------------|-------------------------------------------------------|
 | Name             | name                    | CharField               | max_length=254                                        |
 | Friendly Name    | friendly_name           | CharField               | max_length=254, null=True, blank=True                 |
 
 
-#### Product Model
+### Product Model
 | Name             | Database Key            | Field Type              | Validation Requirements                               |
 |------------------|-------------------------|-------------------------|-------------------------------------------------------|
 | Sku              | sku                     | CharField               | max_length=254, default="", blank=True                |
@@ -242,7 +243,7 @@ This project presents a Online Fashion Boutique call David & Yenny Collection. B
 | Size             | size                    | BooleanField            | default=False, null=True, blank=True                  |   
 | Date Added       | date_added              | DateTimeField           | default=timezone.now                                  |
 
-#### Review Model
+### Review Model
 | Name            | Database Key   | Field Type           | Validation                                                                |
 | --------------- | -------------- | ---------------------| --------------------------------------------------------------------------|
 | User            | User           | ForeignKey(User)     | on_delete=models.CASCADE, null=False, blank=False, related_name='review'  |
@@ -252,3 +253,37 @@ This project presents a Online Fashion Boutique call David & Yenny Collection. B
 | Review Rating   | review_rating  | IntegerField         | choices=RATING, default=5                                                 |
 | Date Added      | date_added     | DateTimeField        | auto_now_add=True                                                         |
 
+
+## Checkout App
+
+### Order Model
+| Name                     | Database Key    | Field Type                 | Validation                                                   |
+| ------------------------ | --------------- | ---------------------------| -------------------------------------------------------------|
+| Order Number             | order_number    | CharField                  | max_length=32, null=False, editable=False                    |
+| User Profile             | user_profile    | ForeignKey(UserProfile)    | on_delete=models.SET_NULL, null=True, related_name='orders'  |
+| Full Name                | full_name       | CharField                  | max_length=50, null=False, blank=False                       |
+| Email Address            | email           | EmailField                 | max_length=254, null=False, blank=False                      |
+| Phone Number             | phone_number    | CharField                  | max_length=20, null=False, blank=False                       |
+| Country                  | country         | CountryField               | blank_label='Country *', null=False, blank=False             |
+| Postcode                 | postcode        | CharField                  | max_length=20, null=True, blank=True                         |
+| Town or City             | town_or_city    | CharField                  | max_length=40, null=False, blank=False                       |
+| Street Address 1         | street_address1 | CharField                  | max_length=80, null=False, blank=False                       |
+| Street Address 2         | street_address2 | CharField                  | max_length=80, null=True, blank=True                         |
+| County                   | county          | CharField                  | max_length=80, null=True, blank=True                         |
+| Date                     | date            | DateTimeField              | auto_now_add=True                                            |
+| Delivery Cost            | delivery_cost   | DecimalField               | max_digits=6, decimal_places=2, null=False, default=0        |
+| Order Total              | order_total     | DecimalField               | max_digits=10, decimal_places=2, null=False, default=0       |
+| Grand Total              | grand_total     | DecimalField               | max_digits=10, decimal_places=2, null=False, default=0       |
+| Original Bag             | original_bag    | TextField                  | null=False, blank=False, default=''                          |
+| Stripe Payment Intent ID | stripe_pid      | CharField                  | max_length=254, null=False, blank=False, default=''          |
+
+
+### Order Line Item Model
+| Name            | Database Key   | Field Type          | Validation                                                                   |
+| --------------- | -------------- | --------------------| -----------------------------------------------------------------------------|
+| Order           | order          | ForeignKey(Order)   | null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems'  |
+| Product         | product        | ForeignKey(Product) | null=False, blank=False, on_delete=models.CASCADE                            |
+| Quantity        | quantity       | IntegerField        | null=False, blank=False, default=0                                           |
+| Line Item Total | lineitem_total | DecimalField        | max_digits=6, decimal_places=2, null=False, blank=False, editable=False      |
+
+[Back to Highlights ](#highlights)
