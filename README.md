@@ -409,16 +409,19 @@ This project presents a Online Fashion Boutique call David & Yenny Collection. B
    * [Postgres](https://www.postgresql.org/) - Relational database, hosted and deployed via Heroku.
 
    ### Tools
-    * [Balsamiq](https://balsamiq.com/): was used to made the initial wireframe models of the website.
-    * [DB Diagram](https://dbdiagram.io/home) : was used to made the database structure and relationships.
-    * [GitPod](https://gitpod.io/): was use as the development environment.
-    * [GitHub](https://github.com/): was used to manage the configuration and control of the project.
-    * [Heroku](https://heroku.com): was used to deploy the project
-    * [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/): Chrome tools used during the project development to debug problems and to test the website.
-    * [Favicon](https://favicon.io/): was used to generate the favicon for the website.
-    * [Flickity](https://flickity.metafizzy.co/): was used to made the Home page new arrival products slider.
+   
+  * [Balsamiq](https://balsamiq.com/): was used to made the initial wireframe models of the website.
+  * [DB Diagram](https://dbdiagram.io/home) : was used to made the database structure and relationships.
+  * [GitPod](https://gitpod.io/): was use as the development environment.
+  * [GitHub](https://github.com/): was used to manage the configuration and control of the project.
+  * [Heroku](https://heroku.com): was used to deploy the project
+  * [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/): Chrome tools used during the project development to debug problems and to test the website.
+  * [Favicon](https://favicon.io/): was used to generate the favicon for the website.
+  * [Flickity](https://flickity.metafizzy.co/): was used to made the Home page new arrival products slider.
 
     [Back to Highlights ](#highlights)
 
-    
+  
+
+
 
