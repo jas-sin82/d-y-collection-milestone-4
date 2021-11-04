@@ -187,7 +187,7 @@ This project presents a Online Fashion Boutique call David & Yenny Collection. B
 
  The database schema was captured using [DB Diagram](https://dbdiagram.io/home)
 
- <div><img src="responsive/d&Y-db-project-4.png"></div>
+ <img src="responsive/database-schema.png">
   
 
 ### Profile App
