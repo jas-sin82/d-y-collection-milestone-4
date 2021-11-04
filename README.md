@@ -152,4 +152,16 @@ This project presents a Online Fashion Boutique call David & Yenny Collection. B
      direction icon used in keep shopping buttons, edit ,delete ,add produts and product review, dropdown menu and for external links social media
      icon in the footer.
 
-     
+  #### Wireframes of website
+
+  I used a balsamiq to create a wireframe. Here is link [balsamiq](https://www.balsamiq.com/)
+
+  [Home Page](https://share.balsamiq.com/c/p7vuW6A6X9ZKB1G5sMRbMH.png) 
+
+  [Product Page](https://share.balsamiq.com/c/WHwCLtJd5qhjaGesYQbg6.png) 
+
+  [Product Detail](https://share.balsamiq.com/c/hMXGnAmdFAnFegsaQs9VLB.png) 
+
+  [Bag Page](https://share.balsamiq.com/c/tSDn1chacg569Ut1fLti8M.png)
+
+  
