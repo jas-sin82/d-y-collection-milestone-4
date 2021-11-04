@@ -603,3 +603,24 @@ I used push command in Gitpod to save changes into GitHub.
             "arn:aws:s3:::s3--bucket-name/*"
         ]
     ```
+
+13. Click the Review Policy button giving the policy a name and description. Click the Create Policy button to save all changes.
+
+14. Under User Groups select the group that was created above. On the Permissions tab select Attach Policies from the Add permissions dropdown menu. Search for the policy that was created above, select it and click the Add permissions button.
+
+15. Under Users click the Add Users button and give the user a name. Check the Access Key - Programmatic access option and click next. On the next page add the user to the new group that was created above. Click through to the end then click Create User.
+
+16. Download the CSV file this contains the user access key and secret access key which will be used by the Django app for authentication.
+
+17. To connect Django to the new S3 Bucket two new packages are required: boto3 and django-storages.
+
+    * `pip3 install boto3`
+    * `pip3 install django-storages`
+
+18. Freeze the requirements:
+ 
+    `pip3 freeze > requirements.txt`.
+
+19. In the settings.py file add 'storages' to the INSTALLED_APPS list.
+
+
