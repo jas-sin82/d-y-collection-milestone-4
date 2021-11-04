@@ -534,4 +534,43 @@ I used push command in Gitpod to save changes into GitHub.
 
   27. Commit the changes to Github. Heroku should pickup the changes from Github and deploy the site to app-name.herokuapp.com.
    
-  
+  [Back to Highlights ](#highlights)
+
+  ### AWS S3 Configuration
+
+  The AWS S3 service will be used to host all static files and images.
+
+  1. Open [AWS](https://aws.amazon.com) in the browser and login creating a new account if required.
+
+  2. Open the AWS Management Console and search for the S3 service.
+
+  3. Click 'Create New Bucket' to create a new bucket.
+
+  4. Select the region closet to you.
+
+  5. Make sure Bucket will be publically access and then Click 'Create bucket'.
+
+  6. Select your bucket from the bucket list. In the properties tab turn on static website hosting and set the following default values then click save.
+    
+      * Index document: `index.html`
+      * Error document: `error.html`
+
+7. In the Permissions tab paste in the following CORS configuration then click save.
+
+```
+    [
+    {
+        "AllowedHeaders": [
+            "Authorization"
+        ],
+        "AllowedMethods": [
+            "GET"
+        ],
+        "AllowedOrigins": [
+            "*"
+        ],
+        "ExposeHeaders": []
+    }
+    ]
+```
+
