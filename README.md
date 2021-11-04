@@ -124,3 +124,18 @@ This project presents a Online Fashion Boutique call David & Yenny Collection. B
 
 
 # Design
+
+  #### Colors 
+
+  * Themecolor of the webpage is white. White color has used as background color through out the whole website.I have placed three buttons on the home page color of orange And black background with white text.The main purpose behind to use just white background, black text and the images with light background used through out the project is to make user intraction above.
+
+  * Main nav which is clean and clear white color with black text and beautiful logo of company, I have used box shadow to make nav bar more user intrative.
+
+  * Mobile navigation menu (side bar) with a clear white background with black text and  with red color left border on each nav links when its drop down which will  be imaging  experience for customer/user.
+
+  * Fade color #abbaab and box shadow used in footer which is perfectly good combination with rest of the website and more user intrative.
+
+  #### Typography 
+
+   * There will be two fonts used throughout the website. Roboto , Playfair Display SC and Serif specific so that will be used for the fall back font,
+      Playfair Display SC font used in  webpage headings and 80% content to make more user intractive.
