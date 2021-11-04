@@ -127,7 +127,7 @@ This project presents a Online Fashion Boutique call David & Yenny Collection. B
 
   ### Colors 
 
-  * Themecolor of the webpage is white. White color has used as background color through out the whole website.I have placed three buttons on the home page color of orange And black background with white text.The main purpose behind to use just white background, black text and the images with light background used through out the project is to make user intraction above.
+  * Themecolor of the webpage is white. White color has used as background color through out the whole website.I have placed three buttons on the home page color of orange And black background with white text.The main purpose behind to use just white background, black text and the images with light background used throughout the project is to make user intraction above.
 
   * Main nav which is clean and clear white color with black text and beautiful logo of company, I have used box shadow to make nav bar more user intrative.
 
@@ -142,7 +142,7 @@ This project presents a Online Fashion Boutique call David & Yenny Collection. B
 
   ### Imagery
 
-   * Choices of the images is an important component of this website both product images and the other images used through out the website. I choosed clean images that will intract Visitors. Hero image at the home page to catch the visitors intrerest and strategically add Flickity carousel which contains some stunning new arrival products images and bottom of the page christmas day timer which count down the christmas sale, which will help to attract visitors to look more in side webpage.
+   * Choices of the images is an important component of this website both product images and the other images used throughout the website. I choosed clean images that will intract Visitors. Hero image at the home page to catch the visitors intrerest and strategically add Flickity carousel which contains some stunning new arrival products images and bottom of the page christmas day timer which count down the christmas sale, which will help to attract visitors to look more in side webpage.
 
    * Brand logo D & Y is represents a family brand name David & Yenny which is it self great attraction for user to know more about brand and products.
 
@@ -359,3 +359,30 @@ This project presents a Online Fashion Boutique call David & Yenny Collection. B
   * A Keep Shopping & Checkout button will also be displayed at the bottom of the page.
 
   [Back to Highlights ](#highlights)
+
+ ### Checkout Page
+
+  * The Checkout page will contain a brief summary of the order and a form for the delivery details.
+
+  * If the user is logged in then the form will be automatically fill with any address information the user has saved in their profile.
+
+  * The payment information system will be implemented by Stripe and it will allow the user to enter a card number, expiry date and CVC number.
+
+  * Buttons at the bottom of the page will allow the user to complete the order or adjust the order.
+
+ ### Profile Page
+
+  * Once a user is registered they will have access to their profile page. 
+  
+  * This allows the user to enter default delivery information and  view previous orders.
+
+## Features left  which I want to implement in future:-
+
+  * To add the wish list functionality, so user can add products in their wish list, and Items from the wish list can delete or add to the users shopping cart. 
+
+  * User can Log in account with social media instead typing manually user name and password.
+
+  * Email Newsletter Subscription by using Django and AJAX.
+
+  * Contact form.
+
