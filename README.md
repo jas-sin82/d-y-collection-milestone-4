@@ -313,3 +313,26 @@ This project presents a Online Fashion Boutique call David & Yenny Collection. B
   * The navigation links in the My Account dropdown will change when the user is registered and logged in.
 
   * On mobile menu all the links has shifted in side bar push menu, header just contain company name,on left side mobile menu button and right side cart.
+
+ ### Home page 
+
+  * Home page contains some beautiful images will attract user.
+
+  * On Home page under the hero image I have placed Flickity carousel which contains new arrival products with nice Auto-play.
+    Auto-playing will pause when mouse is hovered over, and resume when mouse is hovered off. Auto-playing will stop when the carousel is clicked or a cell is selected.
+
+  * Under the  carousel there is two product image one is belongs to men's products and other one to women's products.. both images navigate user to particular product but the buttons lead user to men's all product and women's  all products.  
+
+  * At the bottom of page Strategically placed christmas sale timer which will attract more users.
+
+ ### Product Page
+
+  * The Product page will display a list of all the products available on the site or the products from a particular category. This could be men's, women's, bag and sale  products.
+
+  * The page will clearly display the product image, product name, product category and price of the product.
+
+  * Clicking on the product image will open up a new page containing more details on the selected product.
+
+  * If the user is super user/ author! there is some addition links on each item allow the  super user to edit/delete the product.
+
+  
