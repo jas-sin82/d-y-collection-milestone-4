@@ -287,3 +287,29 @@ This project presents a Online Fashion Boutique call David & Yenny Collection. B
 | Line Item Total | lineitem_total | DecimalField        | max_digits=6, decimal_places=2, null=False, blank=False, editable=False      |
 
 [Back to Highlights ](#highlights)
+
+# Features
+
+## Existing Features
+
+  Every page of the website features a consistently responsive and intuitive layout and navigational system:
+ 
+ ### General features
+
+  *  All the webpages are fully responsive on all devices.
+
+  *  Footer will seen on  most of all the important pages it contains Company name and social links as well.
+
+  *  All the  cards images and text are fully responsive.
+
+  *  Search functionality which will help to find products by name and category.
+
+ ### Header
+   
+  * The header will be in a fixed position at the top of the screen and will not scroll with the page contents. This allows visitors easy access to navigate the site via the menu.
+
+  * The header will include a company name under the name all the nav-links some of them are dropdown menu and on right side on top one search bar which will help user to find products faast on just one click, under the search bar I have placed user account menu and cart.
+
+  * The navigation links in the My Account dropdown will change when the user is registered and logged in.
+
+  * On mobile menu all the links has shifted in side bar push menu, header just contain company name,on left side mobile menu button and right side cart.
