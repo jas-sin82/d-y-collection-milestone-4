@@ -443,5 +443,19 @@ I used push command in Gitpod to save changes into GitHub.
    
    * Second option is you can [Clone](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/ cloning-a-repository)
      or [fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) this repository ([Milestone Project 4](https://github.com/jas-sin82/d-y-collection-milestone-4.git) into your github account.
+ 
+### Deploying to Heroku from Gitpod
 
+  1. Open [Heroku](https://heroku.com) in the browser and login or create a new account if required.
+
+  2. On the Heroku Dashboard click New->Create New App.
+
+  3. Give the app a new name and choose a region closest to you. Click the Create App button.
+
+  4. On the resource tab provision a new Postgres database selecting the free Hobby Dev plan.
+
+  5. To use Postgres in the application two packages are required - these are dj-database-url and psycopg2. To install these in Gitpod type the following commands:
+    
+     * `pip3 install dj_database_url`
+     * `pip3 install psycopg2-binary`
 
