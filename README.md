@@ -386,3 +386,39 @@ This project presents a Online Fashion Boutique call David & Yenny Collection. B
 
   * Contact form.
 
+# Technology used in a Project 
+
+ ## Frameworks, Libraries & Programs
+
+  ### Languages
+
+  * This website uses HTML, CSS, JavaScript & Python programming languages.
+
+  ### Libraries & Frameworks
+
+   * [Font Awesome](https://fontawesome.com/): provided all icons (social media icons etc.) used throughout the site.
+   * [Google Fonts](https://fonts.google.com/): provided the Roboto , Playfair Display SC and Seriffont that is used throughout this website.
+   * [Bootstrap](https://getbootstrap.com/): a frontend framework for implementing responsive websites.
+   * [jQuery](https://jquery.com/): JavaScript library.
+   * [Django](https://www.djangoproject.com/): A Python based framework for developing secure and maintainable websites - the core of this project.
+   * [Amazon Web Services (AWS)](https://aws.amazon.com/): was used to host all static and media files using the [S3](https://aws.amazon.com/s3/) and [IAM](https://aws.amazon.com/iam/) services.
+   * [Stripe](https://stripe.com/gb): an API framework for processing secure payments.
+
+  ### Database
+
+   * [Postgres](https://www.postgresql.org/) - Relational database, hosted and deployed via Heroku.
+
+   ### Tools
+    * [Balsamiq](https://balsamiq.com/): was used to made the initial wireframe models of the website.
+    * [DB Diagram](https://dbdiagram.io/home) : was used to made the database structure and relationships.
+    * [GitPod](https://gitpod.io/): was use as the development environment.
+    * [GitHub](https://github.com/): was used to manage the configuration and control of the project.
+    * [Heroku](https://heroku.com): was used to deploy the project
+    * [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/): Chrome tools used during the project development to debug problems and to test the website.
+    * [Favicon](https://favicon.io/): was used to generate the favicon for the website.
+    * [Flickity](https://flickity.metafizzy.co/): was used to made the Home page new arrival products slider.
+
+    [Back to Highlights ](#highlights)
+
+    
+
