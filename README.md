@@ -168,14 +168,14 @@ This project presents a Online Fashion Boutique call David & Yenny Collection. B
   
   ### Responsive Screenshots
 
-  <img src="static/images/ipad.png">
+  <img src="responsive/ipad.png">
 
-  <img src="static/images/nest-hub-max.png">
+  <img src="responsive/nest-hub-max.png">
  
-  <div><img src="static/images/iphone-5.png"></div>
+  <div><img src="responsive/iphone-5.png"></div>
  
-  <div><img src="static/images/iphone-6.png"></div>
+  <div><img src="responsive/iphone-6.png"></div>
 
-  <div><img src="static/images/nest-hub.png"></div>
+  <div><img src="responsive/nest-hub.png"></div>
 
   
