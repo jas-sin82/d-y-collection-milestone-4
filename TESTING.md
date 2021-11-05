@@ -56,12 +56,40 @@
 
    * When visitor enters website, the visitors is welcomed by a some stunning product images and  carousel which contains new arrival product images  another thing a really clean and white bg header with drop down menu that clealy explains the purpose of the site,A customer should be left in no doubt what the site is selling.
 
+   
+  #### Browse products
+
+  * On Home page under the hero image provide carousel which contains new arrival product images which moves right to left, Auto-playing will pause when mouse is hovered over, and resume when mouse is hovered off. Auto-playing will stop when the carousel is clicked or a cell is selected. One click will bring user to that particular product detail. 
+    
+    <img src="readme-doc/user-testing-2.png">
+
+
+  * Under the home page Carousel there is two diffrent section one is men's fashion and other one is women's fashion on click which will lead user to that particular 
+  product category. There is one buttton on each image which will lead user to that particular gender category.
+
+     <img src="readme-doc/user-testing-3.png">
+
+  * In the navbar there are links to All Products and drop-down menus for Men , Women and Bag. There is other links on the navbar for sale Products and User account.
+
+    <img src="readme-doc/user-testing-1.png">
+
+  * Navigation bar provides one serach bar which will help user to save time to find fast any particular product or category on just one click.
+ 
+     <img src="readme-doc/user-testing-6.png">
+
+  * There is a ‘Sort by’ option on all the products pages from which the customer can order by price and name from high to low or low to high.
+
+    <img src="readme-doc/user-testing-7.png">
+
+  * There is one button on Hero image of Home page for Shop Now which  will take the customer to the All products page.
+
    <img src="readme-doc/user-testing-1.png">
 
-   <img src="readme-doc/user-testing-2.png">
-
-   <img src="readme-doc/user-testing-3.png">
+ * There is brands section each brand leads user to that particular brands products.
 
    <img src="readme-doc/user-testing-4.png">
 
-   <img src="readme-doc/user-testing-5.png">
+
+  * At the bottom of the home page I have placed one  christmas count down which will make user to stay connect with website.
+
+    <img src="readme-doc/user-testing-5.png">
