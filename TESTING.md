@@ -75,11 +75,11 @@
 
   * Navigation bar provides one serach bar which will help user to save time to find fast any particular product or category on just one click.
  
-     <img src="readme-doc/user-testing-6.png">
+      <img src="readme-doc/user-testing-7.png">
 
   * There is a ‘Sort by’ option on all the products pages from which the customer can order by price and name from high to low or low to high.
-
-    <img src="readme-doc/user-testing-7.png">
+     
+      <img src="readme-doc/user-testing-6.png">
 
   * There is one button on Hero image of Home page for Shop Now which  will take the customer to the All products page.
 
@@ -93,3 +93,20 @@
   * At the bottom of the home page I have placed one  christmas count down which will make user to stay connect with website.
 
     <img src="readme-doc/user-testing-5.png">
+
+#### sale products
+
+ * There is a link to sale products on the navbar.
+
+ * The products on sale have a red badge in the top left of the product card labelled ‘Sale’ and product discount percent have green color, its on right top of card. This should be clearly visible to customers in the product.
+
+   <img src="readme-doc/user-testing-8.png">
+
+
+#### Related products 
+
+   * In the product detail page related products are shown below the product Review.
+
+   * Related products are from the same product category and same gender.
+
+   <img src="readme-doc/user-testing-9.png">
