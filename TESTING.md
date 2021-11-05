@@ -14,15 +14,25 @@
 
 ## Functionality Testing
 
- * I used Chrome developer tools throughout the project for testing and solving problems with responsiveness and 
+   * I used Chrome developer tools throughout the project for testing and solving problems with responsiveness and 
      style issues.
 
-  ### Navbar
-   
-   *  Main navigation Menu, all the drop-down menus, links and search bar work smoothly.
+   * Main navigation Menu, all the drop-down menus, links and search bar work correctly.
 
-   * Mobile menu links and dropdown functionality work good.
-  
+   * Mobile menu links and dropdown functionality work correctly.
+
+   * All the buttons throughout the  website link correctly and works great, back to top button works.
+
+   * Home page Flickity carousel works good on all the devices.
+
+   * All products are displayed correctly at different screen sizes.
+
+   * Sort for price and name orders items work correctly.
+
+   * Product cards link through to the product detail page for the product shown.
+
+   * Carousel at product detail page works correctly.
+   
 
 ## Compatibility Testing 
 
@@ -208,9 +218,37 @@
 
  * Author/superuser has permissions to delete any review. This is done using the Delete button on each review.
 
+## Error found during site development
+
+The developer face several issues during the development of the site ,Some of the issues below I got During my site development :-
+
+* I got syntax error! forgot to load endif tag which cause syntax error at product detail page.
+
+  <img src="readme-doc/testing-error-1.png">
+
+* I had very much tuff time while I was working on stripe! first I got authenticationError at checkout page, asking me all the time I did not provide API keys , actually I had provided all the keys.. PUBLIC KEY A and SECRET KEY
+ In a terminal first I used a command:  
+      Set STRIPE_PUBLIC_KEY= key 
+      set STRIPE_SECRET_KEY=key
+  even I have save them in my Configure environment variables in gitpod , still giving back error. Then I took  tutor support help to resolve this error, after talk to tutor support I got replace keys scope in environment variables I saved the keys to direct to my current repo `jas-sin82/d-y-collection-milestone-4` instead 
+  to github username `jas-sin82.`
+
+   <img src="readme-doc/testing-error-4.png">
+
+*  I got syntax error! forgot to load endfor tag which cause syntax error at product sale page.
+   
+
+    <img src="readme-doc/testing-error-2.png">
+ 
+*  I got syntax error! forgot to load endif tag which cause syntax error at bag.html page.
+   
+
+    <img src="readme-doc/testing-error-3.png">
+
+
+ ## Performance Testing
 
  
-
 
 
   
