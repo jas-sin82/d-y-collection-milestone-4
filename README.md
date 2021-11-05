@@ -690,3 +690,28 @@ I used push command in Gitpod to save changes into GitHub.
 30. Inside the media folder click Upload to upload all the media files to the S3 bucket. Grant public-read access.
      
 
+# Credits
+
+* Code Institute tutor support.
+
+* Students on Slack for a helping hand when I've got stuck.
+
+* My mentor gbenga_mentor for helpfull feedback througout the project.
+
+## Hints & Ideas
+
+  * https://www.python.org/
+
+  * https://stackoverflow.com/
+
+  * W3Schools https://www.w3schools.com
+
+  * Code Artisan Lab https://www.youtube.com/hashtag/codeartisanlab
+
+  * Image used as product was sourced from [Zalando](https://www.zalando.se/man-home/). 
+
+  * Bootstrap 5.1 was used throughout the site so that it is responsive to different devices and viewport sizes.[Bootstrap5.1](https://getbootstrap.com/docs/5.1/getting-started/introduction/)
+
+  * Django documentation [Django](https://docs.djangoproject.com/en/3.2/)
+
+  ## To finish this project I have used [Code Institute gitpod full template](https://github.com/Code-Institute-Org/gitpod-full-template) 
