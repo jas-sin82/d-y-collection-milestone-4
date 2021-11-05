@@ -29,6 +29,8 @@
     <img src="readme-doc/iphon-11-pro.jpg">
 
     <img src="readme-doc/s-note-20.jpg">
+ 
+   [Back to Highlights ](#highlights)
 
   * Virtual devices have consisted of the following on Google Chrome:
 
@@ -93,6 +95,8 @@
   * At the bottom of the home page I have placed one  christmas count down which will make user to stay connect with website.
 
     <img src="readme-doc/user-testing-5.png">
+ 
+ [Back to Highlights ](#highlights)
 
 #### Sale Products
 
@@ -133,6 +137,8 @@
  * The customer receives success, informational or error messages to confirm actions throughout the site.
 
      <img src="readme-doc/user-testing-12.png">
+ 
+ [Back to Highlights ](#highlights)
 
 #### Recover Password 
 
@@ -172,8 +178,9 @@
 
   * As a returning visitor, I want to be able to easily log in, if I already registered last time visiting. Visitor can click on my account drop-down menu on right top to login.
 
+ [Back to Highlights ](#highlights)
 
-
+ 
 
 
 
