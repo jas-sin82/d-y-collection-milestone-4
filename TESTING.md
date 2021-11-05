@@ -47,3 +47,21 @@
  ### CSS Validation
 
  <img src="readme-doc/css-validation.png">
+
+ ## User Stories Testing
+
+ ### First Time Visitor Goals 
+ 
+  #### Quickly understand what the site is about
+
+   * When visitor enters website, the visitors is welcomed by a some stunning product images and  carousel which contains new arrival product images  another thing a really clean and white bg header with drop down menu that clealy explains the purpose of the site,A customer should be left in no doubt what the site is selling.
+
+   <img src="readme-doc/user-testing-1.png">
+
+   <img src="readme-doc/user-testing-2.png">
+
+   <img src="readme-doc/user-testing-3.png">
+
+   <img src="readme-doc/user-testing-4.png">
+
+   <img src="readme-doc/user-testing-5.png">
