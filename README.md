@@ -673,3 +673,20 @@ I used push command in Gitpod to save changes into GitHub.
 ```
 [Back to Highlights ](#highlights)
 
+27. In the settings.py add the following lines to the top of the USE_AWS if statement. These will configure the browser to cache static files for a long time as they don't change often.
+
+```
+    AWS_S3_OBJECT_PARAMETERS = {
+        'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+        'CacheControl': 'max-age=94608000',
+    }
+
+```
+
+28. At this point all the changes can be committed to Github triggering Heroku to deploy the app. Confirm all the static files have been uploaded to the S3 bucket.
+
+29. To add the media files to the S3 bucket go to AWS S3, select the bucket and click on Create folder. Create a folder called media.
+
+30. Inside the media folder click Upload to upload all the media files to the S3 bucket. Grant public-read access.
+     
+
