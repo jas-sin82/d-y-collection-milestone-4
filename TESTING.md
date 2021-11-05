@@ -248,7 +248,13 @@ The developer face several issues during the development of the site ,Some of th
 
  ## Performance Testing
 
- 
+ <img src="readme-doc/light-house-testing-1.png">
+
+ <img src="readme-doc/light-house-testing-2.png">
+
+ <img src="readme-doc/light-house-testing-3.png">
+
+ <img src="readme-doc/light-house-testing-4.png">
 
 
   
