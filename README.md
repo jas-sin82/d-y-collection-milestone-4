@@ -623,4 +623,22 @@ I used push command in Gitpod to save changes into GitHub.
 
 19. In the settings.py file add 'storages' to the INSTALLED_APPS list.
 
+20. Add the following configuration to the settings.py file. As the S3 Bucket is only required when using Heroku an if statement is used to check if the variable USE_AWS exists. 
+```
+    if 'USE_AWS' in os.environ:
+        # Bucket Config
+        AWS_STORAGE_BUCKET_NAME = 'bucket-name'
+        AWS_S3_REGION_NAME = 'eu-west-2'
+        AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+        AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+```
 
+21. 21. In Heroku at the following Config Vars to the app. The AWS keys can be found in the csv file that was downloaded when creating the S3 user. The DISABLE_COLLECTSTATIC can also be removed as Heroku will get the static files from AWS for any future deploys.
+    * `AWS_ACCESS_KEY_ID : From the csv file`
+    * `AWS_SECRET_ACCESS_KEY : From the csv file`
+    * `USE_AWS : True`
+    * Remove variable `DISABLE_COLLECTSTATIC`
+
+22. In the settings.py file add the following inside the USE_AWS if statement to tell Django where the static files will be sourced from in production.
+    
+    * `AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'`
