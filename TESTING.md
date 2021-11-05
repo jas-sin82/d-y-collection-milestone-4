@@ -17,6 +17,13 @@
  * I used Chrome developer tools throughout the project for testing and solving problems with responsiveness and 
      style issues.
 
+  ### Navbar
+   
+   *  Main navigation Menu, all the drop-down menus, links and search bar work smoothly.
+
+   * Mobile menu links and dropdown functionality work good.
+  
+
 ## Compatibility Testing 
 
   * The website has been tested across a broad range of physical and virtual desktop, tablet and mobile devices. Additionally, the site has been checked on a browsers including Chrome, Edge.
@@ -179,6 +186,28 @@
   * As a returning visitor, I want to be able to easily log in, if I already registered last time visiting. Visitor can click on my account drop-down menu on right top to login.
 
  [Back to Highlights ](#highlights)
+
+
+### Author of website 
+
+#### Ensure website is secure and safe
+
+  * Django @login_required decorators added to maintain authenticated access only to secure site areas.
+
+  * Allow superuser access only to admin area.
+
+#### CRUD for Products and Reviews
+
+ * A superuser/Author has access to Product Management to add new products.
+
+ * Existing products can be update or delete using the links under the products cards on the product a page or on the product detail page. 
+
+ * Items can be added to the sale via the check box on the Edit Product page.
+
+ * A discount percent can be set as desired.
+
+ * Author/superuser has permissions to delete any review. This is done using the Delete button on each review.
+
 
  
 
