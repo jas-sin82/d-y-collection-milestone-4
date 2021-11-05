@@ -57,7 +57,7 @@
    * When visitor enters website, the visitors is welcomed by a some stunning product images and  carousel which contains new arrival product images  another thing a really clean and white bg header with drop down menu that clealy explains the purpose of the site,A customer should be left in no doubt what the site is selling.
 
    
-  #### Browse products
+  #### Browse Products
 
   * On Home page under the hero image provide carousel which contains new arrival product images which moves right to left, Auto-playing will pause when mouse is hovered over, and resume when mouse is hovered off. Auto-playing will stop when the carousel is clicked or a cell is selected. One click will bring user to that particular product detail. 
     
@@ -94,7 +94,7 @@
 
     <img src="readme-doc/user-testing-5.png">
 
-#### sale products
+#### Sale Products
 
  * There is a link to sale products on the navbar.
 
@@ -103,7 +103,7 @@
    <img src="readme-doc/user-testing-8.png">
 
 
-#### Related products 
+#### Related Products 
 
    * In the product detail page related products are shown below the product Review.
 
@@ -128,6 +128,53 @@
 
  *  The link returns the customer to the David & yenny collection site where they are required to click the Confirm button to complete the registration process.
 
- 
+#### Receive messages 
+
+ * The customer receives success, informational or error messages to confirm actions throughout the site.
+
+     <img src="readme-doc/user-testing-12.png">
+
+#### Recover Password 
+
+ * There is a ‘Forgot Password?’ link on the login screen.
+
+   <img src="readme-doc/user-testing-11.png">
+
+ * The user is required to re-enter their email address and click Reset My Password.
+
+ * A confirmation message is displayed and email sent. 
+
+ * The user has to click the link in the email to create a new password. 
+
+#### Account Security 
+
+  * User accounts are protected by Django Allauth.
+
+  * Payments are secured by Stripe and webhooks to ensure the process completes.
+
+### Returning Visitor 
+
+ #### Save my contact details 
+
+ * At checkout there is a checkbox to ‘Save delivery address to my profile’ for authorised users.
+
+#### See previous orders 
+
+ * Order history is available in the Profile page.
+
+#### Add a review 
+
+ * The Add Review form is displayed in the Reviews section if the user is authenticated.
+
+ * User has authorization to add review but can't edit or delete them just super user can delete any unsatisfactory reviews.
+
+#### Log in and out 
+
+  * As a returning visitor, I want to be able to easily log in, if I already registered last time visiting. Visitor can click on my account drop-down menu on right top to login.
+
+
+
+
+
 
   
