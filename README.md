@@ -424,6 +424,8 @@ This project presents a Online Fashion Boutique call David & Yenny Collection. B
   
 # Testing
 
+  To See Test report [here.](https://github.com/jas-sin82/d-y-collection-milestone-4/blob/main/TESTING.md)
+
 
 # Deployment
 

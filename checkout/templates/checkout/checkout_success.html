@@ -38,7 +38,7 @@
                     <p class="small card-text mb-0 text-black font-weight-bold">
                         Product Name: {{ item.product.name }}
                     </p>
-                    <p class="small card-text mb-0">{% if item.product.size %} Size
+                    <p class="small card-text mb-0">{% if item.product_size %} Size
                         {{ item.product.size|upper }}{% endif %}</p>
                     <p class=" card-text small mb-0">Quantity:{{ item.quantity }}</p>
                     <p class=" card-text small mb-0">Product Price <strong>€{{ item.product.price }}</strong> each</p>
