@@ -167,15 +167,15 @@ This project presents a Online Fashion Boutique call David & Yenny Collection. B
 
   ### Responsive Screenshots
 
-  <img src="responsive/ipad.png">
+  <img src="readme-doc/ipad.png">
 
-  <img src="responsive/nest-hub-max.png">
+  <img src="readme-doc/nest-hub-max.png">
  
-  <div><img src="responsive/iphone-5.png"></div>
+  <div><img src="readme-doc/iphone-5.png"></div>
  
-  <div><img src="responsive/iphone-6.png"></div>
+  <div><img src="readme-doc/iphone-6.png"></div>
 
-  <div><img src="responsive/nest-hub.png"></div>
+  <div><img src="readme-doc/nest-hub.png"></div>
 
   [Back to Highlights ](#highlights)
 
@@ -187,7 +187,7 @@ This project presents a Online Fashion Boutique call David & Yenny Collection. B
 
  The database schema was captured using [DB Diagram](https://dbdiagram.io/home)
 
- <img src="responsive/database-schema.png">
+ <img src="readme-doc/database-schema.png">
   
 
 ## Profile App
