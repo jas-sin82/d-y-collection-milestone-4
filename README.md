@@ -603,6 +603,7 @@ I used push command in Gitpod to save changes into GitHub.
             "arn:aws:s3:::s3--bucket-name/*"
         ]
     ```
+[Back to Highlights ](#highlights)
 
 13. Click the Review Policy button giving the policy a name and description. Click the Create Policy button to save all changes.
 
@@ -633,7 +634,7 @@ I used push command in Gitpod to save changes into GitHub.
         AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
 ```
 
-21. 21. In Heroku at the following Config Vars to the app. The AWS keys can be found in the csv file that was downloaded when creating the S3 user. The DISABLE_COLLECTSTATIC can also be removed as Heroku will get the static files from AWS for any future deploys.
+ 21. In Heroku at the following Config Vars to the app. The AWS keys can be found in the csv file that was downloaded when creating the S3 user. The DISABLE_COLLECTSTATIC can also be removed as Heroku will get the static files from AWS for any future deploys.
     * `AWS_ACCESS_KEY_ID : From the csv file`
     * `AWS_SECRET_ACCESS_KEY : From the csv file`
     * `USE_AWS : True`
@@ -642,3 +643,33 @@ I used push command in Gitpod to save changes into GitHub.
 22. In the settings.py file add the following inside the USE_AWS if statement to tell Django where the static files will be sourced from in production.
     
     * `AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'`
+
+23. The next step is to configure Django to use S3 to store our static files whenever someone runs `collectstatic` and to also store any uploaded images in the S3 bucket.
+
+24. In the root folder create a file by running: 
+
+      `touch custom_storages.py`.
+
+25. Copy the following configuration into the file and save:
+
+```
+    from django.conf import settings
+    from storages.backends.s3boto3 import S3Boto3Storage
+    class StaticStorage(S3Boto3Storage):
+        location = settings.STATICFILES_LOCATION
+    class MediaStorage(S3Boto3Storage):
+        location = settings.MEDIAFILES_LOCATION
+``` 
+
+26. In the settings.py file add the following inside the USE_AWS if statement to configure Django to use our custom storage class for static file storage and to override the static and media URLs in production.
+
+```
+    STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+    STATICFILES_LOCATION = 'static'
+    DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+    MEDIAFILES_LOCATION = 'media'
+    STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
+    MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+```
+[Back to Highlights ](#highlights)
+
