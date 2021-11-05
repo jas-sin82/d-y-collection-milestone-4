@@ -110,3 +110,24 @@
    * Related products are from the same product category and same gender.
 
    <img src="readme-doc/user-testing-9.png">
+
+#### Purchase a product without register/login
+
+  * products can be purchased without registering. 
+
+  * Registration/login is required to save personal details and to see purchase history as well as leave a review.
+
+
+#### Register 
+
+ * The customer signs up with email address, username and password, User account link top right under the serach bar and in mobile menu at bottom of the drop-down menus.
+
+    <img src="readme-doc/user-testing-10.png">
+
+ * A verification email is sent with a link to confirm this is correct.
+
+ *  The link returns the customer to the David & yenny collection site where they are required to click the Confirm button to complete the registration process.
+
+ 
+
+  
