@@ -217,6 +217,8 @@
  * A discount percent can be set as desired.
 
  * Author/superuser has permissions to delete any review. This is done using the Delete button on each review.
+ 
+ [Back to Highlights ](#highlights)
 
 ## Error found during site development
 
@@ -256,5 +258,5 @@ The developer face several issues during the development of the site ,Some of th
 
  <img src="readme-doc/light-house-testing-4.png">
 
-
+[Back to Highlights ](#highlights)
   
