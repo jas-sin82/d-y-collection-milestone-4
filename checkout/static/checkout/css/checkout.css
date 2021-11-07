@@ -101,3 +101,10 @@ select:invalid,
 select option[value=""] {
     color: #aab7c4 !important;
 }
+
+@media (max-width:600px){
+.payment-input{
+  margin-top:-20px;
+}
+
+}
