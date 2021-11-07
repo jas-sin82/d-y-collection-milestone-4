@@ -1972,3 +1972,14 @@ section ul .user-show.show-4 {
        
 }
    
+/*----- base-html-----*/
+
+.product-count{
+ font-size:11px;
+ color: white;
+ background-color: green;
+ border-radius: 50%;
+ text-align: center;
+ justify-content: center;
+ padding-right:2px;
+}
