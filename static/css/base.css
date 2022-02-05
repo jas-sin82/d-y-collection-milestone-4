@@ -1107,6 +1107,7 @@ section ul .user-show.show-4 {
     justify-content: center;
     text-align: center;
     width: 100%;
+    display:none;
 }
 
 .sale-text {
